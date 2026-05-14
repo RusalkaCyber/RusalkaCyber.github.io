@@ -123,7 +123,6 @@ nav.scrolled {
 .nav-mob-close { position:absolute; top:1.5rem; right:2rem; background:none; border:none; cursor:pointer; font-size:1.6rem; color:var(--ink3); }
 
 /* ─── RUSALKA CYBER SVG LOGO ─── */
-/* Forge glow animation — pure CSS/SVG, no external images */
 @keyframes forgeFlicker {
   0%,100% { opacity: 1; filter: drop-shadow(0 0 6px #2e6db4) drop-shadow(0 0 14px #1fa39e); }
   25%      { opacity: .88; filter: drop-shadow(0 0 10px #4d93d9) drop-shadow(0 0 22px #2ec4bd); }
@@ -174,7 +173,6 @@ nav.scrolled {
   animation: runeTrace .7s cubic-bezier(.16,1,.3,1) forwards;
 }
 
-/* Forge effect on hero logo (larger) */
 .hero-logo-wrap .logo-svg-wrap {
   animation: forgeFlicker 3.2s ease-in-out infinite, forgeScale 3.2s ease-in-out infinite;
 }
@@ -996,7 +994,6 @@ footer {
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Primary navigation">
   <a href="#" class="nav-brand" aria-label="Rusalka Cyber — Home">
-    <!-- RUSALKA CYBER NAV LOGO — pure SVG, forge-animated -->
     <div class="nav-brand-mark">
       <div class="logo-svg-wrap" id="navLogoAnim">
         <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -1010,20 +1007,16 @@ footer {
               <stop offset="100%" stop-color="#2ec4bd"/>
             </linearGradient>
           </defs>
-          <!-- Shield outline -->
           <path class="shield-path"
             d="M22 4 L38 10 L38 22 C38 31 30 38.5 22 41 C14 38.5 6 31 6 22 L6 10 Z"
             fill="none" stroke="url(#shieldGrad)" stroke-width="1.6"
             stroke-linejoin="round" stroke-linecap="round"/>
-          <!-- Inner shield fill subtle -->
           <path
             d="M22 7.5 L35 13 L35 22 C35 29.5 28.5 36 22 38.2 C15.5 36 9 29.5 9 22 L9 13 Z"
             fill="rgba(31,163,158,0.06)" stroke="none"/>
-          <!-- R rune mark -->
           <line class="rune-line" x1="17" y1="16" x2="17" y2="28" stroke="url(#accentGrad)" stroke-width="2" stroke-linecap="round"/>
           <path class="rune-line" d="M17 16 Q26 16 26 20 Q26 24 17 24" fill="none" stroke="url(#accentGrad)" stroke-width="2" stroke-linecap="round" style="animation-delay:.15s"/>
           <line class="rune-line" x1="17" y1="24" x2="27" y2="28" stroke="url(#accentGrad)" stroke-width="2" stroke-linecap="round" style="animation-delay:.3s"/>
-          <!-- Corner accent dots -->
           <circle cx="22" cy="11" r="1.2" fill="#2ec4bd" opacity=".7"/>
         </svg>
       </div>
@@ -1062,7 +1055,6 @@ footer {
   <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
 
   <div class="hero-inner">
-    <!-- HERO LOGO BLOCK — full forge animation -->
     <div class="hero-logo-block">
       <div class="hero-logo-wrap">
         <div class="logo-svg-wrap" id="heroLogoAnim">
@@ -1081,20 +1073,16 @@ footer {
                 <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
               </filter>
             </defs>
-            <!-- Outer shield -->
             <path class="shield-path"
               d="M44 8 L76 20 L76 44 C76 62 60 77 44 82 C28 77 12 62 12 44 L12 20 Z"
               fill="none" stroke="url(#hShieldGrad)" stroke-width="2"
               stroke-linejoin="round" stroke-linecap="round" filter="url(#heroGlow)"/>
-            <!-- Inner shield glow fill -->
             <path
               d="M44 14 L70 24 L70 44 C70 59 55 73 44 78 C33 73 18 59 18 44 L18 24 Z"
               fill="rgba(46,196,189,0.05)" stroke="rgba(46,196,189,0.12)" stroke-width="1"/>
-            <!-- R mark, larger -->
             <line class="rune-line" x1="34" y1="32" x2="34" y2="56" stroke="url(#hAccentGrad)" stroke-width="3.5" stroke-linecap="round"/>
             <path class="rune-line" d="M34 32 Q52 32 52 40 Q52 48 34 48" fill="none" stroke="url(#hAccentGrad)" stroke-width="3.5" stroke-linecap="round" style="animation-delay:.15s"/>
             <line class="rune-line" x1="34" y1="48" x2="54" y2="56" stroke="url(#hAccentGrad)" stroke-width="3.5" stroke-linecap="round" style="animation-delay:.3s"/>
-            <!-- Accent dots — forge sparks -->
             <circle cx="44" cy="21" r="2.2" fill="#2ec4bd" opacity=".8">
               <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.1s" repeatCount="indefinite"/>
             </circle>
@@ -1104,7 +1092,6 @@ footer {
             <circle cx="20" cy="38" r="1.4" fill="#6aabea" opacity=".6">
               <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.9s" begin="0.8s" repeatCount="indefinite"/>
             </circle>
-            <!-- Bottom chevron -->
             <path d="M36 66 L44 72 L52 66" fill="none" stroke="rgba(46,196,189,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" repeatCount="indefinite"/>
             </path>
@@ -1139,7 +1126,7 @@ footer {
           <a href="#projects" class="btn-out">View Projects</a>
         </div>
         <div class="hero-member-chips">
-          <a href="#" class="hero-chip" data-target="0"><div class="hero-chip-dot"></div>Abhijit Soman</a>
+          <a href="#" class="hero-chip" data-target="0"><div class="hero-chip-dot"></div>Abhijith Soman</a>
           <a href="#" class="hero-chip" data-target="1"><div class="hero-chip-dot"></div>Naveen Kumar</a>
           <a href="#" class="hero-chip" data-target="2"><div class="hero-chip-dot"></div>Ojas Gaur</a>
           <a href="#" class="hero-chip" data-target="3"><div class="hero-chip-dot"></div>Sourabh Kumar</a>
@@ -1214,7 +1201,7 @@ footer {
         <h2 class="sec-head" id="aboutHeading">Rusalka Cyber —<br><em>Built Different.</em></h2>
         <p>We are <strong>Rusalka Cyber</strong> — a security engineering startup forged by seven cybersecurity professionals who built, broke, and defended systems together — across SOC operations, detection engineering, cloud security, GRC, offensive security research, and enterprise security leadership. Between us, we hold BTech degrees in Cybersecurity and Computer Science, graduating in 2025 and 2026.</p>
         <p>What began as a shared obsession with going deeper than coursework — through independent labs, hackathons, CTFs, and personal builds — evolved into something more deliberate: a startup that architects production-grade security infrastructure, conducts real adversarial simulations, and ships work that stands up under scrutiny.</p>
-        <p>Rusalka Cyber team members has collectively held positions at Gardiyan System Security Technologies (Ankara, Turkey), Quantix IT Ltd (Coventry, England), CyberSRC Consultancy (Noida, India), and Cisco SOC Global (across East Africa, Europe, and Asia). We have built zero trust platforms, automated SOC workflows, authored high-fidelity detection rules, executed penetration tests, and won blockchain security bounties. The work speaks first.</p>
+        <p>Rusalka Cyber team members has collectively held positions at Gardiyan System Security Technologies (Ankara, Turkey), Quantix IT Ltd (Coventry, England), CyberSRC Consultancy (Noida, India), and Cisco Australia (MEA &amp; KSA region). We have built zero trust platforms, automated SOC workflows, authored high-fidelity detection rules, executed penetration tests, and won blockchain security bounties. The work speaks first.</p>
       </div>
       <div class="about-pillars">
         <div class="about-pillar">
@@ -1235,7 +1222,7 @@ footer {
         </div>
         <div class="about-pillar">
           <div class="about-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-          <div><div class="about-pillar-title">Enterprise Security Leadership</div><div class="about-pillar-body">Security operations leadership spanning three continents — East Africa, Europe, and Asia — with enterprise-scale SOC management and detection engineering across Cisco global infrastructure.</div></div>
+          <div><div class="about-pillar-title">Enterprise Security Leadership</div><div class="about-pillar-body">Security operations leadership spanning the MEA &amp; KSA region — with enterprise-scale SOC management and detection engineering across Cisco global infrastructure.</div></div>
         </div>
       </div>
     </div>
@@ -1251,12 +1238,12 @@ footer {
 
     <div class="members-grid" id="membersGrid" role="list">
 
-      <!-- ABHIJIT SOMAN — 01 -->
-      <div class="member-card reveal" data-member="0" role="listitem" tabindex="0" aria-label="View Abhijit Soman profile">
+      <!-- ABHIJITH SOMAN — 01 -->
+      <div class="member-card reveal" data-member="0" role="listitem" tabindex="0" aria-label="View Abhijith Soman profile">
         <div class="member-num" aria-hidden="true">01</div>
-        <div class="member-name">Abhijit Soman</div>
-        <div class="member-role-badge">Detection Engineer · Director of Security</div>
-        <p class="member-summary">Enterprise security leader with a progressive career at Gardiyan — from SOC Engineer to SOC Lead to Director of Security — before joining Cisco SOC Global as Detection Engineer. Subsequently offered the position of Director of Security at Cisco SOC Global, overseeing operations across East Africa, Europe, and Middle East.</p>
+        <div class="member-name">Abhijith Soman</div>
+        <div class="member-role-badge">Detection Engineer · Principal Security Architect (Offered)</div>
+        <p class="member-summary">Enterprise security leader with a progressive career at Gardiyan — from SOC Engineer to SOC Lead to Director of Security — before joining Cisco Australia as Senior Detection Engineer covering the MEA &amp; KSA region. After 8 months of demonstrated impact, offered the position of Principal Security Architect at Cisco Australia for the MEA &amp; KSA region.</p>
         <div class="member-skills-mini">
           <span class="skill-chip">Cisco SecureX</span><span class="skill-chip">Detection Engineering</span><span class="skill-chip">SOC Leadership</span><span class="skill-chip">SIEM</span><span class="skill-chip">Threat Hunting</span>
         </div>
@@ -1494,14 +1481,14 @@ footer {
 
       <div class="exp-co open reveal">
         <div class="exp-co-header" role="button" aria-expanded="true" tabindex="0">
-          <div class="exp-co-left"><div class="exp-co-name">Cisco SOC Global</div><div class="exp-co-sub">East Africa · Europe · Middle East · Remote</div></div>
+          <div class="exp-co-left"><div class="exp-co-name">Cisco Australia</div><div class="exp-co-sub">MEA &amp; KSA Region · Remote</div></div>
           <div class="exp-co-right"><div class="exp-co-period">Sept 2025 – Present</div><div class="exp-toggle" aria-hidden="true">+</div></div>
         </div>
         <div class="exp-co-body">
           <div class="exp-member-rows">
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Abhijit Soman</div><div class="exp-member-role">Detection Engineer · Director of Security (Offered)</div><div class="exp-member-period">September 2025 – Present · 8 months</div></div>
-              <div class="exp-points">Joined Cisco SOC Global as a Detection Engineer, embedded within the organisation's enterprise-scale Security Operations Centre spanning East Africa, Europe, and Asia. Responsible for authoring and maintaining high-fidelity detection rule pipelines, threat hunting playbooks, and cross-regional escalation frameworks across Cisco's global infrastructure.<br><br>Following eight months of demonstrated impact, Abhijit has been extended a formal offer for the position of <strong>Director of Security at Cisco SOC Global</strong> — a role encompassing strategic security leadership and oversight of SOC operations across all three continents.</div>
+              <div><div class="exp-member-name">Abhijith Soman</div><div class="exp-member-role">Detection Engineer → Principal Security Architect (Offered)</div><div class="exp-member-period">September 2025 – Present · 8 months</div></div>
+              <div class="exp-points">Joined Cisco Australia as a Detection Engineer, embedded within the organisation's enterprise-scale Security Operations Centre covering the MEA &amp; KSA (Middle East, Africa &amp; Saudi Arabia) region. Responsible for authoring and maintaining high-fidelity detection rule pipelines, threat hunting playbooks, and cross-regional escalation frameworks across Cisco's global infrastructure.<br><br>Following eight months of demonstrated impact, Abhijith has been extended a formal offer for the position of <strong>Principal Security Architect at Cisco Australia</strong> — a strategic architecture role overseeing security design and operations across the MEA &amp; KSA region.</div>
             </div>
           </div>
         </div>
@@ -1515,7 +1502,7 @@ footer {
         <div class="exp-co-body">
           <div class="exp-member-rows">
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Abhijit Soman</div><div class="exp-member-role">SOC Engineer → SOC Lead → Director of Security</div><div class="exp-member-period">April 2024 – August 2025 · 18 months</div></div>
+              <div><div class="exp-member-name">Abhijith Soman</div><div class="exp-member-role">SOC Engineer → SOC Lead → Director of Security</div><div class="exp-member-period">April 2024 – August 2025 · 18 months</div></div>
               <div class="exp-points"><strong style="color:var(--ink);">SOC Engineer</strong> (Apr–Oct 2024) — Security monitoring, alert triage, detection rule engineering, MITRE ATT&amp;CK-aligned coverage across client environments.<br><br><strong style="color:var(--ink);">SOC Lead</strong> (Oct 2024 – May 2025) — Led SOC analysts in triage operations, escalation workflows, detection tuning, and high-severity incident management.<br><br><strong style="color:var(--ink);">Director of Security</strong> (May–Aug 2025) — Oversaw the entire security operations function — detection strategy, policy enforcement, vendor governance, executive security reporting, and SOC maturity roadmap.</div>
             </div>
             <div class="exp-member-row">
@@ -1658,7 +1645,6 @@ footer {
 <footer role="contentinfo">
   <div class="foot-l">
     <div class="foot-logo">
-      <!-- Footer micro-logo — pure SVG -->
       <svg width="22" height="22" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M22 4 L38 10 L38 22 C38 31 30 38.5 22 41 C14 38.5 6 31 6 22 L6 10 Z" fill="none" stroke="rgba(46,196,189,0.35)" stroke-width="1.6" stroke-linejoin="round"/>
         <line x1="17" y1="16" x2="17" y2="28" stroke="rgba(46,196,189,0.6)" stroke-width="2" stroke-linecap="round"/>
@@ -1672,18 +1658,6 @@ footer {
 </footer>
 
 <script>
-/* =====================================================================
-   RUSALKA CYBER — SITE JAVASCRIPT
-   Security practices applied:
-   • Strict IIFE isolation — no globals leaked
-   • DOMPurify-free safe DOM construction (no innerHTML from user data)
-   • All external links use rel="noopener noreferrer"
-   • Event listeners use passive:true where applicable
-   • No eval(), no Function(), no dangerous string→code paths
-   • Member data kept in closed scope, never serialised to DOM directly
-     except via the safe buildPanel helper (trusted static data only)
-   • CSP-compatible: no inline event handlers in HTML
-   ===================================================================== */
 (function(){
   'use strict';
 
@@ -1735,7 +1709,6 @@ footer {
       navHam.setAttribute('aria-expanded', 'false');
     });
   });
-  /* Close on Escape */
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape' && navMob.classList.contains('open')){
       navMob.classList.remove('open');
@@ -1773,19 +1746,19 @@ footer {
 
   /* ── MEMBER DETAIL PANELS ── */
   var memberData = [
-    /* 0 — Abhijit Soman */
+    /* 0 — Abhijith Soman */
     {
-      name: 'Abhijit Soman',
-      role: 'Detection Engineer · Director of Security (Offered)',
-      about: 'Enterprise security leader with a career trajectory from SOC Engineer to Director of Security at Gardiyan, before joining Cisco SOC Global as a Detection Engineer. Following eight months of demonstrated impact, Abhijit has been extended a formal offer for the position of Director of Security at Cisco SOC Global — encompassing strategic oversight of security operations across East Africa, Europe, and Asia.',
-      location: 'Open to Relocation · Remote',
+      name: 'Abhijith Soman',
+      role: 'Detection Engineer · Principal Security Architect (Offered)',
+      about: 'Enterprise security leader with a career trajectory from SOC Engineer to Director of Security at Gardiyan, before joining Cisco Australia as a Detection Engineer covering the MEA & KSA (Middle East, Africa & Saudi Arabia) region. Following eight months of demonstrated impact, Abhijith has been extended a formal offer for the position of Principal Security Architect at Cisco Australia for the MEA & KSA region.',
+      location: 'MEA & KSA Region · Remote',
       edu: 'Computer Science / Cybersecurity Background',
       exp: [
         { role: 'SOC Engineer → SOC Lead → Director of Security', org: 'Gardiyan System Security Technologies', period: 'April 2024 – August 2025 · 18 months', body: 'SOC Engineer (6 months): Security monitoring, alert triage, and detection rule engineering across endpoint, network, and identity telemetry.\n\nSOC Lead/Analyst (7 months): Led a team of SOC analysts, coordinated shift handovers, managed escalation workflows, and fine-tuned detection rules.\n\nDirector of Security (5 months): Oversaw the organisation\'s entire security operations function — detection strategy, policy enforcement, vendor governance, and executive security reporting.' },
-        { role: 'Detection Engineer · Director of Security (Offered)', org: 'Cisco SOC Global', period: 'September 2025 – Present · 8 months', body: 'Joined as a Detection Engineer within Cisco\'s global SOC spanning East Africa, Europe, and Asia. Architects and maintains enterprise-scale detection rule pipelines, threat hunting playbooks, and escalation frameworks. Extended a formal offer for Director of Security at Cisco SOC Global.' }
+        { role: 'Detection Engineer → Principal Security Architect (Offered)', org: 'Cisco Australia', period: 'September 2025 – Present · 8 months', body: 'Joined as a Detection Engineer within Cisco Australia\'s enterprise-scale SOC covering the MEA & KSA (Middle East, Africa & Saudi Arabia) region. Architects and maintains enterprise-scale detection rule pipelines, threat hunting playbooks, and escalation frameworks.\n\nFollowing eight months of demonstrated impact, extended a formal offer for the position of Principal Security Architect at Cisco Australia — a strategic architecture role overseeing security design and operations across the MEA & KSA region.' }
       ],
-      skills: ['Detection Engineering','SOC Leadership','Cisco SecureX','Cisco Stealthwatch','SIEM Engineering','Threat Hunting','MITRE ATT&CK','Incident Response','Playbook Development','Sigma','KQL','Enterprise Security Governance','Risk Management','Cross-Regional SOC Operations'],
-      certs: ['Director of Security – Cisco SOC Global (Offered · East Africa, Europe, Asia)'],
+      skills: ['Detection Engineering','SOC Leadership','Cisco SecureX','Cisco Stealthwatch','SIEM Engineering','Threat Hunting','MITRE ATT&CK','Incident Response','Playbook Development','Sigma','KQL','Enterprise Security Architecture','Security Strategy','MEA & KSA Operations'],
+      certs: ['Principal Security Architect – Cisco Australia (Offered · MEA & KSA Region)'],
       links: []
     },
     /* 1 — Naveen Kumar */
@@ -1907,7 +1880,6 @@ footer {
     }
   ];
 
-  /* ── Safe icon builder (no user input) ── */
   function iconSvg(type){
     var attrs = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"';
     var paths = {
@@ -1919,17 +1891,11 @@ footer {
     return '<svg ' + attrs + '>' + (paths[type] || '') + '</svg>';
   }
 
-  /* ── Safe text node builder — avoids innerHTML for user-controlled fields ── */
-  function safeText(str){ return document.createTextNode(str || ''); }
-
-  /* ── Panel builder (static trusted data only — no user inputs) ── */
   function buildPanel(idx){
     var d = memberData[idx];
-    /* Yash easter egg on panel name */
     var displayName = d.name;
     if(idx === 4 && d.nameRu && Math.random() < 0.20){ displayName = d.nameRu; }
 
-    /* Build experience HTML (trusted static data) */
     var expHtml = d.exp.map(function(e){
       return '<div class="mdp-exp">'
         + '<div class="mdp-exp-role">' + e.role + '</div>'
@@ -1961,7 +1927,6 @@ footer {
     panel.setAttribute('role', 'region');
     panel.setAttribute('aria-label', d.name + ' profile');
 
-    /* innerHTML used only with trusted static developer-defined strings — no user input */
     panel.innerHTML =
       '<button class="mdp-close" aria-label="Close ' + d.name + ' profile">✕ Close</button>'
       + '<div class="mdp-grid">'
