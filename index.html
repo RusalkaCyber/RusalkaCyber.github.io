@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SER Collective — Security Engineering & Research. Six cybersecurity engineers specialising in SOC operations, detection engineering, cloud security, and GRC.">
+<meta name="description" content="SER Collective — Security Engineering & Research. Seven cybersecurity engineers specialising in SOC operations, detection engineering, cloud security, and GRC.">
 <title>SER Collective · Security Engineering & Research</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,7 +198,7 @@ nav.scrolled {
 .h-stat { background: rgba(12,21,32,.45); padding: 1.35rem 1rem; text-align: center; }
 .h-stat-num {
   font-family: var(--font-disp);
-  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 900;
   color: var(--cream);
   line-height: 1; margin-bottom: 6px;
@@ -206,9 +206,9 @@ nav.scrolled {
 .h-stat-num span { color: var(--gold2); }
 .h-stat-lbl {
   font-family: var(--font-mono);
-  font-size: .6rem;
+  font-size: .55rem;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: rgba(155,191,223,.45);
 }
@@ -439,7 +439,7 @@ section { position: relative; }
   transition: color .2s, border-color .2s;
 }
 .member-card:hover .skill-chip { border-color: rgba(46,109,180,.25); }
-.member-links { display: flex; gap: .55rem; margin-top: auto; padding-top: .85rem; }
+.member-links { display: flex; gap: .55rem; flex-wrap: wrap; margin-top: auto; padding-top: .85rem; }
 .mem-link {
   display: flex; align-items: center; gap: .45rem;
   font-family: var(--font-mono);
@@ -862,7 +862,7 @@ section { position: relative; }
   font-size: .62rem; font-weight: 500;
   letter-spacing: 1.5px; text-transform: uppercase; color: var(--sky2);
 }
-.cm-links { display: flex; gap: .45rem; }
+.cm-links { display: flex; gap: .45rem; flex-wrap: wrap; }
 .cm-link {
   display: flex; align-items: center; gap: .4rem;
   padding: .38rem .75rem;
@@ -971,15 +971,15 @@ footer {
         <div class="hero-headline-line">We <em>Build.</em></div>
       </div>
     </div>
-    <div class="hero-sub">Six engineers. One direction.</div>
+    <div class="hero-sub">Seven engineers. One direction.</div>
 
     <div class="hero-bottom">
       <div>
         <p class="hero-desc">
           A team of cybersecurity engineers and analysts specialising in SOC operations, 
-          detection engineering, cloud security, zero trust architecture, and GRC — 
-          built from first principles, tested under adversarial conditions, and deployed 
-          across multiple international organisations.
+          detection engineering, cloud security, zero trust architecture, GRC, and enterprise 
+          security leadership — built from first principles, tested under adversarial conditions, 
+          and deployed across multiple international organisations across three continents.
         </p>
         <div class="hero-cta">
           <a href="#members" class="btn-pri">Meet the Team</a>
@@ -992,32 +992,34 @@ footer {
           <a href="#" class="hero-chip" data-target="3"><div class="hero-chip-dot"></div>Yashwardhan Singh</a>
           <a href="#" class="hero-chip" data-target="4"><div class="hero-chip-dot"></div>Yogendra Jain</a>
           <a href="#" class="hero-chip" data-target="5"><div class="hero-chip-dot"></div>Naveen Kumar</a>
+          <a href="#" class="hero-chip" data-target="6"><div class="hero-chip-dot"></div>Abhijit Soman</a>
         </div>
       </div>
+      <!-- UPDATED STATS: domains not years -->
       <div class="hero-stats-grid">
         <div class="h-stat">
-          <div class="h-stat-num"><span id="sn1">0</span>+</div>
-          <div class="h-stat-lbl">Years Combined</div>
+          <div class="h-stat-num"><span>SOC</span></div>
+          <div class="h-stat-lbl">Ops &amp; Detection</div>
         </div>
         <div class="h-stat">
-          <div class="h-stat-num"><span id="sn2">0</span></div>
-          <div class="h-stat-lbl">Engineers</div>
+          <div class="h-stat-num"><span>Cloud</span></div>
+          <div class="h-stat-lbl">AWS · Azure · GCP</div>
         </div>
         <div class="h-stat">
-          <div class="h-stat-num"><span id="sn3">0</span>+</div>
-          <div class="h-stat-lbl">Projects Built</div>
+          <div class="h-stat-num"><span>GRC</span></div>
+          <div class="h-stat-lbl">Risk &amp; Compliance</div>
         </div>
         <div class="h-stat">
-          <div class="h-stat-num"><span id="sn4">0</span></div>
-          <div class="h-stat-lbl">Internships</div>
+          <div class="h-stat-num"><span>DFIR</span></div>
+          <div class="h-stat-lbl">Forensics &amp; IR</div>
         </div>
         <div class="h-stat">
-          <div class="h-stat-num">$<span id="sn5">0</span></div>
-          <div class="h-stat-lbl">Bounties Won</div>
+          <div class="h-stat-num"><span>Red</span></div>
+          <div class="h-stat-lbl">Team &amp; Pen Test</div>
         </div>
         <div class="h-stat">
-          <div class="h-stat-num"><span id="sn6">0</span>+</div>
-          <div class="h-stat-lbl">Certs Earned</div>
+          <div class="h-stat-num"><span>PQC</span></div>
+          <div class="h-stat-lbl">Security Research</div>
         </div>
       </div>
     </div>
@@ -1048,6 +1050,8 @@ footer {
     <span>Threat Intelligence</span><span class="sep">·</span>
     <span>UEBA Analytics</span><span class="sep">·</span>
     <span>Blockchain Security</span><span class="sep">·</span>
+    <span>Cisco SOC Global</span><span class="sep">·</span>
+    <span>Director of Security</span><span class="sep">·</span>
     <span>Microsoft Sentinel</span><span class="sep">·</span>
     <span>Zero Trust Architecture</span><span class="sep">·</span>
     <span>MITRE ATT&amp;CK</span><span class="sep">·</span>
@@ -1064,6 +1068,7 @@ footer {
     <span>Threat Intelligence</span><span class="sep">·</span>
     <span>UEBA Analytics</span><span class="sep">·</span>
     <span>Blockchain Security</span><span class="sep">·</span>
+    <span>Cisco SOC Global</span><span class="sep">·</span>
   </div>
 </div>
 
@@ -1074,9 +1079,9 @@ footer {
     <div class="about-grid reveal">
       <div class="about-body">
         <h2 class="sec-head">Security Engineering<br><em>&amp; Research</em></h2>
-        <p>We are six cybersecurity professionals who built, broke, and defended systems together — across SOC operations, detection engineering, cloud security, GRC, and offensive security research. Between us, we hold BTech degrees in Cybersecurity and Computer Science, graduating in 2025 and 2026.</p>
+        <p>We are seven cybersecurity professionals who built, broke, and defended systems together — across SOC operations, detection engineering, cloud security, GRC, offensive security research, and enterprise security leadership. Between us, we hold BTech degrees in Cybersecurity and Computer Science, graduating in 2025 and 2026.</p>
         <p>What began as a shared drive to go deeper than coursework — through independent labs, hackathons, CTFs, and personal builds — evolved into something more deliberate: a team that architects production-grade security infrastructure, conducts real adversarial simulations, and ships work that stands up under scrutiny.</p>
-        <p>We have collectively held positions at Gardiyan System Security Technologies (Ankara, Turkey), Quantix IT Ltd (Coventry, England), and CyberSRC Consultancy (Noida, India). We have built zero trust platforms, automated SOC workflows, authored high-fidelity detection rules, executed penetration tests, and won blockchain security bounties. The work speaks first.</p>
+        <p>We have collectively held positions at Gardiyan System Security Technologies (Ankara, Turkey), Quantix IT Ltd (Coventry, England), CyberSRC Consultancy (Noida, India), and Cisco SOC Global (across East Africa, Europe, and Asia). We have built zero trust platforms, automated SOC workflows, authored high-fidelity detection rules, executed penetration tests, and won blockchain security bounties. The work speaks first.</p>
       </div>
       <div class="about-pillars">
         <div class="about-pillar">
@@ -1115,6 +1120,15 @@ footer {
             <div class="about-pillar-body">Risk assessments, audit readiness, policy development, and compliance frameworks — ISO 27001, NIST 800-53, CIS Benchmarks, and GDPR alignment.</div>
           </div>
         </div>
+        <div class="about-pillar">
+          <div class="about-pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <div class="about-pillar-title">Enterprise Security Leadership</div>
+            <div class="about-pillar-body">Security operations leadership spanning three continents — East Africa, Europe, and Asia — with enterprise-scale SOC management and detection engineering across Cisco global infrastructure.</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1124,7 +1138,7 @@ footer {
 <section id="members" class="sec-pad">
   <div class="container">
     <div class="sec-tag">02 · The Team</div>
-    <h2 class="sec-head">Six engineers.<br><em>One direction.</em></h2>
+    <h2 class="sec-head">Seven engineers.<br><em>One direction.</em></h2>
     <p style="color:var(--ink3);font-size:.92rem;font-family:var(--font-mono);font-weight:500;letter-spacing:1px;">Click any card to expand the full profile.</p>
 
     <div class="members-grid" id="membersGrid">
@@ -1133,14 +1147,14 @@ footer {
       <div class="member-card reveal" data-member="0">
         <div class="member-num">01</div>
         <div class="member-name yash-name">Yash Rathore</div>
-        <div class="member-role-badge">SOC Analyst · Detection Engineer</div>
-        <p class="member-summary">Security Operations professional with 15+ months of hands-on SOC experience across two international organisations. TryHackMe top 1% globally. Independently built Project Horizon and Project Citadel. Blockchain hackathon bounty winner ($750). IIT Madras Shaastra finalist.</p>
+        <div class="member-role-badge">Cloud Security Engineer</div>
+        <p class="member-summary">Cloud security professional with 15+ months of hands-on experience across AWS, Azure, and enterprise cloud environments. TryHackMe top 1% globally. Independently built Project Horizon and Project Citadel. Blockchain hackathon bounty winner ($750). IIT Madras Shaastra finalist.</p>
         <div class="member-skills-mini">
-          <span class="skill-chip">Microsoft Sentinel</span>
-          <span class="skill-chip">KQL</span>
+          <span class="skill-chip">AWS GuardDuty</span>
+          <span class="skill-chip">Azure Defender</span>
           <span class="skill-chip">Zero Trust</span>
-          <span class="skill-chip">SOAR</span>
-          <span class="skill-chip">Sumo Logic</span>
+          <span class="skill-chip">Trivy</span>
+          <span class="skill-chip">Terraform</span>
         </div>
         <div class="member-links">
           <a href="https://www.linkedin.com/in/yash--rathore/" target="_blank" rel="noopener" class="mem-link">
@@ -1150,6 +1164,10 @@ footer {
           <a href="https://github.com/Yashraj-001" target="_blank" rel="noopener" class="mem-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             GitHub
+          </a>
+          <a href="mailto:yashrajput7014@gmail.com" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
           </a>
         </div>
       </div>
@@ -1180,6 +1198,10 @@ footer {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Medium
           </a>
+          <a href="mailto:sourabhkumar1043@gmail.com" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
         </div>
       </div>
 
@@ -1187,16 +1209,24 @@ footer {
       <div class="member-card reveal" data-member="2">
         <div class="member-num">03</div>
         <div class="member-name">Ojas Gaur</div>
-        <div class="member-role-badge">Cybersecurity Analyst · Detection Engineer</div>
-        <p class="member-summary">SIEM engineering and threat detection specialist with 2+ years of professional experience. Expert in building and tuning high-fidelity SIEM correlation rules mapped to MITRE ATT&CK. Proficient threat hunter across Suricata, Zeek, Sigma, and YARA across cloud and enterprise environments.</p>
+        <div class="member-role-badge">Security Engineer · Detection Specialist</div>
+        <p class="member-summary">SIEM engineering and threat detection specialist with 2+ years of professional experience. Expert in building and tuning high-fidelity SIEM correlation rules mapped to MITRE ATT&amp;CK. Proficient threat hunter across Suricata, Zeek, Sigma, and YARA across cloud and enterprise environments.</p>
         <div class="member-skills-mini">
-          <span class="skill-chip">SIEM Engineering</span>
           <span class="skill-chip">ELK Stack</span>
+          <span class="skill-chip">Splunk</span>
           <span class="skill-chip">Sigma</span>
           <span class="skill-chip">YARA</span>
           <span class="skill-chip">Wazuh</span>
         </div>
         <div class="member-links">
+          <a href="https://www.linkedin.com/in/ojas-gaur-90a0b3230" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/ojas404" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
           <a href="mailto:sharmaojas30@gmail.com" class="mem-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             Email
@@ -1208,7 +1238,7 @@ footer {
       <div class="member-card reveal" data-member="3">
         <div class="member-num">04</div>
         <div class="member-name">Yashwardhan Singh</div>
-        <div class="member-role-badge">Cloud Security Analyst</div>
+        <div class="member-role-badge">Cloud Security Engineer</div>
         <p class="member-summary">Multi-cloud security specialist with proven expertise across AWS, Azure, and GCP. Skilled in IAM governance, CSPM, vulnerability management, and integrating automated security scanning (Bandit, Trivy, Semgrep) into CI/CD pipelines. Certified Ethical Hacker and Red Hat Certified System Administrator.</p>
         <div class="member-skills-mini">
           <span class="skill-chip">AWS</span>
@@ -1218,9 +1248,17 @@ footer {
           <span class="skill-chip">DevSecOps</span>
         </div>
         <div class="member-links">
-          <a href="tel:+918852870894" class="mem-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l1.13-1.13a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +91 8852870894
+          <a href="https://www.linkedin.com/in/yashvardhan-singh-944308264" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/YashxProjects/" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:yashvardhans1224@gmail.com" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
           </a>
         </div>
       </div>
@@ -1239,9 +1277,21 @@ footer {
           <span class="skill-chip">CSPM</span>
         </div>
         <div class="member-links">
-          <a href="tel:+919602888847" class="mem-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l1.13-1.13a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +91 9602888847
+          <a href="https://www.linkedin.com/in/yogendrajain/" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/yogendraj1608" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="https://medium.com/@jainyogendra1685" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Medium
+          </a>
+          <a href="mailto:jainyogendra1685@gmail.com" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
           </a>
         </div>
       </div>
@@ -1260,9 +1310,38 @@ footer {
           <span class="skill-chip">TheHive</span>
         </div>
         <div class="member-links">
-          <a href="tel:+919509771206" class="mem-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l1.13-1.13a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +91 9509771206
+          <a href="https://www.linkedin.com/in/kumar--naveen" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Naveenbana5250" target="_blank" rel="noopener" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:Naveenbana5250@gmail.com" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+
+      <!-- ABHIJIT SOMAN -->
+      <div class="member-card reveal" data-member="6">
+        <div class="member-num">07</div>
+        <div class="member-name">Abhijit Soman</div>
+        <div class="member-role-badge">Detection Engineer · Director of Security</div>
+        <p class="member-summary">Enterprise security leader with a progressive career at Gardiyan — from SOC Engineer to SOC Lead to Director of Security — before joining Cisco SOC Global as Detection Engineer and Director of Security across East Africa, Europe, and Asia. Seasoned in large-scale threat detection and multi-continental security operations.</p>
+        <div class="member-skills-mini">
+          <span class="skill-chip">Cisco SecureX</span>
+          <span class="skill-chip">Detection Engineering</span>
+          <span class="skill-chip">SOC Leadership</span>
+          <span class="skill-chip">SIEM</span>
+          <span class="skill-chip">Threat Hunting</span>
+        </div>
+        <div class="member-links">
+          <a href="mailto:abhijitsoman@example.com" class="mem-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
           </a>
         </div>
       </div>
@@ -1475,6 +1554,34 @@ footer {
 
     <div class="exp-companies">
 
+      <!-- CISCO SOC GLOBAL -->
+      <div class="exp-co open reveal">
+        <div class="exp-co-header">
+          <div class="exp-co-left">
+            <div class="exp-co-name">Cisco SOC Global</div>
+            <div class="exp-co-sub">East Africa · Europe · Asia · Remote</div>
+          </div>
+          <div class="exp-co-right">
+            <div class="exp-co-period">Sept 2025 – Present</div>
+            <div class="exp-toggle">+</div>
+          </div>
+        </div>
+        <div class="exp-co-body">
+          <div class="exp-member-rows">
+            <div class="exp-member-row">
+              <div>
+                <div class="exp-member-name">Abhijit Soman</div>
+                <div class="exp-member-role">Detection Engineer · Director of Security</div>
+                <div class="exp-member-period">September 2025 – Present · 8 months</div>
+              </div>
+              <div class="exp-points">
+                Serving as Detection Engineer and Director of Security across three continents — East Africa, Europe, and Asia — within Cisco's global Security Operations Centre. Responsible for enterprise-scale detection engineering, cross-regional SOC oversight, and security posture governance spanning multiple international clients and sectors. Architects and maintains detection rule pipelines, threat hunting playbooks, and escalation frameworks deployed across Cisco's global infrastructure. Drives alignment between regional security teams on MITRE ATT&amp;CK coverage, threat intelligence integration, and incident response readiness across three distinct geopolitical and regulatory environments.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- GARDIYAN -->
       <div class="exp-co open reveal">
         <div class="exp-co-header">
@@ -1483,21 +1590,37 @@ footer {
             <div class="exp-co-sub">Ankara, Türkiye · Remote</div>
           </div>
           <div class="exp-co-right">
-            <div class="exp-co-period">Apr 2025 – Dec 2025</div>
+            <div class="exp-co-period">Apr 2024 – Aug 2025</div>
             <div class="exp-toggle">+</div>
           </div>
         </div>
         <div class="exp-co-body">
           <div class="exp-member-rows">
 
+            <!-- ABHIJIT @ GARDIYAN -->
+            <div class="exp-member-row">
+              <div>
+                <div class="exp-member-name">Abhijit Soman</div>
+                <div class="exp-member-role">SOC Engineer → SOC Lead → Director of Security</div>
+                <div class="exp-member-period">April 2024 – August 2025 · 18 months total</div>
+              </div>
+              <div class="exp-points">
+                <strong style="color:var(--ink);">SOC Engineer</strong> (Apr–Oct 2024 · 6 months) — Performed hands-on security monitoring and alert triage across endpoint, network, and identity telemetry. Engineered detection rules, configured SIEM correlation logic, and participated in incident response activities. Built foundational detection coverage aligned to MITRE ATT&amp;CK across the organisation's client environments.
+                <br><br>
+                <strong style="color:var(--ink);">SOC Lead (SOC Analyst)</strong> (Oct 2024 – May 2025 · 7 months) — Led a team of SOC analysts in daily triage operations, coordinated shift handover protocols, and managed escalation workflows. Owned the quality of alert investigations, fine-tuned detection rules to reduce false positive rates, and authored threat hunting playbooks. Served as the primary escalation point for high-severity incidents.
+                <br><br>
+                <strong style="color:var(--ink);">Director of Security</strong> (May–Aug 2025 · 4 months) — Oversaw the organisation's entire security operations function, including detection strategy, policy enforcement, vendor relationships, and security posture reporting to executive stakeholders. Defined SOC maturity roadmap, established governance frameworks, and led hiring and mentorship of security engineering staff prior to transitioning to Cisco.
+              </div>
+            </div>
+
             <!-- YASH -->
             <div class="exp-member-row">
               <div>
                 <div class="exp-member-name yash-name">Yash Rathore</div>
-                <div class="exp-member-role">SOC L1 Analyst Intern</div>
+                <div class="exp-member-role">Cloud Infrastructure Security Specialist</div>
                 <div class="exp-member-period">April 2025 – December 2025</div>
               </div>
-              <div class="exp-points">Investigated and triaged security alerts across endpoint, identity, and network telemetry, improving incident handling consistency. Tuned 12+ Microsoft Sentinel and SIEM detection rules by analysing false positives to improve detection precision. Developed 10+ SOC playbooks for phishing, DNS tunnelling, and DoS scenarios mapped to MITRE ATT&amp;CK. Automated triage workflows in Tines and Shuffle via Python/Bash scripts, saving ~10 hours of manual enrichment effort per week. Conducted adversary simulations (T1003, T1059, T1078, T1047) to validate detection coverage for credential abuse and lateral movement. Received a full-time offer upon completion, declined for contractual reasons.</div>
+              <div class="exp-points">Investigated and triaged security alerts across endpoint, identity, and network telemetry. Tuned 12+ Microsoft Sentinel and SIEM detection rules by analysing false positives. Developed 10+ SOC playbooks for phishing, DNS tunnelling, and DoS scenarios mapped to MITRE ATT&amp;CK. Automated triage workflows in Tines and Shuffle via Python/Bash, saving ~10 hours of manual enrichment per week. Conducted adversary simulations (T1003, T1059, T1078, T1047) to validate detection coverage. Received a full-time offer upon completion, declined for contractual reasons.</div>
             </div>
 
             <!-- SOURABH -->
@@ -1507,17 +1630,17 @@ footer {
                 <div class="exp-member-role">SOC Level 1 Analyst Intern</div>
                 <div class="exp-member-period">April 2025 – December 2025</div>
               </div>
-              <div class="exp-points">Managed endpoint security coverage across 300+ assets; asset-to-telemetry reconciliation reduced unmanaged system gaps by ~22% over two quarters via targeted agent deployment and configuration remediation. Tracked 80+ vulnerability findings per month (Tenable/Qualys), maintaining sub-14-day MTTR for critical CVEs and reducing escalations for overdue findings by ~30%. Authored 18+ SIEM detection rules in Splunk and Microsoft Sentinel mapped to MITRE ATT&amp;CK (T1078, T1059, T1190), maintaining 94%+ CIS Benchmark compliance and reducing the false-positive rate by ~18%. Processed 20–30 ITSM tickets per week (ServiceNow) with 100% documentation coverage. Conducted threat hunting via MISP/OpenCTI, uncovering 5 previously undetected persistence mechanisms during quarterly exercises.</div>
+              <div class="exp-points">Managed endpoint security coverage across 300+ assets; reduced unmanaged system gaps by ~22% over two quarters. Tracked 80+ vulnerability findings per month (Tenable/Qualys), maintaining sub-14-day MTTR for critical CVEs. Authored 18+ SIEM detection rules in Splunk and Microsoft Sentinel mapped to MITRE ATT&amp;CK, maintaining 94%+ CIS Benchmark compliance. Processed 20–30 ITSM tickets per week with 100% documentation coverage. Conducted threat hunting via MISP/OpenCTI, uncovering 5 previously undetected persistence mechanisms.</div>
             </div>
 
             <!-- OJAS -->
             <div class="exp-member-row">
               <div>
                 <div class="exp-member-name">Ojas Gaur</div>
-                <div class="exp-member-role">Cybersecurity Analyst Intern</div>
+                <div class="exp-member-role">Security Engineer Intern</div>
                 <div class="exp-member-period">April 2025 – December 2025</div>
               </div>
-              <div class="exp-points">Completed an intensive, hands-on cybersecurity analyst programme focused on SOC operations, threat detection, cloud security, and incident response. Performed alert triage, log analysis, and event correlation across Wazuh, ELK Stack, and Splunk to identify suspicious authentication events, lateral movement attempts, and abnormal network behaviour. Created and tuned SIEM correlation rules mapped to MITRE ATT&amp;CK, improving alert quality and reducing false positives. Conducted guided threat hunting using Suricata, Zeek, Sigma, and YARA to detect anomalous patterns in endpoint and network telemetry.</div>
+              <div class="exp-points">Performed alert triage, log analysis, and event correlation across Wazuh, ELK Stack, and Splunk to identify suspicious authentication events, lateral movement attempts, and abnormal network behaviour. Created and tuned SIEM correlation rules mapped to MITRE ATT&amp;CK, improving alert quality and reducing false positives. Conducted guided threat hunting using Suricata, Zeek, Sigma, and YARA to detect anomalous patterns in endpoint and network telemetry.</div>
             </div>
 
             <!-- YASHWARDHAN -->
@@ -1547,7 +1670,7 @@ footer {
                 <div class="exp-member-role">SOC Level 1 Analyst Intern</div>
                 <div class="exp-member-period">April 2025 – December 2025</div>
               </div>
-              <div class="exp-points">Triaged 100+ weekly alerts across identity, endpoint, and network telemetry, identifying threats including lateral movement and credential abuse. Improved SIEM detection accuracy by tuning correlation rules and refining log normalisation. Automated enrichment and response workflows using Tines/Shuffle, reducing MTTR by ~40%. Conducted MITRE ATT&amp;CK-aligned adversary simulations to validate and enhance detection coverage. Investigated deceptive artefact alerts and developed standardised playbooks to improve SOC response consistency.</div>
+              <div class="exp-points">Triaged 100+ weekly alerts across identity, endpoint, and network telemetry, identifying threats including lateral movement and credential abuse. Improved SIEM detection accuracy by tuning correlation rules and refining log normalisation. Automated enrichment and response workflows using Tines/Shuffle, reducing MTTR by ~40%. Conducted MITRE ATT&amp;CK-aligned adversary simulations to validate and enhance detection coverage. Developed standardised playbooks to improve SOC response consistency.</div>
             </div>
 
           </div>
@@ -1569,73 +1692,67 @@ footer {
         <div class="exp-co-body">
           <div class="exp-member-rows">
 
-            <!-- YASH @ QUANTIX -->
             <div class="exp-member-row">
               <div>
                 <div class="exp-member-name yash-name">Yash Rathore</div>
                 <div class="exp-member-role">Cloud Infrastructure Security Specialist</div>
                 <div class="exp-member-period">Nov 2023 – Mar 2025</div>
               </div>
-              <div class="exp-points">Performed cloud threat monitoring and investigated security events across AWS and Azure platforms. Administered identity and access management controls, including role-based permissions and account reviews. Executed cloud security assessments, configuration audits, and vulnerability management processes. Collaborated with incident response teams to contain threats and improve recovery readiness. Implemented automated DevSecOps security checks using Trivy, Semgrep, and Bandit within CI/CD workflows. Maintained deception-based security environments and analysed attacker behaviour to enhance detection strategies.
-                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Junior Cloud Security Associate Intern (May 2023 – Oct 2023) — monitored cloud environments, supported user access audits, privilege management, and cloud risk analysis.</em>
+              <div class="exp-points">Performed cloud threat monitoring and investigated security events across AWS and Azure platforms. Administered identity and access management controls, including role-based permissions and account reviews. Executed cloud security assessments, configuration audits, and vulnerability management processes. Implemented automated DevSecOps security checks using Trivy, Semgrep, and Bandit within CI/CD workflows. Maintained deception-based security environments and analysed attacker behaviour.
+                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Junior Cloud Security Associate Intern (May 2023 – Oct 2023).</em>
               </div>
             </div>
 
-            <!-- SOURABH @ QUANTIX -->
             <div class="exp-member-row">
               <div>
                 <div class="exp-member-name">Sourabh Kumar</div>
                 <div class="exp-member-role">SOC Analyst Level 1</div>
                 <div class="exp-member-period">May 2023 – Mar 2025</div>
               </div>
-              <div class="exp-points">Investigated security incidents through alert triage, log analysis, and threat detection workflows. Monitored endpoint, identity, and network telemetry to detect lateral movement, credential abuse, and anomalous activity. Tuned SIEM detection rules and reduced false positives to improve SOC monitoring efficiency. Automated alert enrichment and response workflows using SOAR tools. Conducted MITRE ATT&amp;CK-aligned simulations to validate and strengthen detection coverage. Managed honeypot environments to analyse attacker behaviour and identify emerging threat patterns. Developed and maintained incident response playbooks to improve escalation consistency and investigation procedures.</div>
+              <div class="exp-points">Investigated security incidents through alert triage, log analysis, and threat detection workflows. Tuned SIEM detection rules and reduced false positives to improve SOC monitoring efficiency. Automated alert enrichment and response workflows using SOAR tools. Conducted MITRE ATT&amp;CK-aligned simulations to validate detection coverage. Managed honeypot environments to analyse attacker behaviour and identify emerging threat patterns.</div>
             </div>
 
-            <!-- OJAS @ QUANTIX -->
             <div class="exp-member-row">
               <div>
                 <div class="exp-member-name">Ojas Gaur</div>
                 <div class="exp-member-role">Security Engineer</div>
                 <div class="exp-member-period">Nov 2023 – Mar 2025</div>
               </div>
-              <div class="exp-points">Monitored and investigated security alerts across cloud infrastructure and enterprise systems, improving incident response efficiency and detection coverage. Designed, tuned, and maintained SIEM detection rules and alerting workflows to reduce false positives and enhance threat visibility. Performed threat hunting and log analysis across AWS and Azure environments to identify suspicious activity. Supported incident response activities by conducting investigations, validating indicators of compromise, and coordinating remediation with technical teams. Evaluated cloud configurations to identify gaps and recommend improvements aligned with security best practices.
-                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Security Engineer Intern (May 2023 – Oct 2023) — assisted in security event monitoring, detection engineering reviews, and vulnerability assessment activities.</em>
+              <div class="exp-points">Monitored and investigated security alerts across cloud infrastructure and enterprise systems. Designed, tuned, and maintained SIEM detection rules and alerting workflows to reduce false positives and enhance threat visibility. Performed threat hunting and log analysis across AWS and Azure environments. Supported incident response activities by conducting investigations and coordinating remediation.
+                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Security Engineer Intern (May 2023 – Oct 2023).</em>
               </div>
             </div>
 
-            <!-- YASHWARDHAN @ QUANTIX -->
             <div class="exp-member-row">
               <div>
                 <div class="exp-member-name">Yashwardhan Singh</div>
                 <div class="exp-member-role">Cloud Security Analyst</div>
                 <div class="exp-member-period">Nov 2023 – Mar 2025</div>
               </div>
-              <div class="exp-points">Investigated cloud security incidents through alert triage, log analysis, and threat detection workflows. Managed IAM policies, access reviews, and cloud security controls across AWS and Azure environments. Conducted risk assessments, vulnerability scans, and cloud configuration reviews to identify security gaps. Supported incident response, remediation tracking, and disaster recovery activities for cloud infrastructure. Integrated Bandit, Trivy, and Semgrep into CI/CD pipelines for automated security scanning. Managed and monitored cloud-based honeypot environments to analyse attack patterns and improve threat detection capabilities.
-                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Cloud Security Intern (May 2023 – Oct 2023) — monitored cloud events, assisted in IAM reviews, vulnerability assessments, and compliance checks.</em>
+              <div class="exp-points">Investigated cloud security incidents through alert triage, log analysis, and threat detection workflows. Managed IAM policies, access reviews, and cloud security controls across AWS and Azure environments. Integrated Bandit, Trivy, and Semgrep into CI/CD pipelines for automated security scanning. Managed and monitored cloud-based honeypot environments.
+                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Cloud Security Intern (May 2023 – Oct 2023).</em>
               </div>
             </div>
 
-            <!-- YOGENDRA @ QUANTIX -->
             <div class="exp-member-row">
               <div>
                 <div class="exp-member-name">Yogendra Jain</div>
                 <div class="exp-member-role">Cloud Security Analyst / GRC</div>
                 <div class="exp-member-period">Nov 2023 – Mar 2025</div>
               </div>
-              <div class="exp-points">Conducted governance and compliance reviews for cloud infrastructure, ensuring adherence to security frameworks, organisational policies, and regulatory requirements. Managed control assessments, risk registers, and remediation tracking to strengthen cloud security governance across AWS and Azure. Coordinated audit readiness activities, including evidence collection, policy reviews, and compliance reporting for internal and external assessments. Performed third-party and configuration risk evaluations to identify compliance gaps and improve security posture. Supported policy development, security awareness initiatives, and process standardisation to improve governance maturity.
-                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: GRC &amp; Compliance Intern (May 2023 – Oct 2023) — assisted in compliance assessments, access reviews, audit preparation, and risk identification activities.</em>
+              <div class="exp-points">Conducted governance and compliance reviews for cloud infrastructure, ensuring adherence to security frameworks and regulatory requirements. Managed control assessments, risk registers, and remediation tracking across AWS and Azure. Coordinated audit readiness activities, including evidence collection, policy reviews, and compliance reporting.
+                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: GRC &amp; Compliance Intern (May 2023 – Oct 2023).</em>
               </div>
             </div>
 
-            <!-- NAVEEN @ QUANTIX -->
             <div class="exp-member-row">
               <div>
                 <div class="exp-member-name">Naveen Kumar</div>
                 <div class="exp-member-role">SOC Analyst</div>
                 <div class="exp-member-period">Nov 2023 – Mar 2025</div>
               </div>
-              <div class="exp-points">Investigated security incidents through alert triage, log analysis, and threat detection workflows. Monitored endpoint, identity, and network telemetry to identify lateral movement, credential abuse, and suspicious activity. Tuned SIEM rules and reduced false positives to improve detection accuracy and SOC efficiency. Automated alert enrichment workflows using SOAR tools, improving response time and reducing manual effort. Conducted MITRE ATT&amp;CK-aligned adversary simulations to validate detection coverage. Managed honeypot environments to analyse attacker behaviour and improve threat detection strategies. Created and maintained incident investigation playbooks to improve escalation consistency.
-                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: SOC Analyst Intern (May 2023 – Oct 2023) — triaged alerts, assisted in phishing analysis, IOC validation, and incident escalation.</em>
+              <div class="exp-points">Investigated security incidents through alert triage, log analysis, and threat detection workflows. Tuned SIEM rules and reduced false positives to improve detection accuracy. Automated alert enrichment workflows using SOAR tools. Conducted MITRE ATT&amp;CK-aligned adversary simulations. Created and maintained incident investigation playbooks.
+                <br><br><em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: SOC Analyst Intern (May 2023 – Oct 2023).</em>
               </div>
             </div>
 
@@ -1689,7 +1806,7 @@ footer {
       <div class="skill-cat">
         <div class="skill-cat-name">SOAR &amp; Automation</div>
         <div class="skill-cat-tags">
-          <span class="skill-tag">Tines</span><span class="skill-tag">Shuffle</span><span class="skill-tag">TheHive</span><span class="skill-tag">Cortex</span><span class="skill-tag">n8n</span><span class="skill-tag">Zendesk</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Sentinel Playbooks</span>
+          <span class="skill-tag">Tines</span><span class="skill-tag">Shuffle</span><span class="skill-tag">TheHive</span><span class="skill-tag">Cortex</span><span class="skill-tag">n8n</span><span class="skill-tag">Cisco SecureX</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Sentinel Playbooks</span>
         </div>
       </div>
       <div class="skill-cat">
@@ -1790,6 +1907,10 @@ footer {
         <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
         <div><div class="cert-name">CompTIA CySA+ (In Progress)</div><div class="cert-holder">Ojas Gaur · Sourabh Kumar · Yogendra Jain</div></div>
       </div>
+      <div class="cert-item reveal">
+        <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="cert-name">Director of Security — Cisco SOC Global (3 Continents)</div><div class="cert-holder">Abhijit Soman · East Africa · Europe · Asia</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1806,84 +1927,136 @@ footer {
             <div class="avail-dot"></div>
             <div class="avail-status">All members available · 2026</div>
           </div>
-          <p class="avail-body">SOC analyst roles, detection engineering, cloud security, GRC, security research, and tool development. All members are based in Jaipur, India — open to relocation and remote-first environments globally.</p>
+          <p class="avail-body">SOC analyst roles, detection engineering, cloud security, GRC, security research, and tool development. Members are based in Jaipur and across India — open to relocation and remote-first environments globally.</p>
         </div>
       </div>
       <div>
         <div style="font-family:var(--font-mono);font-size:.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky2);margin-bottom:1.1rem;">Contact the Team</div>
         <div class="contact-members">
+
           <div class="cm-card">
             <div>
               <div class="cm-name yash-name">Yash Rathore</div>
-              <div class="cm-role">SOC Analyst · Detection Engineer</div>
+              <div class="cm-role">Cloud Security Engineer</div>
             </div>
             <div class="cm-links">
               <a href="https://www.linkedin.com/in/yash--rathore/" target="_blank" rel="noopener" class="cm-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI
+              </a>
+              <a href="https://github.com/Yashraj-001" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH
               </a>
               <a href="mailto:yashrajput7014@gmail.com" class="cm-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email
               </a>
             </div>
           </div>
+
           <div class="cm-card">
             <div>
               <div class="cm-name">Sourabh Kumar</div>
-              <div class="cm-role">Security Analyst · Security Architect</div>
+              <div class="cm-role">SOC Analyst · Security Architect</div>
             </div>
             <div class="cm-links">
               <a href="https://www.linkedin.com/in/sourabh-kumar-73b549227/" target="_blank" rel="noopener" class="cm-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI
+              </a>
+              <a href="https://github.com/sourabh1042022" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH
               </a>
               <a href="mailto:sourabhkumar1043@gmail.com" class="cm-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email
               </a>
             </div>
           </div>
+
           <div class="cm-card">
             <div>
               <div class="cm-name">Ojas Gaur</div>
-              <div class="cm-role">Cybersecurity Analyst</div>
+              <div class="cm-role">Security Engineer · Detection Specialist</div>
             </div>
             <div class="cm-links">
+              <a href="https://www.linkedin.com/in/ojas-gaur-90a0b3230" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI
+              </a>
+              <a href="https://github.com/ojas404" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH
+              </a>
               <a href="mailto:sharmaojas30@gmail.com" class="cm-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email
               </a>
             </div>
           </div>
+
           <div class="cm-card">
             <div>
               <div class="cm-name">Yashwardhan Singh</div>
-              <div class="cm-role">Cloud Security Analyst</div>
+              <div class="cm-role">Cloud Security Engineer</div>
             </div>
             <div class="cm-links">
-              <a href="tel:+918852870894" class="cm-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l1.13-1.13a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call
+              <a href="https://www.linkedin.com/in/yashvardhan-singh-944308264" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI
+              </a>
+              <a href="https://github.com/YashxProjects/" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH
+              </a>
+              <a href="mailto:yashvardhans1224@gmail.com" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email
               </a>
             </div>
           </div>
+
           <div class="cm-card">
             <div>
               <div class="cm-name">Yogendra Jain</div>
               <div class="cm-role">GRC &amp; Compliance Engineer</div>
             </div>
             <div class="cm-links">
-              <a href="tel:+919602888847" class="cm-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l1.13-1.13a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call
+              <a href="https://www.linkedin.com/in/yogendrajain/" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI
+              </a>
+              <a href="https://github.com/yogendraj1608" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH
+              </a>
+              <a href="https://medium.com/@jainyogendra1685" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Med
+              </a>
+              <a href="mailto:jainyogendra1685@gmail.com" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email
               </a>
             </div>
           </div>
+
           <div class="cm-card">
             <div>
               <div class="cm-name">Naveen Kumar</div>
               <div class="cm-role">SOC Analyst · Detection Engineer</div>
             </div>
             <div class="cm-links">
-              <a href="tel:+919509771206" class="cm-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l1.13-1.13a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call
+              <a href="https://www.linkedin.com/in/kumar--naveen" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI
+              </a>
+              <a href="https://github.com/Naveenbana5250" target="_blank" rel="noopener" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH
+              </a>
+              <a href="mailto:Naveenbana5250@gmail.com" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email
               </a>
             </div>
           </div>
+
+          <div class="cm-card">
+            <div>
+              <div class="cm-name">Abhijit Soman</div>
+              <div class="cm-role">Detection Engineer · Director of Security · Cisco</div>
+            </div>
+            <div class="cm-links">
+              <a href="mailto:abhijitsoman@example.com" class="cm-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -1899,13 +2072,10 @@ footer {
 (function(){
 
   // ── YASH RUSSIAN NAME EASTER EGG ──
-  // "Яш Ратхор" appears ~2 in 10 times across all .yash-name elements
   var russianName = 'Яш Ратхор';
   var englishName = 'Yash Rathore';
   document.querySelectorAll('.yash-name, .chip-name-yash').forEach(function(el){
-    // Each instance independently has a 20% chance
     if(Math.random() < 0.20){
-      // Only replace the text node that contains the name (not child elements)
       if(el.childNodes.length && el.childNodes[0].nodeType === 3){
         el.childNodes[0].textContent = russianName;
       } else {
@@ -1949,29 +2119,6 @@ footer {
   }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal, .proj-card, .cert-item').forEach(function(el){ io.observe(el); });
 
-  // ── COUNTER ANIMATION ──
-  function countUp(el, target){
-    var v = 0, steps = 55, step = target / steps;
-    var t = setInterval(function(){
-      v += step;
-      if(v >= target){ v = target; clearInterval(t); }
-      el.textContent = Math.floor(v);
-    }, 22);
-  }
-  var statsObs = new IntersectionObserver(function(entries){
-    if(entries[0].isIntersecting){
-      countUp(document.getElementById('sn1'), 6);
-      countUp(document.getElementById('sn2'), 6);
-      countUp(document.getElementById('sn3'), 12);
-      countUp(document.getElementById('sn4'), 12);
-      countUp(document.getElementById('sn5'), 750);
-      countUp(document.getElementById('sn6'), 10);
-      statsObs.disconnect();
-    }
-  }, { threshold: 0.5 });
-  var statsEl = document.querySelector('.hero-stats-grid');
-  if(statsEl) statsObs.observe(statsEl);
-
   // ── EXPERIENCE ACCORDION ──
   document.querySelectorAll('.exp-co-header').forEach(function(header){
     header.addEventListener('click', function(){
@@ -1984,16 +2131,16 @@ footer {
     {
       name: 'Yash Rathore',
       nameRu: 'Яш Ратхор',
-      role: 'SOC Analyst · Detection Engineer',
-      about: 'Security Operations professional with 15+ months of hands-on SOC experience across two international organisations. TryHackMe top 1% globally. Independently architected and delivered Project Horizon and Project Citadel. Blockchain hackathon bounty winner ($750 across two events). IIT Madras Shaastra Programming Contest finalist. BTech in Cybersecurity, graduated 2026.',
+      role: 'Cloud Security Engineer',
+      about: 'Cloud security professional with 15+ months of hands-on experience across AWS, Azure, and enterprise cloud environments. TryHackMe top 1% globally. Independently architected and delivered Project Horizon and Project Citadel. Blockchain hackathon bounty winner ($750 across two events). IIT Madras Shaastra Programming Contest finalist. BTech in Cybersecurity, graduated 2026.',
       location: 'Jaipur, India · Open to Relocation',
       edu: 'BTech Cybersecurity · Graduated 2026 · CGPA 7.31',
       exp: [
-        { role: 'Cloud Infrastructure Security Specialist', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Performed cloud threat monitoring across AWS and Azure. Managed IAM controls, role-based permissions, and account reviews. Executed cloud security assessments, configuration audits, and vulnerability management. Implemented Trivy, Semgrep, and Bandit within CI/CD workflows. Previously: Junior Cloud Security Associate Intern (May–Oct 2023).' },
-        { role: 'SOC L1 Analyst Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Tuned 12+ Sentinel/SIEM detection rules. Developed 10+ SOC playbooks for phishing, DNS tunnelling, and DoS scenarios. Automated triage via Tines/Shuffle, saving ~10 hours of manual effort weekly. Conducted adversary simulations (T1003, T1059, T1078, T1047). Full-time offer received.' },
+        { role: 'Cloud Infrastructure Security Specialist', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Performed cloud threat monitoring and investigated security events across AWS and Azure platforms. Administered IAM controls, role-based permissions, and account reviews. Executed cloud security assessments, configuration audits, and vulnerability management. Implemented Trivy, Semgrep, and Bandit within CI/CD workflows. Maintained deception-based security environments. Previously: Junior Cloud Security Associate Intern (May–Oct 2023).' },
+        { role: 'Cloud Infrastructure Security Specialist', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Tuned 12+ Sentinel/SIEM detection rules. Developed 10+ SOC playbooks for phishing, DNS tunnelling, and DoS scenarios. Automated triage via Tines/Shuffle, saving ~10 hours of manual effort weekly. Conducted adversary simulations (T1003, T1059, T1078, T1047). Full-time offer received.' },
         { role: 'Cyber Risk Intern', org: 'CyberSRC Consultancy', period: 'Sept – Dec 2024', body: 'Security monitoring via Wazuh. Developed security documentation and audit-ready evidence packages for client engagements.' }
       ],
-      skills: ['Microsoft Sentinel','KQL','Sumo Logic','SOAR','Tines','Shuffle','Wazuh','ELK Stack','AWS GuardDuty','Azure Monitor','Keycloak','Pomerium','Falco','Trivy','MITRE ATT&CK','Python','Bash','Solidity'],
+      skills: ['AWS GuardDuty','AWS Security Hub','Azure Defender for Cloud','Azure Monitor','GCP IAM','CloudTrail','Terraform','CSPM','Cloud Custodian','Trivy','Semgrep','Bandit','Microsoft Sentinel','KQL','Tines','Shuffle','Wazuh','Keycloak','Pomerium','Falco','MITRE ATT&CK','Python','Bash','Solidity'],
       certs: ['TryHackMe Top 1% Global','Oracle Cloud Infra Gen AI Professional','CyberOps Associate – Cisco','IIT Madras Shaastra Finalist','Blockchain Hackathon Bounty Winner ($750)'],
       links: [
         { label: 'LinkedIn', url: 'https://www.linkedin.com/in/yash--rathore/', icon: 'li' },
@@ -2012,7 +2159,7 @@ footer {
         { role: 'SOC Analyst Level 1', org: 'Quantix IT Ltd', period: 'May 2023 – Mar 2025', body: 'Investigated security incidents through alert triage, log analysis, and threat detection workflows. Tuned SIEM detection rules, automated SOAR workflows, conducted MITRE ATT&CK-aligned simulations, and managed honeypot environments. Previously: SOC Analyst Intern — phishing investigations, IOC analysis, and vulnerability assessment.' },
         { role: 'SOC Level 1 Analyst Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Managed endpoint coverage across 300+ assets, reducing unmanaged gaps by ~22%. Tracked 80+ vulnerabilities/month. Authored 18+ SIEM rules with 94%+ CIS Benchmark compliance and ~18% false-positive reduction. Uncovered 5 previously undetected persistence mechanisms during quarterly threat hunting exercises.' }
       ],
-      skills: ['Splunk','Microsoft Sentinel','ELK Stack','Wazuh','CrowdStrike','Defender XDR','Tenable','MISP','OpenCTI','Tines','Shuffle','TheHive','Kubernetes','Cilium','Falco','Kafka','Neo4j','Terraform','Python','Bash','MITRE ATT&CK','NIST 800-53','ISO 27001'],
+      skills: ['Splunk','Microsoft Sentinel','ELK Stack','Wazuh','CrowdStrike','Defender XDR','Tenable','Qualys','MISP','OpenCTI','Tines','Shuffle','TheHive','Kubernetes','Cilium','Falco','Kafka','Neo4j','Terraform','Python','Bash','MITRE ATT&CK','NIST 800-53','ISO 27001'],
       certs: ['CEH – EC-Council (Expected 2026)','CySA+ – CompTIA (Expected 2026)'],
       links: [
         { label: 'LinkedIn', url: 'https://www.linkedin.com/in/sourabh-kumar-73b549227/', icon: 'li' },
@@ -2023,23 +2170,25 @@ footer {
     },
     {
       name: 'Ojas Gaur',
-      role: 'Cybersecurity Analyst · Detection Engineer',
+      role: 'Security Engineer · Detection Specialist',
       about: 'SIEM engineering and threat detection specialist with 2+ years of professional experience across cloud and enterprise environments. Expert in building and tuning high-fidelity SIEM correlation rules mapped to MITRE ATT&CK. Skilled threat hunter across Suricata, Zeek, Sigma, and YARA. BCA graduate, 2025.',
       location: 'Bangalore, India',
       edu: 'Bachelor of Computer Applications · Graduated 2025',
       exp: [
         { role: 'Security Engineer', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Monitored and investigated security alerts across cloud and enterprise systems. Designed, tuned, and maintained SIEM detection rules and alerting workflows to reduce false positives. Performed threat hunting and log analysis across AWS and Azure. Evaluated cloud configurations and security controls to identify gaps. Previously: Security Engineer Intern (May–Oct 2023).' },
-        { role: 'Cybersecurity Analyst Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Performed alert triage, log analysis, and event correlation across Wazuh, ELK Stack, and Splunk. Created and tuned SIEM correlation rules mapped to MITRE ATT&CK. Conducted guided threat hunting using Suricata, Zeek, Sigma, and YARA to detect anomalous patterns in endpoint and network telemetry.' }
+        { role: 'Security Engineer Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Performed alert triage, log analysis, and event correlation across Wazuh, ELK Stack, and Splunk. Created and tuned SIEM correlation rules mapped to MITRE ATT&CK. Conducted guided threat hunting using Suricata, Zeek, Sigma, and YARA to detect anomalous patterns in endpoint and network telemetry.' }
       ],
-      skills: ['SIEM Management','Detection Engineering','Splunk','ELK Stack','Wazuh','Suricata','Zeek','Sigma','YARA','AWS Security','Azure Security','Python','Bash','PowerShell','MITRE ATT&CK','NIST CSF','ISO 27001','CIS Benchmarks'],
+      skills: ['SIEM Engineering','Detection Engineering','Splunk','ELK Stack','Wazuh','Suricata','Zeek','Sigma','YARA','AWS Security','Azure Security','Python','Bash','PowerShell','MITRE ATT&CK','NIST CSF','ISO 27001','CIS Benchmarks'],
       certs: ['Cisco Networking Basics','Cisco Cyber Threat Management','CompTIA CySA+ (In Progress)'],
       links: [
+        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/ojas-gaur-90a0b3230', icon: 'li' },
+        { label: 'GitHub', url: 'https://github.com/ojas404', icon: 'gh' },
         { label: 'Email', url: 'mailto:sharmaojas30@gmail.com', icon: 'em' }
       ]
     },
     {
       name: 'Yashwardhan Singh',
-      role: 'Cloud Security Analyst',
+      role: 'Cloud Security Engineer',
       about: 'Multi-cloud security specialist with proven expertise across AWS, Azure, and GCP. Certified Ethical Hacker (CEH) and Red Hat Certified System Administrator (RHCSA). Strong background in IAM governance, CSPM, vulnerability management, and integrating automated security scanning into CI/CD pipelines. BTech in Cybersecurity, graduating 2026 with CGPA 7.8.',
       location: 'Jaipur, India',
       edu: 'BTech Cybersecurity · Graduating 2026 · CGPA 7.8',
@@ -2047,10 +2196,12 @@ footer {
         { role: 'Cloud Security Analyst', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Investigated cloud security incidents through alert triage, log analysis, and threat detection workflows. Managed IAM policies and access reviews across AWS and Azure. Conducted risk assessments, vulnerability scans, and configuration reviews. Integrated Bandit, Trivy, and Semgrep into CI/CD pipelines. Managed cloud-based honeypot environments. Previously: Cloud Security Intern (May–Oct 2023).' },
         { role: 'Cloud Security Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Monitored cloud security alerts, logs, and incident escalations within SOC operations. Supported IAM reviews, vulnerability assessments, and cloud security monitoring across AWS. Developed cloud compliance dashboards aligned with ISO 27001 and NIST controls. Deployed cloud-based honeypots for threat detection. Performed Active Directory hardening and GPO management.' }
       ],
-      skills: ['AWS','Azure','GCP','IAM','CSPM','Terraform','Docker','Kubernetes','CI/CD Security','Bandit','Trivy','Semgrep','Splunk','Wazuh','ELK','IDS/IPS','Active Directory','OWASP','ISO 27001','NIST'],
+      skills: ['AWS','AWS GuardDuty','Azure','Azure Defender','GCP','GCP IAM','IAM','CSPM','Terraform','Docker','Kubernetes','CI/CD Security','Bandit','Trivy','Semgrep','Splunk','Wazuh','ELK','IDS/IPS','Active Directory','OWASP','ISO 27001','NIST'],
       certs: ['Certified Ethical Hacker (CEH) – EC-Council · Oct 2024','RHCSA – Red Hat · Feb 2025'],
       links: [
-        { label: 'Phone', url: 'tel:+918852870894', icon: 'ph' }
+        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/yashvardhan-singh-944308264', icon: 'li' },
+        { label: 'GitHub', url: 'https://github.com/YashxProjects/', icon: 'gh' },
+        { label: 'Email', url: 'mailto:yashvardhans1224@gmail.com', icon: 'em' }
       ]
     },
     {
@@ -2063,10 +2214,13 @@ footer {
         { role: 'Cloud Security Analyst / GRC', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Conducted governance and compliance reviews for cloud infrastructure. Managed control assessments, risk registers, and remediation tracking across AWS and Azure. Coordinated audit readiness activities, including evidence collection, policy reviews, and compliance reporting. Supported policy development and process standardisation. Previously: GRC & Compliance Intern (May–Oct 2023).' },
         { role: 'GRC & Compliance Engineer Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Monitored cloud security alerts and incident escalations within SOC operations. Supported IAM reviews and vulnerability assessments. Developed cloud compliance dashboards aligned with ISO 27001 and NIST controls. Deployed cloud-based honeypots for threat detection. Performed Active Directory hardening and privileged access security tasks.' }
       ],
-      skills: ['GRC','Risk Assessments','Policy Management','Audit Support','Compliance Reporting','ISO 27001','NIST','OWASP','AWS','Azure','GCP','IAM','CSPM','SIEM','Active Directory','Firewalls','VPN','IDS/IPS'],
+      skills: ['GRC','Risk Assessments','Policy Management','Audit Support','Compliance Reporting','ISO 27001','NIST 800-53','CIS Benchmarks','GDPR','PCI-DSS','OWASP','AWS','Azure','GCP','IAM','CSPM','SIEM','Active Directory','Firewalls','VPN','IDS/IPS'],
       certs: ['Cisco Cybersecurity Essentials','Cisco CyberOps Associate','CompTIA CySA+ (In Progress)'],
       links: [
-        { label: 'Phone', url: 'tel:+919602888847', icon: 'ph' }
+        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/yogendrajain/', icon: 'li' },
+        { label: 'GitHub', url: 'https://github.com/yogendraj1608', icon: 'gh' },
+        { label: 'Medium', url: 'https://medium.com/@jainyogendra1685', icon: 'md' },
+        { label: 'Email', url: 'mailto:jainyogendra1685@gmail.com', icon: 'em' }
       ]
     },
     {
@@ -2082,7 +2236,25 @@ footer {
       skills: ['Splunk','Microsoft Sentinel','QRadar','ELK Stack','Wazuh','Sigma','YARA','Suricata','Zeek','OpenEDR','Tines','Shuffle','TheHive','Cortex','MISP','OpenCTI','AlienVault OTX','NIST','ISO 27001','Active Directory','Wireshark'],
       certs: [],
       links: [
-        { label: 'Phone', url: 'tel:+919509771206', icon: 'ph' }
+        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kumar--naveen', icon: 'li' },
+        { label: 'GitHub', url: 'https://github.com/Naveenbana5250', icon: 'gh' },
+        { label: 'Email', url: 'mailto:Naveenbana5250@gmail.com', icon: 'em' }
+      ]
+    },
+    {
+      name: 'Abhijit Soman',
+      role: 'Detection Engineer · Director of Security',
+      about: 'Enterprise security leader with a career trajectory from SOC Engineer to Director of Security at Gardiyan, before being appointed as Detection Engineer and Director of Security at Cisco SOC Global — overseeing security operations across East Africa, Europe, and Asia. Seasoned in large-scale detection engineering, SOC leadership, and cross-continental security governance.',
+      location: 'Open to Relocation · Remote',
+      edu: 'Computer Science / Cybersecurity Background',
+      exp: [
+        { role: 'SOC Engineer → SOC Lead → Director of Security', org: 'Gardiyan System Security Technologies', period: 'April 2024 – August 2025 · 18 months', body: 'SOC Engineer (6 months): Performed security monitoring, alert triage, and detection rule engineering across endpoint, network, and identity telemetry. Built foundational MITRE ATT&CK-aligned detection coverage across client environments.<br><br>SOC Lead/Analyst (7 months): Led a team of SOC analysts, coordinated shift handovers, managed escalation workflows, and owned alert investigation quality. Authored threat hunting playbooks and fine-tuned detection rules to reduce false positive rates.<br><br>Director of Security (5 months): Oversaw the organisation\'s entire security operations function — detection strategy, policy enforcement, vendor governance, and executive security reporting. Defined SOC maturity roadmap, established governance frameworks, and led security engineering staff mentorship prior to transitioning to Cisco.' },
+        { role: 'Detection Engineer · Director of Security (3 Continents)', org: 'Cisco SOC Global', period: 'September 2025 – Present · 8 months', body: 'Serving as Detection Engineer and Director of Security at Cisco\'s global Security Operations Centre, responsible for security operations across East Africa, Europe, and Asia. Architects and maintains enterprise-scale detection rule pipelines, threat hunting playbooks, and escalation frameworks deployed across Cisco\'s global infrastructure. Drives alignment between regional security teams on MITRE ATT&CK coverage, threat intelligence integration, and incident response readiness across three distinct geopolitical and regulatory environments.' }
+      ],
+      skills: ['Detection Engineering','SOC Leadership','Cisco SecureX','Cisco Stealthwatch','SIEM Engineering','Threat Hunting','MITRE ATT&CK','Incident Response','Playbook Development','Sigma','KQL','Enterprise Security Governance','Risk Management','Cross-Regional SOC Operations','Threat Intelligence','SOAR','Python','Bash'],
+      certs: ['Director of Security – Cisco SOC Global (East Africa, Europe, Asia)'],
+      links: [
+        { label: 'Email', url: 'mailto:abhijitsoman@example.com', icon: 'em' }
       ]
     }
   ];
@@ -2098,7 +2270,6 @@ footer {
 
   function buildPanel(idx){
     var d = memberData[idx];
-    // Easter egg: show Russian name in panel ~20% of time for Yash
     var displayName = d.name;
     if(idx === 0 && d.nameRu && Math.random() < 0.20) displayName = d.nameRu;
 
