@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Rusalka Cyber — Security Engineering & Research. Seven cybersecurity engineers specialising in SOC operations, detection engineering, cloud security, and GRC.">
+<meta name="description" content="Rusalka Cyber — Security Engineering & Research. Six cybersecurity engineers specialising in SOC operations, detection engineering, cloud security, and GRC.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -11,109 +11,38 @@
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0c1520">
 <title>Rusalka Cyber · Security Engineering & Research</title>
-<!-- Subresource Integrity on external fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-/* ─── SECURITY: prevent text-size inflation on mobile ─── */
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-
 :root {
-  --navy: #0c1520;
-  --navy2: #111d2b;
-  --navy3: #182536;
-  --slate: #253548;
-  --blue: #2e6db4;
-  --sky: #4d93d9;
-  --sky2: #6aabea;
-  --pale: #9bbfdf;
-  --cream: #f4f2ed;
-  --cream2: #ece9e1;
-  --cream3: #e0dbd0;
-  --ink: #14191f;
-  --ink2: #323d4a;
-  --ink3: #607080;
-  --gold: #b8862e;
-  --gold2: #d9a84a;
-  --gold-pale: #edd9a0;
-  --teal: #1fa39e;
-  --teal2: #2ec4bd;
-  --rule: rgba(20,25,31,0.09);
-  --rule-b: rgba(46,109,180,0.22);
-  --shadow: 0 4px 28px rgba(12,21,32,0.1);
-  --shadow-md: 0 10px 48px rgba(12,21,32,0.18);
+  --navy: #0c1520; --navy2: #111d2b; --navy3: #182536; --slate: #253548;
+  --blue: #2e6db4; --sky: #4d93d9; --sky2: #6aabea; --pale: #9bbfdf;
+  --cream: #f4f2ed; --cream2: #ece9e1; --cream3: #e0dbd0;
+  --ink: #14191f; --ink2: #323d4a; --ink3: #607080;
+  --gold: #b8862e; --gold2: #d9a84a; --gold-pale: #edd9a0;
+  --teal: #1fa39e; --teal2: #2ec4bd;
+  --rule: rgba(20,25,31,0.09); --rule-b: rgba(46,109,180,0.22);
+  --shadow: 0 4px 28px rgba(12,21,32,0.1); --shadow-md: 0 10px 48px rgba(12,21,32,0.18);
   --max: 1220px;
   --font-disp: 'Playfair Display', Georgia, serif;
   --font-body: 'Outfit', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 }
-
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; font-size: 17px; }
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-weight: 400;
-  line-height: 1.75;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ─── PROGRESS BAR ─── */
+body { background: var(--cream); color: var(--ink); font-family: var(--font-body); font-weight: 400; line-height: 1.75; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 #prog { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,var(--blue),var(--teal2)); z-index:999; width:0; transition:width .1s; }
-
-/* ─── NAV ─── */
-nav {
-  position: fixed; top:0; left:0; right:0; z-index:200;
-  padding: 1.1rem 2.25rem;
-  display: flex; align-items: center; justify-content: space-between;
-  transition: background .4s, box-shadow .4s;
-}
-nav.scrolled {
-  background: rgba(244,242,237,0.97);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 var(--rule);
-}
+nav { position: fixed; top:0; left:0; right:0; z-index:200; padding: 1.1rem 2.25rem; display: flex; align-items: center; justify-content: space-between; transition: background .4s, box-shadow .4s; }
+nav.scrolled { background: rgba(244,242,237,0.97); backdrop-filter: blur(20px); box-shadow: 0 1px 0 var(--rule); }
 .nav-brand { display: flex; align-items: center; gap: .85rem; text-decoration: none; }
-.nav-brand-mark {
-  width: 44px; height: 44px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.nav-brand-text {
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--ink);
-}
+.nav-brand-mark { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.nav-brand-text { font-family: var(--font-mono); font-size: .72rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink); }
 .nav-links { display: flex; gap: 2.25rem; align-items: center; }
-.nav-links a {
-  font-family: var(--font-mono);
-  font-size: .65rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--ink3);
-  text-decoration: none;
-  transition: color .2s;
-}
+.nav-links a { font-family: var(--font-mono); font-size: .65rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--ink3); text-decoration: none; transition: color .2s; }
 .nav-links a:hover { color: var(--blue); }
-.nav-cta {
-  font-family: var(--font-mono);
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: .6rem 1.4rem;
-  background: var(--navy);
-  color: var(--cream);
-  text-decoration: none;
-  transition: background .2s;
-}
+.nav-cta { font-family: var(--font-mono); font-size: .65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: .6rem 1.4rem; background: var(--navy); color: var(--cream); text-decoration: none; transition: background .2s; }
 .nav-cta:hover { background: var(--blue); }
 .nav-ham { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
 .nav-ham span { display:block; width:22px; height:2px; background:var(--ink); transition:all .3s; }
@@ -121,899 +50,225 @@ nav.scrolled {
 .nav-mob.open { display:flex; }
 .nav-mob a { font-family:var(--font-disp); font-size:2.2rem; color:var(--ink); text-decoration:none; }
 .nav-mob-close { position:absolute; top:1.5rem; right:2rem; background:none; border:none; cursor:pointer; font-size:1.6rem; color:var(--ink3); }
-
-/* ─── RUSALKA CYBER SVG LOGO ─── */
-@keyframes forgeFlicker {
-  0%,100% { opacity: 1; filter: drop-shadow(0 0 6px #2e6db4) drop-shadow(0 0 14px #1fa39e); }
-  25%      { opacity: .88; filter: drop-shadow(0 0 10px #4d93d9) drop-shadow(0 0 22px #2ec4bd); }
-  50%      { opacity: .95; filter: drop-shadow(0 0 4px #2e6db4) drop-shadow(0 0 10px #1fa39e); }
-  75%      { opacity: .92; filter: drop-shadow(0 0 16px #6aabea) drop-shadow(0 0 28px #2ec4bd); }
-}
-@keyframes forgeScale {
-  0%,100% { transform: scale(1); }
-  50%      { transform: scale(1.04); }
-}
-@keyframes forgeRotate {
-  0%   { stroke-dashoffset: 120; }
-  100% { stroke-dashoffset: 0; }
-}
-@keyframes forgeFill {
-  0%   { fill-opacity: 0; stroke-dashoffset: 200; }
-  60%  { fill-opacity: 0; }
-  100% { fill-opacity: 1; stroke-dashoffset: 0; }
-}
-@keyframes forgeRipple {
-  0%   { r: 4; opacity: .9; }
-  100% { r: 18; opacity: 0; }
-}
-@keyframes forgeSpark {
-  0%   { transform: translate(0, 0) scale(1); opacity: 1; }
-  100% { transform: translate(var(--sx), var(--sy)) scale(0); opacity: 0; }
-}
-@keyframes shieldDraw {
-  from { stroke-dashoffset: 300; }
-  to   { stroke-dashoffset: 0; }
-}
-@keyframes runeTrace {
-  from { stroke-dashoffset: 80; opacity: 0; }
-  to   { stroke-dashoffset: 0; opacity: 1; }
-}
-
-.logo-svg-wrap {
-  animation: forgeFlicker 3.8s ease-in-out infinite, forgeScale 3.8s ease-in-out infinite;
-  transform-origin: center;
-  display: flex; align-items: center; justify-content: center;
-}
-.logo-svg-wrap .shield-path {
-  stroke-dasharray: 300;
-  animation: shieldDraw .9s cubic-bezier(.16,1,.3,1) forwards;
-}
-.logo-svg-wrap .rune-line {
-  stroke-dasharray: 80;
-  animation: runeTrace .7s cubic-bezier(.16,1,.3,1) forwards;
-}
-
-.hero-logo-wrap .logo-svg-wrap {
-  animation: forgeFlicker 3.2s ease-in-out infinite, forgeScale 3.2s ease-in-out infinite;
-}
-
-/* ─── HERO ─── */
-#hero {
-  min-height: 100svh;
-  background: var(--navy);
-  display: grid;
-  grid-template-rows: 1fr auto;
-  position: relative;
-  overflow: hidden;
-  padding-top: 5.5rem;
-}
-.hero-noise {
-  position: absolute; inset: 0; z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity: .5; pointer-events: none;
-}
-.hero-grid-lines {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image:
-    linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
-  background-size: 90px 90px;
-}
+@keyframes forgeFlicker { 0%,100%{opacity:1;filter:drop-shadow(0 0 6px #2e6db4) drop-shadow(0 0 14px #1fa39e)} 25%{opacity:.88;filter:drop-shadow(0 0 10px #4d93d9) drop-shadow(0 0 22px #2ec4bd)} 50%{opacity:.95;filter:drop-shadow(0 0 4px #2e6db4) drop-shadow(0 0 10px #1fa39e)} 75%{opacity:.92;filter:drop-shadow(0 0 16px #6aabea) drop-shadow(0 0 28px #2ec4bd)} }
+@keyframes forgeScale { 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
+@keyframes shieldDraw { from{stroke-dashoffset:300} to{stroke-dashoffset:0} }
+@keyframes runeTrace { from{stroke-dashoffset:80;opacity:0} to{stroke-dashoffset:0;opacity:1} }
+.logo-svg-wrap { animation: forgeFlicker 3.8s ease-in-out infinite, forgeScale 3.8s ease-in-out infinite; transform-origin: center; display: flex; align-items: center; justify-content: center; }
+.logo-svg-wrap .shield-path { stroke-dasharray: 300; animation: shieldDraw .9s cubic-bezier(.16,1,.3,1) forwards; }
+.logo-svg-wrap .rune-line { stroke-dasharray: 80; animation: runeTrace .7s cubic-bezier(.16,1,.3,1) forwards; }
+.hero-logo-wrap .logo-svg-wrap { animation: forgeFlicker 3.2s ease-in-out infinite, forgeScale 3.2s ease-in-out infinite; }
+#hero { min-height: 100svh; background: var(--navy); display: grid; grid-template-rows: 1fr auto; position: relative; overflow: hidden; padding-top: 5.5rem; }
+.hero-noise { position: absolute; inset: 0; z-index: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: .5; pointer-events: none; }
+.hero-grid-lines { position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 90px 90px; }
 .hero-glow { position: absolute; z-index: 0; pointer-events: none; border-radius: 50%; filter: blur(130px); }
 .hero-glow-1 { width: 560px; height: 560px; background: rgba(46,109,180,0.2); top: -120px; right: -80px; }
 .hero-glow-2 { width: 420px; height: 420px; background: rgba(31,163,158,0.14); bottom: -80px; left: 8%; }
-
-.hero-inner {
-  position: relative; z-index: 1;
-  max-width: var(--max); margin: 0 auto; padding: 3rem 2.25rem 2rem; width: 100%;
-  display: flex; flex-direction: column; justify-content: flex-end;
-}
-.hero-logo-block {
-  display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem;
-  opacity: 0; animation: fup .7s .05s forwards;
-}
+.hero-inner { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding: 3rem 2.25rem 2rem; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; }
+.hero-logo-block { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; opacity: 0; animation: fup .7s .05s forwards; }
 .hero-logo-wrap { flex-shrink: 0; }
-.hero-logo-wordmark {
-  display: flex; flex-direction: column; gap: .2rem;
-}
-.hero-logo-name {
-  font-family: var(--font-disp);
-  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: var(--cream);
-  line-height: 1;
-}
+.hero-logo-wordmark { display: flex; flex-direction: column; gap: .2rem; }
+.hero-logo-name { font-family: var(--font-disp); font-size: clamp(1.6rem, 3.5vw, 2.8rem); font-weight: 900; letter-spacing: -1px; color: var(--cream); line-height: 1; }
 .hero-logo-name em { font-style: italic; color: var(--teal2); }
-.hero-logo-sub {
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: rgba(155,191,223,.45);
-}
-.hero-tag {
-  font-family: var(--font-mono);
-  font-size: .7rem;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--sky);
-  margin-bottom: 2rem;
-  display: flex; align-items: center; gap: .85rem;
-  opacity: 0; animation: fup .7s .1s forwards;
-}
+.hero-logo-sub { font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: rgba(155,191,223,.45); }
+.hero-tag { font-family: var(--font-mono); font-size: .7rem; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--sky); margin-bottom: 2rem; display: flex; align-items: center; gap: .85rem; opacity: 0; animation: fup .7s .1s forwards; }
 .hero-tag::before { content:''; width:36px; height:1px; background:var(--sky); opacity:.5; }
-.hero-headline {
-  font-family: var(--font-disp);
-  font-size: clamp(3.2rem, 9vw, 8.5rem);
-  font-weight: 900;
-  line-height: .92;
-  letter-spacing: -3px;
-  color: var(--cream);
-  margin-bottom: .5rem;
-}
+.hero-headline { font-family: var(--font-disp); font-size: clamp(3.2rem, 9vw, 8.5rem); font-weight: 900; line-height: .92; letter-spacing: -3px; color: var(--cream); margin-bottom: .5rem; }
 .hero-headline em { font-style: italic; color: var(--teal2); }
-.hero-sub {
-  font-family: var(--font-disp);
-  font-size: clamp(1.5rem, 3.2vw, 3rem);
-  font-weight: 700;
-  font-style: italic;
-  color: rgba(155,191,223,.55);
-  margin-bottom: 2.75rem;
-  line-height: 1.2;
-  opacity: 0; animation: fup .7s .3s forwards;
-}
+.hero-sub { font-family: var(--font-disp); font-size: clamp(1.5rem, 3.2vw, 3rem); font-weight: 700; font-style: italic; color: rgba(155,191,223,.55); margin-bottom: 2.75rem; line-height: 1.2; opacity: 0; animation: fup .7s .3s forwards; }
 .hero-headline-wrap { overflow: hidden; }
 .hero-headline-line { opacity: 0; transform: translateY(100%); animation: slideUp .9s cubic-bezier(.16,1,.3,1) forwards; }
 .hero-headline-line:nth-child(1) { animation-delay: .15s; }
 .hero-headline-line:nth-child(2) { animation-delay: .32s; }
-
-.hero-bottom {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: end; margin-top: 2rem;
-  opacity: 0; animation: fup .7s .65s forwards;
-}
-.hero-desc {
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
-  font-weight: 400;
-  line-height: 1.85;
-  color: rgba(155,191,223,.72);
-  max-width: 500px;
-}
-.hero-stats-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1px; background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.06);
-}
+.hero-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: end; margin-top: 2rem; opacity: 0; animation: fup .7s .65s forwards; }
+.hero-desc { font-size: clamp(1rem, 1.6vw, 1.15rem); font-weight: 400; line-height: 1.85; color: rgba(155,191,223,.72); max-width: 500px; }
+.hero-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.06); }
 .h-stat { background: rgba(12,21,32,.45); padding: 1.35rem 1rem; text-align: center; }
-.h-stat-num {
-  font-family: var(--font-disp);
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  font-weight: 900;
-  color: var(--cream);
-  line-height: 1; margin-bottom: 6px;
-}
+.h-stat-num { font-family: var(--font-disp); font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 900; color: var(--cream); line-height: 1; margin-bottom: 6px; }
 .h-stat-num span { color: var(--teal2); }
-.h-stat-lbl {
-  font-family: var(--font-mono);
-  font-size: .55rem;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: rgba(155,191,223,.45);
-}
-.hero-cta {
-  display: flex; gap: .85rem; flex-wrap: wrap; margin-top: 2rem;
-  opacity: 0; animation: fup .7s .85s forwards;
-}
-.btn-pri {
-  padding: .95rem 2rem;
-  background: var(--blue);
-  color: var(--cream);
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none; cursor: pointer;
-  transition: background .2s, transform .2s;
-  display: inline-block;
-}
+.h-stat-lbl { font-family: var(--font-mono); font-size: .55rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(155,191,223,.45); }
+.hero-cta { display: flex; gap: .85rem; flex-wrap: wrap; margin-top: 2rem; opacity: 0; animation: fup .7s .85s forwards; }
+.btn-pri { padding: .95rem 2rem; background: var(--blue); color: var(--cream); font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: background .2s, transform .2s; display: inline-block; }
 .btn-pri:hover { background: var(--teal); transform: translateY(-2px); }
-.btn-out {
-  padding: .95rem 2rem;
-  background: transparent;
-  color: rgba(155,191,223,.8);
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1px solid rgba(155,191,223,.2);
-  cursor: pointer;
-  transition: border-color .2s, color .2s, transform .2s;
-  display: inline-block;
-}
+.btn-out { padding: .95rem 2rem; background: transparent; color: rgba(155,191,223,.8); font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(155,191,223,.2); cursor: pointer; transition: border-color .2s, color .2s, transform .2s; display: inline-block; }
 .btn-out:hover { border-color: var(--teal2); color: var(--teal2); transform: translateY(-2px); }
-
-.hero-scroll {
-  position: relative; z-index: 1;
-  max-width: var(--max); margin: 0 auto; width: 100%;
-  padding: 1.35rem 2.25rem;
-  border-top: 1px solid rgba(255,255,255,.06);
-  display: flex; align-items: center; gap: .85rem;
-  opacity: 0; animation: fup .7s 1.1s forwards;
-}
+.hero-scroll { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; width: 100%; padding: 1.35rem 2.25rem; border-top: 1px solid rgba(255,255,255,.06); display: flex; align-items: center; gap: .85rem; opacity: 0; animation: fup .7s 1.1s forwards; }
 .hero-scroll-line { width: 32px; height: 1px; background: var(--teal2); opacity: .5; }
-.hero-scroll-txt {
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(155,191,223,.38);
-}
-.hero-member-chips {
-  display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 2rem;
-  opacity: 0; animation: fup .7s 1s forwards;
-}
-.hero-chip {
-  display: flex; align-items: center; gap: .55rem;
-  padding: .45rem 1rem;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(155,191,223,.12);
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: rgba(155,191,223,.6);
-  cursor: pointer; text-decoration: none;
-  transition: background .2s, border-color .2s, color .2s;
-}
+.hero-scroll-txt { font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(155,191,223,.38); }
+.hero-member-chips { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 2rem; opacity: 0; animation: fup .7s 1s forwards; }
+.hero-chip { display: flex; align-items: center; gap: .55rem; padding: .45rem 1rem; background: rgba(255,255,255,.04); border: 1px solid rgba(155,191,223,.12); font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(155,191,223,.6); cursor: pointer; text-decoration: none; transition: background .2s, border-color .2s, color .2s; }
 .hero-chip:hover { background: rgba(31,163,158,.18); border-color: rgba(46,196,189,.35); color: var(--teal2); }
 .hero-chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal2); opacity: .65; }
-
-/* ─── MARQUEE ─── */
-.marquee-bar {
-  background: var(--navy2); padding: .9rem 0; overflow: hidden;
-  border-top: 1px solid rgba(255,255,255,.04);
-  border-bottom: 1px solid rgba(255,255,255,.04);
-}
-.marquee-inner {
-  display: inline-flex; gap: 3.5rem; white-space: nowrap;
-  animation: marquee 50s linear infinite;
-}
-.marquee-inner span {
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(155,191,223,.28);
-}
+.marquee-bar { background: var(--navy2); padding: .9rem 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,.04); border-bottom: 1px solid rgba(255,255,255,.04); }
+.marquee-inner { display: inline-flex; gap: 3.5rem; white-space: nowrap; animation: marquee 50s linear infinite; }
+.marquee-inner span { font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(155,191,223,.28); }
 .marquee-inner .sep { color: var(--teal); opacity: .55; }
 @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-
-/* ─── SECTION COMMONS ─── */
 .container { max-width: var(--max); margin: 0 auto; padding: 0 2.25rem; }
 section { position: relative; }
 .sec-pad { padding: 7rem 0; }
-.sec-tag {
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 1.1rem;
-  display: flex; align-items: center; gap: .85rem;
-}
+.sec-tag { font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--blue); margin-bottom: 1.1rem; display: flex; align-items: center; gap: .85rem; }
 .sec-tag::after { content:''; width: 44px; height: 1px; background: var(--pale); opacity: .45; }
-.sec-head {
-  font-family: var(--font-disp);
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  font-weight: 900;
-  line-height: 1.0;
-  letter-spacing: -1.5px;
-  color: var(--ink);
-  margin-bottom: 3.25rem;
-}
+.sec-head { font-family: var(--font-disp); font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.0; letter-spacing: -1.5px; color: var(--ink); margin-bottom: 3.25rem; }
 .sec-head em { font-style: italic; color: var(--blue); }
-.reveal {
-  opacity: 0; transform: translateY(22px);
-  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
-}
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
 .reveal.in { opacity: 1; transform: translateY(0); }
-
-/* ─── ABOUT ─── */
 #about { background: var(--cream2); border-bottom: 1px solid var(--rule); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: start; }
-.about-body p {
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
-  font-weight: 400;
-  line-height: 1.95;
-  color: var(--ink2);
-  margin-bottom: 1.35rem;
-}
+.about-body p { font-size: clamp(1rem, 1.5vw, 1.1rem); font-weight: 400; line-height: 1.95; color: var(--ink2); margin-bottom: 1.35rem; }
 .about-pillars { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
-.about-pillar {
-  background: var(--cream);
-  padding: 1.4rem 1.65rem;
-  display: flex; align-items: flex-start; gap: 1.1rem;
-  transition: background .25s;
-}
+.about-pillar { background: var(--cream); padding: 1.4rem 1.65rem; display: flex; align-items: flex-start; gap: 1.1rem; transition: background .25s; }
 .about-pillar:hover { background: var(--cream2); }
-.about-pillar-icon {
-  width: 38px; height: 38px; flex-shrink: 0;
-  border: 1px solid var(--rule-b);
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(46,109,180,.07);
-}
+.about-pillar-icon { width: 38px; height: 38px; flex-shrink: 0; border: 1px solid var(--rule-b); display: flex; align-items: center; justify-content: center; background: rgba(46,109,180,.07); }
 .about-pillar-icon svg { width: 17px; height: 17px; color: var(--blue); }
-.about-pillar-title {
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--ink);
-  margin-bottom: .35rem;
-}
+.about-pillar-title { font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); margin-bottom: .35rem; }
 .about-pillar-body { font-size: .95rem; line-height: 1.75; color: var(--ink3); }
-
-/* ─── MEMBERS ─── */
 #members { background: var(--cream); }
-.members-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 2.25rem;
-}
-.member-card {
-  background: var(--cream);
-  padding: 2.25rem 2rem;
-  display: flex; flex-direction: column;
-  transition: background .25s;
-  cursor: pointer; position: relative; overflow: hidden;
-}
-.member-card::after {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-  background: var(--teal);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .38s cubic-bezier(.16,1,.3,1);
-}
+.members-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 2.25rem; }
+.member-card { background: var(--cream); padding: 2.25rem 2rem; display: flex; flex-direction: column; transition: background .25s; cursor: pointer; position: relative; overflow: hidden; }
+.member-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--teal); transform: scaleX(0); transform-origin: left; transition: transform .38s cubic-bezier(.16,1,.3,1); }
 .member-card:hover { background: var(--cream2); }
 .member-card:hover::after { transform: scaleX(1); }
-.member-num {
-  font-family: var(--font-disp);
-  font-size: 4rem;
-  font-weight: 900;
-  color: var(--cream3);
-  line-height: 1; margin-bottom: .85rem;
-  transition: color .3s;
-}
+.member-num { font-family: var(--font-disp); font-size: 4rem; font-weight: 900; color: var(--cream3); line-height: 1; margin-bottom: .85rem; transition: color .3s; }
 .member-card:hover .member-num { color: var(--pale); }
-.member-name {
-  font-family: var(--font-disp);
-  font-size: 1.55rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: .25rem;
-  line-height: 1.15;
-}
-.member-role-badge {
-  font-family: var(--font-mono);
-  font-size: .63rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 1rem;
-}
-.member-summary {
-  font-size: .95rem;
-  font-weight: 400;
-  line-height: 1.8;
-  color: var(--ink3);
-  margin-bottom: 1.1rem;
-}
+.member-name { font-family: var(--font-disp); font-size: 1.55rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; line-height: 1.15; }
+.member-role-badge { font-family: var(--font-mono); font-size: .63rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+.member-summary { font-size: .95rem; font-weight: 400; line-height: 1.8; color: var(--ink3); margin-bottom: 1.1rem; }
 .member-skills-mini { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1.1rem; }
-.skill-chip {
-  padding: .22rem .6rem;
-  font-family: var(--font-mono);
-  font-size: .6rem;
-  font-weight: 500;
-  color: var(--ink3);
-  border: 1px solid var(--rule);
-  transition: color .2s, border-color .2s;
-}
+.skill-chip { padding: .22rem .6rem; font-family: var(--font-mono); font-size: .6rem; font-weight: 500; color: var(--ink3); border: 1px solid var(--rule); transition: color .2s, border-color .2s; }
 .member-card:hover .skill-chip { border-color: rgba(31,163,158,.25); }
 .member-links { display: flex; gap: .55rem; flex-wrap: wrap; margin-top: auto; padding-top: .85rem; }
-.mem-link {
-  display: flex; align-items: center; gap: .45rem;
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: var(--ink3);
-  text-decoration: none;
-  padding: .35rem .7rem;
-  border: 1px solid var(--rule);
-  transition: all .2s;
-}
+.mem-link { display: flex; align-items: center; gap: .45rem; font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 1px; color: var(--ink3); text-decoration: none; padding: .35rem .7rem; border: 1px solid var(--rule); transition: all .2s; }
 .mem-link:hover { border-color: var(--teal); color: var(--teal); }
 .mem-link svg { width: 11px; height: 11px; }
-
-/* ─── MEMBER DETAIL ─── */
-.member-detail-panel {
-  display: none;
-  background: var(--navy);
-  padding: 3.5rem 2.25rem;
-  margin-top: 1px;
-  border: 1px solid rgba(255,255,255,.06);
-  animation: panelIn .4s cubic-bezier(.16,1,.3,1) forwards;
-  position: relative;
-}
+.member-detail-panel { display: none; background: var(--navy); padding: 3.5rem 2.25rem; margin-top: 1px; border: 1px solid rgba(255,255,255,.06); animation: panelIn .4s cubic-bezier(.16,1,.3,1) forwards; position: relative; }
 .member-detail-panel.open { display: block; }
 @keyframes panelIn { from{opacity:0;transform:translateY(-10px)} to{opacity:1;transform:translateY(0)} }
-.mdp-close {
-  position: absolute; top: 1.75rem; right: 1.75rem;
-  background: none; border: 1px solid rgba(155,191,223,.15);
-  color: rgba(155,191,223,.6);
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  padding: .45rem .85rem;
-  cursor: pointer; transition: all .2s;
-}
+.mdp-close { position: absolute; top: 1.75rem; right: 1.75rem; background: none; border: 1px solid rgba(155,191,223,.15); color: rgba(155,191,223,.6); font-family: var(--font-mono); font-size: .62rem; font-weight: 700; letter-spacing: 2px; padding: .45rem .85rem; cursor: pointer; transition: all .2s; }
 .mdp-close:hover { border-color: var(--teal2); color: var(--teal2); }
 .mdp-grid { display: grid; grid-template-columns: 320px 1fr; gap: 3.5rem; }
-.mdp-name {
-  font-family: var(--font-disp);
-  font-size: clamp(2rem, 3.2vw, 3.1rem);
-  font-weight: 900;
-  color: var(--cream);
-  margin-bottom: .45rem; line-height: 1.05;
-}
-.mdp-role {
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--teal2); margin-bottom: 1.65rem;
-}
-.mdp-about {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.9;
-  color: rgba(155,191,223,.72);
-  margin-bottom: 1.65rem;
-}
+.mdp-name { font-family: var(--font-disp); font-size: clamp(2rem, 3.2vw, 3.1rem); font-weight: 900; color: var(--cream); margin-bottom: .45rem; line-height: 1.05; }
+.mdp-role { font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal2); margin-bottom: 1.65rem; }
+.mdp-about { font-size: 1rem; font-weight: 400; line-height: 1.9; color: rgba(155,191,223,.72); margin-bottom: 1.65rem; }
 .mdp-meta { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.65rem; }
-.mdp-meta-row {
-  display: flex; align-items: center; gap: .8rem;
-  font-family: var(--font-mono);
-  font-size: .64rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: rgba(155,191,223,.5);
-}
+.mdp-meta-row { display: flex; align-items: center; gap: .8rem; font-family: var(--font-mono); font-size: .64rem; font-weight: 500; letter-spacing: 1px; color: rgba(155,191,223,.5); }
 .mdp-meta-row svg { width: 13px; height: 13px; color: var(--teal2); flex-shrink: 0; }
 .mdp-links { display: flex; flex-direction: column; gap: .45rem; }
-.mdp-link {
-  display: flex; align-items: center; gap: .85rem;
-  padding: .7rem 1.1rem;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.07);
-  color: rgba(155,191,223,.7);
-  text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: .64rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: all .2s;
-}
+.mdp-link { display: flex; align-items: center; gap: .85rem; padding: .7rem 1.1rem; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); color: rgba(155,191,223,.7); text-decoration: none; font-family: var(--font-mono); font-size: .64rem; font-weight: 500; letter-spacing: 1px; transition: all .2s; }
 .mdp-link:hover { border-color: var(--teal2); color: var(--teal2); background: rgba(31,163,158,.12); }
 .mdp-link svg { width: 14px; height: 14px; color: var(--teal2); }
-.mdp-section-title {
-  font-family: var(--font-mono);
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--teal2);
-  margin-bottom: 1.1rem;
-  border-bottom: 1px solid rgba(255,255,255,.07);
-  padding-bottom: .55rem;
-}
+.mdp-section-title { font-family: var(--font-mono); font-size: .65rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal2); margin-bottom: 1.1rem; border-bottom: 1px solid rgba(255,255,255,.07); padding-bottom: .55rem; }
 .mdp-exp-list { display: flex; flex-direction: column; gap: 1.1rem; margin-bottom: 2.25rem; }
-.mdp-exp {
-  padding: 1.35rem 1.4rem;
-  background: rgba(255,255,255,.03);
-  border-left: 3px solid rgba(46,196,189,.45);
-}
-.mdp-exp-role {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--cream); margin-bottom: .25rem;
-}
-.mdp-exp-org {
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--teal2);
-  text-transform: uppercase; margin-bottom: .6rem;
-}
-.mdp-exp-period {
-  font-family: var(--font-mono);
-  font-size: .6rem;
-  font-weight: 500;
-  color: rgba(155,191,223,.4);
-  margin-bottom: .6rem;
-}
+.mdp-exp { padding: 1.35rem 1.4rem; background: rgba(255,255,255,.03); border-left: 3px solid rgba(46,196,189,.45); }
+.mdp-exp-role { font-family: var(--font-body); font-weight: 700; font-size: 1rem; color: var(--cream); margin-bottom: .25rem; }
+.mdp-exp-org { font-family: var(--font-mono); font-size: .62rem; font-weight: 700; letter-spacing: 1.5px; color: var(--teal2); text-transform: uppercase; margin-bottom: .6rem; }
+.mdp-exp-period { font-family: var(--font-mono); font-size: .6rem; font-weight: 500; color: rgba(155,191,223,.4); margin-bottom: .6rem; }
 .mdp-exp-body { font-size: .92rem; line-height: 1.75; color: rgba(155,191,223,.62); }
 .mdp-skills-grid { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 2.25rem; }
-.mdp-skill {
-  padding: .28rem .75rem;
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: .5px;
-  color: rgba(155,191,223,.62);
-  border: 1px solid rgba(155,191,223,.13);
-  transition: all .2s;
-}
+.mdp-skill { padding: .28rem .75rem; font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: .5px; color: rgba(155,191,223,.62); border: 1px solid rgba(155,191,223,.13); transition: all .2s; }
 .mdp-skill:hover { border-color: var(--teal2); color: var(--teal2); }
 .mdp-certs { display: flex; flex-wrap: wrap; gap: .55rem; }
-.mdp-cert {
-  display: flex; align-items: center; gap: .55rem;
-  padding: .45rem 1rem;
-  background: rgba(184,134,46,.08);
-  border: 1px solid rgba(184,134,46,.22);
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: var(--gold2);
-}
+.mdp-cert { display: flex; align-items: center; gap: .55rem; padding: .45rem 1rem; background: rgba(184,134,46,.08); border: 1px solid rgba(184,134,46,.22); font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 1px; color: var(--gold2); }
 .mdp-cert svg { width: 11px; height: 11px; }
-
-/* ─── PROJECTS ─── */
 #projects { background: var(--cream2); }
 .proj-grid { display: flex; flex-direction: column; gap: 2px; }
-.proj-card {
-  background: var(--cream);
-  border: 1px solid var(--rule);
-  border-left: 4px solid transparent;
-  padding: 2.25rem 2.75rem;
-  display: grid; grid-template-columns: 1fr 190px;
-  gap: 2.25rem; align-items: start;
-  opacity: 0; transform: translateY(16px);
-  transition: opacity .55s, transform .55s, border-color .25s, background .25s;
-}
+.proj-card { background: var(--cream); border: 1px solid var(--rule); border-left: 4px solid transparent; padding: 2.25rem 2.75rem; display: grid; grid-template-columns: 1fr 190px; gap: 2.25rem; align-items: start; opacity: 0; transform: translateY(16px); transition: opacity .55s, transform .55s, border-color .25s, background .25s; }
 .proj-card.in { opacity: 1; transform: translateY(0); }
 .proj-card:hover { background: var(--cream2); border-left-color: var(--teal); }
-.proj-tag {
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--ink3); margin-bottom: .55rem;
-}
-.proj-name {
-  font-family: var(--font-disp);
-  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
-  font-weight: 900;
-  color: var(--ink); margin-bottom: .7rem;
-  line-height: 1.05; letter-spacing: -.5px;
-}
-.proj-desc {
-  font-size: .98rem;
-  font-weight: 400;
-  line-height: 1.9;
-  color: var(--ink2); margin-bottom: 1.1rem;
-  max-width: 640px;
-}
+.proj-tag { font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--ink3); margin-bottom: .55rem; }
+.proj-name { font-family: var(--font-disp); font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 900; color: var(--ink); margin-bottom: .7rem; line-height: 1.05; letter-spacing: -.5px; }
+.proj-desc { font-size: .98rem; font-weight: 400; line-height: 1.9; color: var(--ink2); margin-bottom: 1.1rem; max-width: 640px; }
 .proj-tech { display: flex; flex-wrap: wrap; gap: 6px; }
-.proj-tech span {
-  padding: .24rem .65rem;
-  font-family: var(--font-mono);
-  font-size: .6rem;
-  font-weight: 500;
-  letter-spacing: .5px;
-  color: var(--ink3); border: 1px solid var(--rule);
-}
+.proj-tech span { padding: .24rem .65rem; font-family: var(--font-mono); font-size: .6rem; font-weight: 500; letter-spacing: .5px; color: var(--ink3); border: 1px solid var(--rule); }
 .proj-side { display: flex; flex-direction: column; gap: .7rem; align-items: flex-end; }
-.proj-badge {
-  padding: .55rem 1.1rem;
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border: 1px solid var(--rule);
-  color: var(--ink3); text-align: center; white-space: nowrap;
-}
-.proj-link {
-  display: flex; align-items: center; gap: .45rem;
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--teal); text-decoration: none;
-  transition: opacity .2s;
-}
+.proj-badge { padding: .55rem 1.1rem; font-family: var(--font-mono); font-size: .62rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border: 1px solid var(--rule); color: var(--ink3); text-align: center; white-space: nowrap; }
+.proj-link { display: flex; align-items: center; gap: .45rem; font-family: var(--font-mono); font-size: .62rem; font-weight: 700; letter-spacing: 1px; color: var(--teal); text-decoration: none; transition: opacity .2s; }
 .proj-link:hover { opacity: .65; }
 .proj-link svg { width: 12px; height: 12px; }
-.proj-authors {
-  font-family: var(--font-mono);
-  font-size: .6rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: var(--ink3); text-align: right; line-height: 1.6;
-}
+.proj-authors { font-family: var(--font-mono); font-size: .6rem; font-weight: 500; letter-spacing: 1px; color: var(--ink3); text-align: right; line-height: 1.6; }
 .proj-authors strong { color: var(--teal); }
-
-/* ─── EXPERIENCE ─── */
 #experience { background: var(--cream); }
 .exp-companies { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
 .exp-co { background: var(--cream); overflow: hidden; }
-.exp-co-header {
-  padding: 2rem 2.25rem;
-  display: flex; align-items: center; justify-content: space-between;
-  cursor: pointer; transition: background .2s; flex-wrap: wrap; gap: 1rem;
-}
+.exp-co-header { padding: 2rem 2.25rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; transition: background .2s; flex-wrap: wrap; gap: 1rem; }
 .exp-co-header:hover { background: var(--cream2); }
-.exp-co-name {
-  font-family: var(--font-disp);
-  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
-  font-weight: 700;
-  color: var(--ink); margin-bottom: .25rem;
-}
-.exp-co-sub {
-  font-family: var(--font-mono);
-  font-size: .65rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--ink3);
-}
+.exp-co-name { font-family: var(--font-disp); font-size: clamp(1.3rem, 2.8vw, 1.9rem); font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+.exp-co-sub { font-family: var(--font-mono); font-size: .65rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--ink3); }
 .exp-co-right { display: flex; align-items: center; gap: 1.1rem; }
-.exp-co-period {
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--ink2);
-  padding: .45rem .95rem;
-  border: 1px solid var(--rule);
-  background: var(--cream2);
-}
-.exp-toggle {
-  width: 26px; height: 26px;
-  border: 1px solid var(--rule);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; color: var(--ink3);
-  transition: transform .3s; flex-shrink: 0;
-}
+.exp-co-period { font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: 1px; color: var(--ink2); padding: .45rem .95rem; border: 1px solid var(--rule); background: var(--cream2); }
+.exp-toggle { width: 26px; height: 26px; border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--ink3); transition: transform .3s; flex-shrink: 0; }
 .exp-co.open .exp-toggle { transform: rotate(45deg); }
 .exp-co-body { display: none; padding: 0 2.25rem 2.25rem; }
 .exp-co.open .exp-co-body { display: block; }
 .exp-member-rows { display: flex; flex-direction: column; gap: 1px; background: var(--rule); }
-.exp-member-row {
-  background: var(--cream2); padding: 1.4rem 1.65rem;
-  display: grid; grid-template-columns: 200px 1fr; gap: 1.75rem;
-}
+.exp-member-row { background: var(--cream2); padding: 1.4rem 1.65rem; display: grid; grid-template-columns: 200px 1fr; gap: 1.75rem; }
 .exp-member-name { font-family: var(--font-body); font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: .2rem; }
 .exp-member-role { font-family: var(--font-mono); font-size: .62rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); }
 .exp-member-period { font-family: var(--font-mono); font-size: .58rem; font-weight: 500; color: var(--ink3); margin-top: .2rem; }
 .exp-points { font-size: .95rem; font-weight: 400; line-height: 1.8; color: var(--ink2); }
-
-/* ─── SKILLS MAP ─── */
 #skills { background: var(--navy2); }
 #skills .sec-head { color: var(--cream); }
 #skills .sec-tag { color: var(--teal2); }
-.skills-grid {
-  display: grid; grid-template-columns: repeat(5, 1fr);
-  gap: 1px; background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.04);
-}
-.skill-cat {
-  background: rgba(255,255,255,.02);
-  padding: 1.65rem 1.35rem; transition: background .25s;
-}
+.skills-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.04); }
+.skill-cat { background: rgba(255,255,255,.02); padding: 1.65rem 1.35rem; transition: background .25s; }
 .skill-cat:hover { background: rgba(255,255,255,.05); }
-.skill-cat-name {
-  font-family: var(--font-mono);
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--teal2); margin-bottom: .95rem;
-}
+.skill-cat-name { font-family: var(--font-mono); font-size: .65rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal2); margin-bottom: .95rem; }
 .skill-cat-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.skill-tag {
-  padding: .24rem .65rem;
-  font-family: var(--font-mono);
-  font-size: .6rem;
-  font-weight: 500;
-  letter-spacing: .5px;
-  color: rgba(155,191,223,.52);
-  border: 1px solid rgba(155,191,223,.1);
-  cursor: default; transition: all .2s;
-}
+.skill-tag { padding: .24rem .65rem; font-family: var(--font-mono); font-size: .6rem; font-weight: 500; letter-spacing: .5px; color: rgba(155,191,223,.52); border: 1px solid rgba(155,191,223,.1); cursor: default; transition: all .2s; }
 .skill-tag:hover { color: var(--teal2); border-color: rgba(46,196,189,.32); }
-
-/* ─── CERTIFICATIONS ─── */
 #certs { background: var(--cream2); }
-.cert-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 1px; background: var(--rule); border: 1px solid var(--rule);
-}
-.cert-item {
-  background: var(--cream2);
-  padding: 1.35rem 1.85rem;
-  display: flex; align-items: center; gap: 1.1rem;
-  transition: background .2s;
-}
+.cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.cert-item { background: var(--cream2); padding: 1.35rem 1.85rem; display: flex; align-items: center; gap: 1.1rem; transition: background .2s; }
 .cert-item:hover { background: var(--cream); }
-.cert-icon {
-  width: 40px; height: 40px; flex-shrink: 0;
-  border: 1px solid var(--rule-b);
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(31,163,158,.07);
-}
+.cert-icon { width: 40px; height: 40px; flex-shrink: 0; border: 1px solid var(--rule-b); display: flex; align-items: center; justify-content: center; background: rgba(31,163,158,.07); }
 .cert-icon svg { width: 17px; height: 17px; color: var(--teal); }
 .cert-name { font-family: var(--font-body); font-weight: 700; font-size: .97rem; color: var(--ink); margin-bottom: 3px; }
 .cert-holder { font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); }
-
-/* ─── CONTACT ─── */
 #contact { background: var(--navy); }
-.contact-inner {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 4.5rem; align-items: start; padding: 4.5rem 0;
-}
-.contact-left-head {
-  font-family: var(--font-disp);
-  font-size: clamp(2.1rem, 4.5vw, 4rem);
-  font-weight: 900;
-  color: var(--cream); line-height: 1.05; margin-bottom: 1.65rem;
-}
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: start; padding: 4.5rem 0; }
+.contact-left-head { font-family: var(--font-disp); font-size: clamp(2.1rem, 4.5vw, 4rem); font-weight: 900; color: var(--cream); line-height: 1.05; margin-bottom: 1.65rem; }
 .contact-left-head em { color: var(--teal2); }
-.contact-left-body {
-  font-size: 1.05rem; font-weight: 400;
-  line-height: 1.9;
-  color: rgba(155,191,223,.65);
-  margin-bottom: 2.25rem; max-width: 460px;
-}
-.contact-avail {
-  padding: 1.65rem;
-  border: 1px solid rgba(46,196,189,.22);
-  background: rgba(31,163,158,.07);
-  margin-bottom: 1.65rem;
-}
+.contact-left-body { font-size: 1.05rem; font-weight: 400; line-height: 1.9; color: rgba(155,191,223,.65); margin-bottom: 2.25rem; max-width: 460px; }
+.contact-avail { padding: 1.65rem; border: 1px solid rgba(46,196,189,.22); background: rgba(31,163,158,.07); margin-bottom: 1.65rem; }
 .avail-top { display: flex; align-items: center; gap: .7rem; margin-bottom: .85rem; }
-.avail-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--teal2);
-  animation: pulse 2.5s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%,100% { box-shadow: 0 0 0 0 rgba(46,196,189,.4); }
-  50% { box-shadow: 0 0 0 9px rgba(46,196,189,0); }
-}
-.avail-status {
-  font-family: var(--font-mono);
-  font-size: .64rem; font-weight: 700;
-  letter-spacing: 3px; text-transform: uppercase; color: var(--teal2);
-}
+.avail-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal2); animation: pulse 2.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(46,196,189,.4)} 50%{box-shadow:0 0 0 9px rgba(46,196,189,0)} }
+.avail-status { font-family: var(--font-mono); font-size: .64rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal2); }
 .avail-body { font-size: .95rem; font-weight: 400; line-height: 1.85; color: rgba(155,191,223,.62); }
 .contact-members { display: flex; flex-direction: column; gap: .55rem; }
-.cm-card {
-  padding: 1.35rem 1.65rem;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.07);
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: .85rem;
-  transition: border-color .2s, background .2s;
-}
+.cm-card { padding: 1.35rem 1.65rem; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .85rem; transition: border-color .2s, background .2s; }
 .cm-card:hover { border-color: rgba(46,196,189,.32); background: rgba(31,163,158,.07); }
 .cm-name { font-family: var(--font-body); font-weight: 700; font-size: 1rem; color: var(--cream); margin-bottom: .2rem; }
 .cm-role { font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal2); }
 .cm-links { display: flex; gap: .45rem; flex-wrap: wrap; }
-.cm-link {
-  display: flex; align-items: center; gap: .4rem;
-  padding: .38rem .75rem;
-  border: 1px solid rgba(155,191,223,.13);
-  font-family: var(--font-mono);
-  font-size: .6rem; font-weight: 700;
-  letter-spacing: 1px;
-  color: rgba(155,191,223,.62);
-  text-decoration: none; transition: all .2s;
-}
+.cm-link { display: flex; align-items: center; gap: .4rem; padding: .38rem .75rem; border: 1px solid rgba(155,191,223,.13); font-family: var(--font-mono); font-size: .6rem; font-weight: 700; letter-spacing: 1px; color: rgba(155,191,223,.62); text-decoration: none; transition: all .2s; }
 .cm-link:hover { border-color: var(--teal2); color: var(--teal2); }
 .cm-link svg { width: 11px; height: 11px; }
-
-/* ─── FOOTER ─── */
-footer {
-  background: #070e16;
-  padding: 1.75rem 2.25rem;
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: .85rem;
-  border-top: 1px solid rgba(255,255,255,.04);
-}
+footer { background: #070e16; padding: 1.75rem 2.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .85rem; border-top: 1px solid rgba(255,255,255,.04); }
 .foot-l { font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 2px; color: rgba(155,191,223,.28); display: flex; align-items: center; gap: .85rem; }
 .foot-r { font-family: var(--font-mono); font-size: .62rem; font-weight: 500; letter-spacing: 1px; color: rgba(155,191,223,.28); }
 .foot-r a { color: var(--teal2); text-decoration: none; }
 .foot-logo { display: flex; align-items: center; }
-
-/* ─── ANIMATIONS ─── */
 @keyframes fup { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
 @keyframes slideUp { from{opacity:0;transform:translateY(100%)} to{opacity:1;transform:translateY(0)} }
-
-/* ─── RESPONSIVE ─── */
-@media(max-width:1024px) {
-  .members-grid { grid-template-columns: repeat(2, 1fr); }
-  .skills-grid { grid-template-columns: repeat(3, 1fr); }
-  .about-grid { grid-template-columns: 1fr; gap: 2.25rem; }
-  .mdp-grid { grid-template-columns: 1fr; }
-}
-@media(max-width:768px) {
-  nav { padding: .85rem 1.35rem; }
-  .nav-links, .nav-cta { display: none; }
-  .nav-ham { display: flex; }
-  .members-grid { grid-template-columns: 1fr; }
-  .hero-bottom { grid-template-columns: 1fr; gap: 1.75rem; }
-  .hero-stats-grid { grid-template-columns: repeat(3,1fr); }
-  .proj-card { grid-template-columns: 1fr; }
-  .proj-side { align-items: flex-start; }
-  .cert-grid { grid-template-columns: 1fr; }
-  .contact-inner { grid-template-columns: 1fr; gap: 2.25rem; }
-  .skills-grid { grid-template-columns: repeat(2,1fr); }
-  .exp-member-row { grid-template-columns: 1fr; }
-  footer { flex-direction: column; text-align: center; }
-  .hero-logo-block { flex-direction: column; align-items: flex-start; gap: 1rem; }
-}
-@media(max-width:480px) {
-  .skills-grid { grid-template-columns: 1fr; }
-  .sec-pad { padding: 4rem 0; }
-}
+@media(max-width:1024px) { .members-grid{grid-template-columns:repeat(2,1fr)} .skills-grid{grid-template-columns:repeat(3,1fr)} .about-grid{grid-template-columns:1fr;gap:2.25rem} .mdp-grid{grid-template-columns:1fr} }
+@media(max-width:768px) { nav{padding:.85rem 1.35rem} .nav-links,.nav-cta{display:none} .nav-ham{display:flex} .members-grid{grid-template-columns:1fr} .hero-bottom{grid-template-columns:1fr;gap:1.75rem} .hero-stats-grid{grid-template-columns:repeat(3,1fr)} .proj-card{grid-template-columns:1fr} .proj-side{align-items:flex-start} .cert-grid{grid-template-columns:1fr} .contact-inner{grid-template-columns:1fr;gap:2.25rem} .skills-grid{grid-template-columns:repeat(2,1fr)} .exp-member-row{grid-template-columns:1fr} footer{flex-direction:column;text-align:center} .hero-logo-block{flex-direction:column;align-items:flex-start;gap:1rem} }
+@media(max-width:480px) { .skills-grid{grid-template-columns:1fr} .sec-pad{padding:4rem 0} }
 </style>
 </head>
 <body>
-
 <div id="prog" role="progressbar" aria-hidden="true"></div>
-
-<!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Primary navigation">
   <a href="#" class="nav-brand" aria-label="Rusalka Cyber — Home">
     <div class="nav-brand-mark">
       <div class="logo-svg-wrap" id="navLogoAnim">
         <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
           <defs>
-            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#2e6db4"/>
-              <stop offset="100%" stop-color="#1fa39e"/>
-            </linearGradient>
-            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#4d93d9"/>
-              <stop offset="100%" stop-color="#2ec4bd"/>
-            </linearGradient>
+            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2e6db4"/><stop offset="100%" stop-color="#1fa39e"/></linearGradient>
+            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#4d93d9"/><stop offset="100%" stop-color="#2ec4bd"/></linearGradient>
           </defs>
-          <path class="shield-path"
-            d="M22 4 L38 10 L38 22 C38 31 30 38.5 22 41 C14 38.5 6 31 6 22 L6 10 Z"
-            fill="none" stroke="url(#shieldGrad)" stroke-width="1.6"
-            stroke-linejoin="round" stroke-linecap="round"/>
-          <path
-            d="M22 7.5 L35 13 L35 22 C35 29.5 28.5 36 22 38.2 C15.5 36 9 29.5 9 22 L9 13 Z"
-            fill="rgba(31,163,158,0.06)" stroke="none"/>
+          <path class="shield-path" d="M22 4 L38 10 L38 22 C38 31 30 38.5 22 41 C14 38.5 6 31 6 22 L6 10 Z" fill="none" stroke="url(#shieldGrad)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M22 7.5 L35 13 L35 22 C35 29.5 28.5 36 22 38.2 C15.5 36 9 29.5 9 22 L9 13 Z" fill="rgba(31,163,158,0.06)" stroke="none"/>
           <line class="rune-line" x1="17" y1="16" x2="17" y2="28" stroke="url(#accentGrad)" stroke-width="2" stroke-linecap="round"/>
           <path class="rune-line" d="M17 16 Q26 16 26 20 Q26 24 17 24" fill="none" stroke="url(#accentGrad)" stroke-width="2" stroke-linecap="round" style="animation-delay:.15s"/>
           <line class="rune-line" x1="17" y1="24" x2="27" y2="28" stroke="url(#accentGrad)" stroke-width="2" stroke-linecap="round" style="animation-delay:.3s"/>
@@ -1024,27 +279,19 @@ footer {
     <div class="nav-brand-text">Rusalka Cyber</div>
   </a>
   <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#members">Team</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#members">Team</a><a href="#projects">Projects</a>
+    <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
   </div>
   <a href="#contact" class="nav-cta">Start a Project</a>
   <button class="nav-ham" id="navHam" aria-label="Open menu" aria-expanded="false" aria-controls="navMob">
     <span></span><span></span><span></span>
   </button>
 </nav>
-
 <div class="nav-mob" id="navMob" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-  <button class="nav-mob-close" id="navMobClose" aria-label="Close menu">✕</button>
-  <a href="#about" class="mob-link">About</a>
-  <a href="#members" class="mob-link">Team</a>
-  <a href="#projects" class="mob-link">Projects</a>
-  <a href="#experience" class="mob-link">Experience</a>
-  <a href="#skills" class="mob-link">Skills</a>
-  <a href="#contact" class="mob-link">Contact</a>
+  <button class="nav-mob-close" id="navMobClose" aria-label="Close menu">&#x2715;</button>
+  <a href="#about" class="mob-link">About</a><a href="#members" class="mob-link">Team</a>
+  <a href="#projects" class="mob-link">Projects</a><a href="#experience" class="mob-link">Experience</a>
+  <a href="#skills" class="mob-link">Skills</a><a href="#contact" class="mob-link">Contact</a>
 </div>
 
 <!-- HERO -->
@@ -1053,48 +300,25 @@ footer {
   <div class="hero-grid-lines" aria-hidden="true"></div>
   <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
   <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
-
   <div class="hero-inner">
     <div class="hero-logo-block">
       <div class="hero-logo-wrap">
         <div class="logo-svg-wrap" id="heroLogoAnim">
           <svg width="88" height="88" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg" aria-label="Rusalka Cyber logo" role="img">
             <defs>
-              <linearGradient id="hShieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#2e6db4"/>
-                <stop offset="100%" stop-color="#1fa39e"/>
-              </linearGradient>
-              <linearGradient id="hAccentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#6aabea"/>
-                <stop offset="100%" stop-color="#2ec4bd"/>
-              </linearGradient>
-              <filter id="heroGlow" x="-30%" y="-30%" width="160%" height="160%">
-                <feGaussianBlur stdDeviation="3" result="blur"/>
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
+              <linearGradient id="hShieldGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2e6db4"/><stop offset="100%" stop-color="#1fa39e"/></linearGradient>
+              <linearGradient id="hAccentGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#6aabea"/><stop offset="100%" stop-color="#2ec4bd"/></linearGradient>
+              <filter id="heroGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
             </defs>
-            <path class="shield-path"
-              d="M44 8 L76 20 L76 44 C76 62 60 77 44 82 C28 77 12 62 12 44 L12 20 Z"
-              fill="none" stroke="url(#hShieldGrad)" stroke-width="2"
-              stroke-linejoin="round" stroke-linecap="round" filter="url(#heroGlow)"/>
-            <path
-              d="M44 14 L70 24 L70 44 C70 59 55 73 44 78 C33 73 18 59 18 44 L18 24 Z"
-              fill="rgba(46,196,189,0.05)" stroke="rgba(46,196,189,0.12)" stroke-width="1"/>
+            <path class="shield-path" d="M44 8 L76 20 L76 44 C76 62 60 77 44 82 C28 77 12 62 12 44 L12 20 Z" fill="none" stroke="url(#hShieldGrad)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" filter="url(#heroGlow)"/>
+            <path d="M44 14 L70 24 L70 44 C70 59 55 73 44 78 C33 73 18 59 18 44 L18 24 Z" fill="rgba(46,196,189,0.05)" stroke="rgba(46,196,189,0.12)" stroke-width="1"/>
             <line class="rune-line" x1="34" y1="32" x2="34" y2="56" stroke="url(#hAccentGrad)" stroke-width="3.5" stroke-linecap="round"/>
             <path class="rune-line" d="M34 32 Q52 32 52 40 Q52 48 34 48" fill="none" stroke="url(#hAccentGrad)" stroke-width="3.5" stroke-linecap="round" style="animation-delay:.15s"/>
             <line class="rune-line" x1="34" y1="48" x2="54" y2="56" stroke="url(#hAccentGrad)" stroke-width="3.5" stroke-linecap="round" style="animation-delay:.3s"/>
-            <circle cx="44" cy="21" r="2.2" fill="#2ec4bd" opacity=".8">
-              <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.1s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="68" cy="38" r="1.4" fill="#6aabea" opacity=".6">
-              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.7s" begin="0.4s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="20" cy="38" r="1.4" fill="#6aabea" opacity=".6">
-              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.9s" begin="0.8s" repeatCount="indefinite"/>
-            </circle>
-            <path d="M36 66 L44 72 L52 66" fill="none" stroke="rgba(46,196,189,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" repeatCount="indefinite"/>
-            </path>
+            <circle cx="44" cy="21" r="2.2" fill="#2ec4bd" opacity=".8"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.1s" repeatCount="indefinite"/></circle>
+            <circle cx="68" cy="38" r="1.4" fill="#6aabea" opacity=".6"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.7s" begin="0.4s" repeatCount="indefinite"/></circle>
+            <circle cx="20" cy="38" r="1.4" fill="#6aabea" opacity=".6"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.9s" begin="0.8s" repeatCount="indefinite"/></circle>
+            <path d="M36 66 L44 72 L52 66" fill="none" stroke="rgba(46,196,189,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" repeatCount="indefinite"/></path>
           </svg>
         </div>
       </div>
@@ -1103,8 +327,7 @@ footer {
         <div class="hero-logo-sub">Security Engineering &amp; Research</div>
       </div>
     </div>
-
-    <div class="hero-tag">Seven engineers. One startup. — Jaipur, India</div>
+    <div class="hero-tag">Six engineers. One startup. &mdash; Jaipur, India</div>
     <div class="hero-headline-wrap">
       <div class="hero-headline" id="heroHeading">
         <div class="hero-headline-line">We Defend.</div>
@@ -1112,15 +335,9 @@ footer {
       </div>
     </div>
     <div class="hero-sub">The future of security, engineered from first principles.</div>
-
     <div class="hero-bottom">
       <div>
-        <p class="hero-desc">
-          Rusalka Cyber is a security engineering startup built by seven cybersecurity engineers
-          specialising in SOC operations, detection engineering, cloud security, zero trust architecture,
-          GRC, and adversarial research — deployed across multiple international organisations across
-          three continents. We build, ship, and protect.
-        </p>
+        <p class="hero-desc">Rusalka Cyber is a security engineering startup built by six cybersecurity engineers specialising in SOC operations, detection engineering, cloud security, zero trust architecture, GRC, and adversarial research — deployed across multiple international organisations across three continents. We build, ship, and protect.</p>
         <div class="hero-cta">
           <a href="#members" class="btn-pri">Meet the Team</a>
           <a href="#projects" class="btn-out">View Projects</a>
@@ -1130,14 +347,13 @@ footer {
           <a href="#" class="hero-chip" data-target="1"><div class="hero-chip-dot"></div>Naveen Kumar</a>
           <a href="#" class="hero-chip" data-target="2"><div class="hero-chip-dot"></div>Ojas Gaur</a>
           <a href="#" class="hero-chip" data-target="3"><div class="hero-chip-dot"></div>Sourabh Kumar</a>
-          <a href="#" class="hero-chip" data-target="4"><div class="hero-chip-dot"></div><span class="chip-name-yash">Yash Rathore</span></a>
-          <a href="#" class="hero-chip" data-target="5"><div class="hero-chip-dot"></div>Yashwardhan Singh</a>
-          <a href="#" class="hero-chip" data-target="6"><div class="hero-chip-dot"></div>Yogendra Jain</a>
+          <a href="#" class="hero-chip" data-target="4"><div class="hero-chip-dot"></div>Yashwardhan Singh</a>
+          <a href="#" class="hero-chip" data-target="5"><div class="hero-chip-dot"></div>Yogendra Jain</a>
         </div>
       </div>
       <div class="hero-stats-grid">
         <div class="h-stat"><div class="h-stat-num"><span>SOC</span></div><div class="h-stat-lbl">Ops &amp; Detection</div></div>
-        <div class="h-stat"><div class="h-stat-num"><span>Cloud</span></div><div class="h-stat-lbl">AWS · Azure · GCP</div></div>
+        <div class="h-stat"><div class="h-stat-num"><span>Cloud</span></div><div class="h-stat-lbl">AWS &middot; Azure &middot; GCP</div></div>
         <div class="h-stat"><div class="h-stat-num"><span>GRC</span></div><div class="h-stat-lbl">Risk &amp; Compliance</div></div>
         <div class="h-stat"><div class="h-stat-num"><span>DFIR</span></div><div class="h-stat-lbl">Forensics &amp; IR</div></div>
         <div class="h-stat"><div class="h-stat-num"><span>Red</span></div><div class="h-stat-lbl">Team &amp; Pen Test</div></div>
@@ -1145,7 +361,6 @@ footer {
       </div>
     </div>
   </div>
-
   <div class="hero-scroll" aria-hidden="true">
     <div class="hero-scroll-line"></div>
     <span class="hero-scroll-txt">Scroll to explore</span>
@@ -1155,62 +370,29 @@ footer {
 <!-- MARQUEE -->
 <div class="marquee-bar" aria-hidden="true">
   <div class="marquee-inner">
-    <span>Microsoft Sentinel</span><span class="sep">·</span>
-    <span>Zero Trust Architecture</span><span class="sep">·</span>
-    <span>MITRE ATT&amp;CK</span><span class="sep">·</span>
-    <span>AWS GuardDuty</span><span class="sep">·</span>
-    <span>Kubernetes Security</span><span class="sep">·</span>
-    <span>Detection Engineering</span><span class="sep">·</span>
-    <span>SOAR Automation</span><span class="sep">·</span>
-    <span>GRC &amp; Compliance</span><span class="sep">·</span>
-    <span>Penetration Testing</span><span class="sep">·</span>
-    <span>Incident Response</span><span class="sep">·</span>
-    <span>Cloud Security</span><span class="sep">·</span>
-    <span>ELK Stack</span><span class="sep">·</span>
-    <span>Post-Quantum Cryptography</span><span class="sep">·</span>
-    <span>Threat Intelligence</span><span class="sep">·</span>
-    <span>UEBA Analytics</span><span class="sep">·</span>
-    <span>Blockchain Security</span><span class="sep">·</span>
-    <span>Rusalka Cyber</span><span class="sep">·</span>
-    <span>Microsoft Sentinel</span><span class="sep">·</span>
-    <span>Zero Trust Architecture</span><span class="sep">·</span>
-    <span>MITRE ATT&amp;CK</span><span class="sep">·</span>
-    <span>AWS GuardDuty</span><span class="sep">·</span>
-    <span>Kubernetes Security</span><span class="sep">·</span>
-    <span>Detection Engineering</span><span class="sep">·</span>
-    <span>SOAR Automation</span><span class="sep">·</span>
-    <span>GRC &amp; Compliance</span><span class="sep">·</span>
-    <span>Penetration Testing</span><span class="sep">·</span>
-    <span>Incident Response</span><span class="sep">·</span>
-    <span>Cloud Security</span><span class="sep">·</span>
-    <span>ELK Stack</span><span class="sep">·</span>
-    <span>Post-Quantum Cryptography</span><span class="sep">·</span>
-    <span>Threat Intelligence</span><span class="sep">·</span>
-    <span>UEBA Analytics</span><span class="sep">·</span>
-    <span>Blockchain Security</span><span class="sep">·</span>
-    <span>Rusalka Cyber</span><span class="sep">·</span>
+    <span>Microsoft Sentinel</span><span class="sep">&middot;</span><span>Zero Trust Architecture</span><span class="sep">&middot;</span><span>MITRE ATT&amp;CK</span><span class="sep">&middot;</span><span>AWS GuardDuty</span><span class="sep">&middot;</span><span>Kubernetes Security</span><span class="sep">&middot;</span><span>Detection Engineering</span><span class="sep">&middot;</span><span>SOAR Automation</span><span class="sep">&middot;</span><span>GRC &amp; Compliance</span><span class="sep">&middot;</span><span>Penetration Testing</span><span class="sep">&middot;</span><span>Incident Response</span><span class="sep">&middot;</span><span>Cloud Security</span><span class="sep">&middot;</span><span>ELK Stack</span><span class="sep">&middot;</span><span>Post-Quantum Cryptography</span><span class="sep">&middot;</span><span>Threat Intelligence</span><span class="sep">&middot;</span><span>UEBA Analytics</span><span class="sep">&middot;</span><span>Rusalka Cyber</span><span class="sep">&middot;</span><span>Microsoft Sentinel</span><span class="sep">&middot;</span><span>Zero Trust Architecture</span><span class="sep">&middot;</span><span>MITRE ATT&amp;CK</span><span class="sep">&middot;</span><span>AWS GuardDuty</span><span class="sep">&middot;</span><span>Kubernetes Security</span><span class="sep">&middot;</span><span>Detection Engineering</span><span class="sep">&middot;</span><span>SOAR Automation</span><span class="sep">&middot;</span><span>GRC &amp; Compliance</span><span class="sep">&middot;</span><span>Penetration Testing</span><span class="sep">&middot;</span><span>Incident Response</span><span class="sep">&middot;</span><span>Cloud Security</span><span class="sep">&middot;</span><span>ELK Stack</span><span class="sep">&middot;</span><span>Post-Quantum Cryptography</span><span class="sep">&middot;</span><span>Threat Intelligence</span><span class="sep">&middot;</span><span>UEBA Analytics</span><span class="sep">&middot;</span><span>Rusalka Cyber</span><span class="sep">&middot;</span>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section id="about" class="sec-pad" aria-labelledby="aboutHeading">
   <div class="container">
-    <div class="sec-tag">01 · Who We Are</div>
+    <div class="sec-tag">01 &middot; Who We Are</div>
     <div class="about-grid reveal">
       <div class="about-body">
-        <h2 class="sec-head" id="aboutHeading">Rusalka Cyber —<br><em>Built Different.</em></h2>
-        <p>We are <strong>Rusalka Cyber</strong> — a security engineering startup forged by seven cybersecurity professionals who built, broke, and defended systems together — across SOC operations, detection engineering, cloud security, GRC, offensive security research, and enterprise security leadership. Between us, we hold BTech degrees in Cybersecurity and Computer Science, graduating in 2025 and 2026.</p>
-        <p>What began as a shared obsession with going deeper than coursework — through independent labs, hackathons, CTFs, and personal builds — evolved into something more deliberate: a startup that architects production-grade security infrastructure, conducts real adversarial simulations, and ships work that stands up under scrutiny.</p>
-        <p>Rusalka Cyber team members has collectively held positions at Gardiyan System Security Technologies (Ankara, Turkey), Quantix IT Ltd (Coventry, England), CyberSRC Consultancy (Noida, India), and Cisco Australia (MEA &amp; KSA region). We have built zero trust platforms, automated SOC workflows, authored high-fidelity detection rules, executed penetration tests, and won blockchain security bounties. The work speaks first.</p>
+        <h2 class="sec-head" id="aboutHeading">Rusalka Cyber &mdash;<br><em>Built Different.</em></h2>
+        <p>We are <strong>Rusalka Cyber</strong> &mdash; a security engineering startup forged by six cybersecurity professionals who built, broke, and defended systems together &mdash; across SOC operations, detection engineering, cloud security, GRC, offensive security research, and enterprise security leadership. Between us, we hold BTech degrees in Cybersecurity and Computer Science, graduating in 2025 and 2026.</p>
+        <p>What began as a shared obsession with going deeper than coursework &mdash; through independent labs, hackathons, CTFs, and personal builds &mdash; evolved into something more deliberate: a startup that architects production-grade security infrastructure, conducts real adversarial simulations, and ships work that stands up under scrutiny.</p>
+        <p>Rusalka Cyber team members have collectively held positions at Gardiyan System Security Technologies (Ankara, Turkey), Quantix IT Ltd (Coventry, England), CyberSRC Consultancy (Noida, India), and Cisco Australia (MEA - KSA region). We have built zero trust platforms, automated SOC workflows, authored high-fidelity detection rules, executed penetration tests, and won blockchain security bounties. The work speaks first.</p>
       </div>
       <div class="about-pillars">
         <div class="about-pillar">
           <div class="about-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div><div class="about-pillar-title">SOC &amp; Detection Engineering</div><div class="about-pillar-body">Alert triage, SIEM rule authoring, SOAR automation, incident response playbooks — across Sentinel, Sumo Logic, Wazuh, Splunk, and ELK Stack.</div></div>
+          <div><div class="about-pillar-title">SOC &amp; Detection Engineering</div><div class="about-pillar-body">Alert triage, SIEM rule authoring, SOAR automation, incident response playbooks &mdash; across Sentinel, Sumo Logic, Wazuh, Splunk, and ELK Stack.</div></div>
         </div>
         <div class="about-pillar">
           <div class="about-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
-          <div><div class="about-pillar-title">Cloud &amp; Zero Trust Security</div><div class="about-pillar-body">Multi-cloud security monitoring across AWS, Azure, and GCP — IAM, CSPM, Kubernetes hardening, and Zero Trust architecture with Keycloak and Pomerium.</div></div>
+          <div><div class="about-pillar-title">Cloud &amp; Zero Trust Security</div><div class="about-pillar-body">Multi-cloud security monitoring across AWS, Azure, and GCP &mdash; IAM, CSPM, Kubernetes hardening, and Zero Trust architecture with Keycloak and Pomerium.</div></div>
         </div>
         <div class="about-pillar">
           <div class="about-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
@@ -1218,11 +400,11 @@ footer {
         </div>
         <div class="about-pillar">
           <div class="about-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <div><div class="about-pillar-title">GRC &amp; Compliance</div><div class="about-pillar-body">Risk assessments, audit readiness, policy development, and compliance frameworks — ISO 27001, NIST 800-53, CIS Benchmarks, and GDPR alignment.</div></div>
+          <div><div class="about-pillar-title">GRC &amp; Compliance</div><div class="about-pillar-body">Risk assessments, audit readiness, policy development, and compliance frameworks &mdash; ISO 27001, NIST 800-53, CIS Benchmarks, and GDPR alignment.</div></div>
         </div>
         <div class="about-pillar">
           <div class="about-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-          <div><div class="about-pillar-title">Enterprise Security Leadership</div><div class="about-pillar-body">Security operations leadership spanning the MEA &amp; KSA region — with enterprise-scale SOC management and detection engineering across Cisco global infrastructure.</div></div>
+          <div><div class="about-pillar-title">Enterprise Security Leadership</div><div class="about-pillar-body">Security operations leadership spanning the MEA - KSA region &mdash; with enterprise-scale SOC management and detection engineering across Cisco global infrastructure.</div></div>
         </div>
       </div>
     </div>
@@ -1232,33 +414,28 @@ footer {
 <!-- MEMBERS -->
 <section id="members" class="sec-pad" aria-labelledby="membersHeading">
   <div class="container">
-    <div class="sec-tag">02 · The Team</div>
-    <h2 class="sec-head" id="membersHeading">Seven engineers.<br><em>One direction.</em></h2>
+    <div class="sec-tag">02 &middot; The Team</div>
+    <h2 class="sec-head" id="membersHeading">Six engineers.<br><em>One direction.</em></h2>
     <p style="color:var(--ink3);font-size:.92rem;font-family:var(--font-mono);font-weight:500;letter-spacing:1px;">Click any card to expand the full profile.</p>
-
     <div class="members-grid" id="membersGrid" role="list">
 
-      <!-- ABHIJITH SOMAN — 01 -->
+      <!-- 01 ABHIJITH SOMAN -->
       <div class="member-card reveal" data-member="0" role="listitem" tabindex="0" aria-label="View Abhijith Soman profile">
         <div class="member-num" aria-hidden="true">01</div>
         <div class="member-name">Abhijith Soman</div>
-        <div class="member-role-badge">Detection Engineer · Principal Security Architect (Offered)</div>
-        <p class="member-summary">Enterprise security leader with a progressive career at Gardiyan — from SOC Engineer to SOC Lead to Director of Security — before joining Cisco Australia as Senior Detection Engineer covering the MEA &amp; KSA region. After 8 months of demonstrated impact, offered the position of Principal Security Architect at Cisco Australia for the MEA &amp; KSA region.</p>
-        <div class="member-skills-mini">
-          <span class="skill-chip">Cisco SecureX</span><span class="skill-chip">Detection Engineering</span><span class="skill-chip">SOC Leadership</span><span class="skill-chip">SIEM</span><span class="skill-chip">Threat Hunting</span>
-        </div>
+        <div class="member-role-badge">Detection Engineer &middot; Principal Security Architect (Offered)</div>
+        <p class="member-summary">Enterprise security leader with a progressive career at Gardiyan &mdash; from SOC Engineer to SOC Lead to Director of Security &mdash; before joining Cisco Australia as Senior Detection Engineer covering the MEA - KSA region. After 8 months of demonstrated impact, offered the position of Principal Security Architect at Cisco Australia for the MEA - KSA region.</p>
+        <div class="member-skills-mini"><span class="skill-chip">Cisco SecureX</span><span class="skill-chip">Detection Engineering</span><span class="skill-chip">SOC Leadership</span><span class="skill-chip">SIEM</span><span class="skill-chip">Threat Hunting</span></div>
         <div class="member-links"></div>
       </div>
 
-      <!-- NAVEEN KUMAR — 02 -->
+      <!-- 02 NAVEEN KUMAR -->
       <div class="member-card reveal" data-member="1" role="listitem" tabindex="0" aria-label="View Naveen Kumar profile">
         <div class="member-num" aria-hidden="true">02</div>
         <div class="member-name">Naveen Kumar</div>
-        <div class="member-role-badge">SOC Analyst · Detection Engineer</div>
+        <div class="member-role-badge">SOC Analyst &middot; Detection Engineer</div>
         <p class="member-summary">SIEM operations and behavioural analytics professional with deep expertise in UEBA-driven detection and SOAR automation. Triaged 100+ weekly alerts, reduced MTTR by ~40% through enrichment workflow automation, and contributed to Projects Horizon and Citadel.</p>
-        <div class="member-skills-mini">
-          <span class="skill-chip">QRadar</span><span class="skill-chip">Wazuh</span><span class="skill-chip">Tines</span><span class="skill-chip">UEBA</span><span class="skill-chip">TheHive</span>
-        </div>
+        <div class="member-skills-mini"><span class="skill-chip">QRadar</span><span class="skill-chip">Wazuh</span><span class="skill-chip">Tines</span><span class="skill-chip">UEBA</span><span class="skill-chip">TheHive</span></div>
         <div class="member-links">
           <a href="https://www.linkedin.com/in/kumar--naveen" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
           <a href="https://github.com/Naveenbana5250" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
@@ -1266,15 +443,13 @@ footer {
         </div>
       </div>
 
-      <!-- OJAS GAUR — 03 -->
+      <!-- 03 OJAS GAUR -->
       <div class="member-card reveal" data-member="2" role="listitem" tabindex="0" aria-label="View Ojas Gaur profile">
         <div class="member-num" aria-hidden="true">03</div>
         <div class="member-name">Ojas Gaur</div>
-        <div class="member-role-badge">Security Engineer · Detection Specialist</div>
+        <div class="member-role-badge">Security Engineer &middot; Detection Specialist</div>
         <p class="member-summary">SIEM engineering and threat detection specialist with 2+ years of professional experience. Expert in building and tuning high-fidelity SIEM correlation rules mapped to MITRE ATT&amp;CK. Proficient threat hunter across Suricata, Zeek, Sigma, and YARA.</p>
-        <div class="member-skills-mini">
-          <span class="skill-chip">ELK Stack</span><span class="skill-chip">Splunk</span><span class="skill-chip">Sigma</span><span class="skill-chip">YARA</span><span class="skill-chip">Wazuh</span>
-        </div>
+        <div class="member-skills-mini"><span class="skill-chip">ELK Stack</span><span class="skill-chip">Splunk</span><span class="skill-chip">Sigma</span><span class="skill-chip">YARA</span><span class="skill-chip">Wazuh</span></div>
         <div class="member-links">
           <a href="https://www.linkedin.com/in/ojas-gaur-90a0b3230" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
           <a href="https://github.com/ojas404" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
@@ -1282,15 +457,13 @@ footer {
         </div>
       </div>
 
-      <!-- SOURABH KUMAR — 04 -->
+      <!-- 04 SOURABH KUMAR -->
       <div class="member-card reveal" data-member="3" role="listitem" tabindex="0" aria-label="View Sourabh Kumar profile">
         <div class="member-num" aria-hidden="true">04</div>
         <div class="member-name">Sourabh Kumar</div>
-        <div class="member-role-badge">SOC Analyst · Security Architect</div>
-        <p class="member-summary">Lead architect of Project Chimera, Project Kronos, and Project Leviathan — a 20-service zero trust Kubernetes ecosystem. Engineered an ML anomaly engine achieving 97.2% classification accuracy. Authored enterprise-grade PQC and CTI research frameworks.</p>
-        <div class="member-skills-mini">
-          <span class="skill-chip">Splunk</span><span class="skill-chip">Kubernetes</span><span class="skill-chip">Threat Intel</span><span class="skill-chip">DFIR</span><span class="skill-chip">ML / UEBA</span>
-        </div>
+        <div class="member-role-badge">SOC Analyst &middot; Security Architect</div>
+        <p class="member-summary">Lead architect of Project Chimera, Project Kronos, and Project Leviathan &mdash; a 20-service zero trust Kubernetes ecosystem. Engineered an ML anomaly engine achieving 97.2% classification accuracy. Authored enterprise-grade PQC and CTI research frameworks.</p>
+        <div class="member-skills-mini"><span class="skill-chip">Splunk</span><span class="skill-chip">Kubernetes</span><span class="skill-chip">Threat Intel</span><span class="skill-chip">DFIR</span><span class="skill-chip">ML / UEBA</span></div>
         <div class="member-links">
           <a href="https://www.linkedin.com/in/sourabh-kumar-73b549227/" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
           <a href="https://github.com/sourabh1042022" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
@@ -1298,31 +471,13 @@ footer {
         </div>
       </div>
 
-      <!-- YASH RATHORE — 05 -->
-      <div class="member-card reveal" data-member="4" role="listitem" tabindex="0" aria-label="View Yash Rathore profile">
+      <!-- 05 YASHWARDHAN SINGH -->
+      <div class="member-card reveal" data-member="4" role="listitem" tabindex="0" aria-label="View Yashwardhan Singh profile">
         <div class="member-num" aria-hidden="true">05</div>
-        <div class="member-name yash-name">Yash Rathore</div>
-        <div class="member-role-badge">Cloud Security Engineer</div>
-        <p class="member-summary">Cloud security professional with 15+ months of hands-on experience across AWS, Azure, and enterprise cloud environments. TryHackMe top 1% globally. Independently built Project Horizon and Project Citadel. Blockchain hackathon bounty winner ($750). IIT Madras Shaastra finalist.</p>
-        <div class="member-skills-mini">
-          <span class="skill-chip">AWS GuardDuty</span><span class="skill-chip">Azure Defender</span><span class="skill-chip">Zero Trust</span><span class="skill-chip">Trivy</span><span class="skill-chip">Terraform</span>
-        </div>
-        <div class="member-links">
-          <a href="https://www.linkedin.com/in/yash--rathore/" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-          <a href="https://github.com/Yashraj-001" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
-          <a href="mailto:yashrajput7014@gmail.com" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
-        </div>
-      </div>
-
-      <!-- YASHWARDHAN SINGH — 06 -->
-      <div class="member-card reveal" data-member="5" role="listitem" tabindex="0" aria-label="View Yashwardhan Singh profile">
-        <div class="member-num" aria-hidden="true">06</div>
         <div class="member-name">Yashwardhan Singh</div>
         <div class="member-role-badge">Cloud Security Engineer</div>
         <p class="member-summary">Multi-cloud security specialist with proven expertise across AWS, Azure, and GCP. Skilled in IAM governance, CSPM, vulnerability management, and integrating automated security scanning into CI/CD pipelines. Certified Ethical Hacker and Red Hat Certified System Administrator.</p>
-        <div class="member-skills-mini">
-          <span class="skill-chip">AWS</span><span class="skill-chip">Azure</span><span class="skill-chip">GCP</span><span class="skill-chip">IAM</span><span class="skill-chip">DevSecOps</span>
-        </div>
+        <div class="member-skills-mini"><span class="skill-chip">AWS</span><span class="skill-chip">Azure</span><span class="skill-chip">GCP</span><span class="skill-chip">IAM</span><span class="skill-chip">DevSecOps</span></div>
         <div class="member-links">
           <a href="https://www.linkedin.com/in/yashvardhan-singh-944308264" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
           <a href="https://github.com/YashxProjects/" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
@@ -1330,15 +485,13 @@ footer {
         </div>
       </div>
 
-      <!-- YOGENDRA JAIN — 07 -->
-      <div class="member-card reveal" data-member="6" role="listitem" tabindex="0" aria-label="View Yogendra Jain profile">
-        <div class="member-num" aria-hidden="true">07</div>
+      <!-- 06 YOGENDRA JAIN -->
+      <div class="member-card reveal" data-member="5" role="listitem" tabindex="0" aria-label="View Yogendra Jain profile">
+        <div class="member-num" aria-hidden="true">06</div>
         <div class="member-name">Yogendra Jain</div>
         <div class="member-role-badge">GRC &amp; Compliance Engineer</div>
-        <p class="member-summary">Governance, Risk, and Compliance specialist with operational experience spanning cloud and on-premises environments. Proven track record in risk assessments, compliance management, audit readiness, and policy enforcement — strengthening security governance posture across international organisations.</p>
-        <div class="member-skills-mini">
-          <span class="skill-chip">ISO 27001</span><span class="skill-chip">NIST</span><span class="skill-chip">Audit Readiness</span><span class="skill-chip">Risk Management</span><span class="skill-chip">CSPM</span><span class="skill-chip">SOC2</span><span class="skill-chip">Fedral</span><span class="skill-chip">GDPR</span>
-        </div>
+        <p class="member-summary">Governance, Risk, and Compliance specialist with operational experience spanning cloud and on-premises environments. Proven track record in risk assessments, compliance management, audit readiness, and policy enforcement &mdash; strengthening security governance posture across international organisations.</p>
+        <div class="member-skills-mini"><span class="skill-chip">ISO 27001</span><span class="skill-chip">NIST</span><span class="skill-chip">Audit Readiness</span><span class="skill-chip">Risk Management</span><span class="skill-chip">CSPM</span><span class="skill-chip">SOC2</span><span class="skill-chip">GDPR</span></div>
         <div class="member-links">
           <a href="https://www.linkedin.com/in/yogendrajain/" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
           <a href="https://github.com/yogendraj1608" target="_blank" rel="noopener noreferrer" class="mem-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
@@ -1354,55 +507,55 @@ footer {
 <!-- PROJECTS -->
 <section id="projects" class="sec-pad" aria-labelledby="projectsHeading">
   <div class="container">
-    <div class="sec-tag">03 · Projects</div>
+    <div class="sec-tag">03 &middot; Projects</div>
     <h2 class="sec-head" id="projectsHeading">Built under<br><em>real conditions.</em></h2>
     <div class="proj-grid">
 
       <div class="proj-card">
         <div>
-          <div class="proj-tag">Adversarial Simulation · 2025 · Sourabh Kumar</div>
+          <div class="proj-tag">Adversarial Simulation &middot; 2025 &middot; Sourabh Kumar</div>
           <h3 class="proj-name">Project Chimera</h3>
-          <p class="proj-desc">Zero-budget adversarial simulation proving that real-time detection of sensitive file access, automated analyst notifications, and a live forensic response channel can be constructed without commercial licensing. All seven success criteria passed — including sub-2-minute end-to-end detection latency — across Windows and Linux crown jewel targets with ATT&amp;CK-mapped KQL rules.</p>
+          <p class="proj-desc">Zero-budget adversarial simulation proving that real-time detection of sensitive file access, automated analyst notifications, and a live forensic response channel can be constructed without commercial licensing. All seven success criteria passed &mdash; including sub-2-minute end-to-end detection latency &mdash; across Windows and Linux crown jewel targets with ATT&amp;CK-mapped KQL rules.</p>
           <div class="proj-tech"><span>Elastic Stack 8.18</span><span>Sysmon</span><span>Velociraptor 0.74</span><span>Auditd</span><span>Fleet Server</span><span>VMware Lab</span><span>KQL</span></div>
         </div>
         <div class="proj-side">
           <div class="proj-badge">Zero Budget</div>
           <a href="https://github.com/sourabh1042022/OPERATION-CHIMERA" target="_blank" rel="noopener noreferrer" class="proj-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>GitHub</a>
-          <div class="proj-authors">7/7 criteria passed<br><strong>T1005 · T1204 · T1222</strong></div>
+          <div class="proj-authors">7/7 criteria passed<br><strong>T1005 &middot; T1204 &middot; T1222</strong></div>
         </div>
       </div>
 
       <div class="proj-card">
         <div>
-          <div class="proj-tag">Multi-Cloud Red Team · 2025 · Sourabh Kumar</div>
+          <div class="proj-tag">Multi-Cloud Red Team &middot; 2025 &middot; Sourabh Kumar</div>
           <h3 class="proj-name">Project Kronos</h3>
-          <p class="proj-desc">Live adversarial simulation executed simultaneously across AWS, Azure, and GCP — interconnected via pfSense mesh VPN with Keycloak as the central identity provider. A four-stage attack chain executed end-to-end, with Wazuh detecting across all three clouds. Twenty-five security policies forged directly from observed gaps.</p>
+          <p class="proj-desc">Live adversarial simulation executed simultaneously across AWS, Azure, and GCP &mdash; interconnected via pfSense mesh VPN with Keycloak as the central identity provider. A four-stage attack chain executed end-to-end, with Wazuh detecting across all three clouds. Twenty-five security policies forged directly from observed gaps.</p>
           <div class="proj-tech"><span>AWS</span><span>Azure</span><span>GCP</span><span>pfSense</span><span>Keycloak</span><span>Wazuh</span><span>Terraform</span></div>
         </div>
         <div class="proj-side">
           <div class="proj-badge">Multi-Cloud</div>
           <a href="https://github.com/sourabh1042022/PROJECT-KRONOS" target="_blank" rel="noopener noreferrer" class="proj-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>GitHub</a>
-          <div class="proj-authors">25 policies forged<br><strong>AES-256-GCM · SHA-512</strong></div>
+          <div class="proj-authors">25 policies forged<br><strong>AES-256-GCM &middot; SHA-512</strong></div>
         </div>
       </div>
 
       <div class="proj-card">
         <div>
-          <div class="proj-tag">Autonomous Zero Trust Ecosystem · 2025 · Sourabh Kumar</div>
+          <div class="proj-tag">Autonomous Zero Trust Ecosystem &middot; 2025 &middot; Sourabh Kumar</div>
           <h3 class="proj-name">Project Leviathan</h3>
           <p class="proj-desc">A 20-service zero trust defence ecosystem deployed on Kubernetes within a 12 GB VM budget. GitOps via Argo CD, eBPF micro-segmentation via Cilium, mTLS via Istio, admission control via Kyverno, runtime detection via Falco. Honeytoken simulation achieved 100% detection coverage.</p>
           <div class="proj-tech"><span>Kubernetes</span><span>Cilium eBPF</span><span>Istio mTLS</span><span>Argo CD</span><span>Falco</span><span>Kafka</span><span>HashiCorp Vault</span></div>
         </div>
         <div class="proj-side">
-          <div class="proj-badge">K8s · GitOps</div>
+          <div class="proj-badge">K8s &middot; GitOps</div>
           <a href="https://github.com/sourabh1042022/Project-Leviathan" target="_blank" rel="noopener noreferrer" class="proj-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>GitHub</a>
-          <div class="proj-authors">100% detection rate<br><strong>20+ services · 12 GB</strong></div>
+          <div class="proj-authors">100% detection rate<br><strong>20+ services &middot; 12 GB</strong></div>
         </div>
       </div>
 
       <div class="proj-card">
         <div>
-          <div class="proj-tag">Unified Zero Trust Architecture · 2025 · Full Team</div>
+          <div class="proj-tag">Unified Zero Trust Architecture &middot; 2025 &middot; Full Team</div>
           <h3 class="proj-name">Project Horizon</h3>
           <p class="proj-desc">End-to-end open-source Zero Trust Security Architecture unifying five pillars: ZTNA &amp; SASE, DSPM, CNAPP, XDR pipeline, and insider risk analytics via UEBA. Validated against simulated attacks. Collaboratively built by the full Rusalka Cyber team.</p>
           <div class="proj-tech"><span>Keycloak</span><span>Pomerium</span><span>Apache NiFi</span><span>K3s</span><span>Falco</span><span>ELK Stack</span><span>Python</span></div>
@@ -1416,7 +569,7 @@ footer {
 
       <div class="proj-card">
         <div>
-          <div class="proj-tag">Enterprise SOC Platform · 2025 · Full Team</div>
+          <div class="proj-tag">Enterprise SOC Platform &middot; 2025 &middot; Full Team</div>
           <h3 class="proj-name">Project Citadel</h3>
           <p class="proj-desc">Enterprise-grade SOC framework unifying SIEM, SOAR, UEBA, monitoring, and governance. Isolation Forest UEBA engine achieving 97.2% anomaly classification accuracy. SOAR response time under 2 seconds. Handles 500,000+ events per day. NIST 800-53 and ISO 27001 compliant.</p>
           <div class="proj-tech"><span>Wazuh</span><span>Elasticsearch</span><span>Isolation Forest</span><span>FastAPI</span><span>Grafana</span><span>HashiCorp Vault</span><span>Streamlit</span></div>
@@ -1430,41 +583,15 @@ footer {
 
       <div class="proj-card">
         <div>
-          <div class="proj-tag">Research Framework · 2025 · Sourabh Kumar</div>
+          <div class="proj-tag">Research Framework &middot; 2025 &middot; Sourabh Kumar</div>
           <h3 class="proj-name">Post-Quantum Cryptography Security Framework</h3>
-          <p class="proj-desc">Practitioner-level enterprise framework for transitioning from quantum-vulnerable cryptography to NIST-standardised PQC algorithms. Includes enforceable adoption policy, a three-phase migration strategy, and comparative analysis of CRYSTALS-Kyber versus Classic McEliece. Aligned to NIST FIPS 203–205.</p>
+          <p class="proj-desc">Practitioner-level enterprise framework for transitioning from quantum-vulnerable cryptography to NIST-standardised PQC algorithms. Includes enforceable adoption policy, a three-phase migration strategy, and comparative analysis of CRYSTALS-Kyber versus Classic McEliece. Aligned to NIST FIPS 203&ndash;205.</p>
           <div class="proj-tech"><span>NIST FIPS 203-205</span><span>NSA CNSA 2.0</span><span>CRYSTALS-Kyber</span><span>McEliece</span><span>ENISA</span></div>
         </div>
         <div class="proj-side">
           <div class="proj-badge">Research</div>
           <a href="https://github.com/sourabh1042022/PQC-SECURITY-FRAMEWORK" target="_blank" rel="noopener noreferrer" class="proj-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>GitHub</a>
           <div class="proj-authors">25+ year timeline<br><strong>Harvest Now risk</strong></div>
-        </div>
-      </div>
-
-      <div class="proj-card">
-        <div>
-          <div class="proj-tag">Hackathon Build · Gurgaon · Sept 2024 · Yash Rathore</div>
-          <h3 class="proj-name">Blockchain Lending Platform — $400 Bounty</h3>
-          <p class="proj-desc">Smart contract-based lending system written in Solidity with security logic embedded at the contract level. Placed top 10 of 150+ teams at Gurgaon. A $400 bounty was awarded, with the sponsor company indicating intent to incorporate the codebase into their production platform.</p>
-          <div class="proj-tech"><span>Solidity</span><span>Smart Contracts</span><span>Ethereum</span><span>Web3.js</span></div>
-        </div>
-        <div class="proj-side">
-          <div class="proj-badge">$400 Bounty</div>
-          <div class="proj-authors">Top 10 / 150+ teams<br><strong>Logic adopted by sponsor</strong></div>
-        </div>
-      </div>
-
-      <div class="proj-card">
-        <div>
-          <div class="proj-tag">Hackathon Build · Bangalore · Dec 2024 · Yash Rathore</div>
-          <h3 class="proj-name">Cross-Chain Lending Platform — $350 Bounty</h3>
-          <p class="proj-desc">Cross-chain lending platform built on the Agoric blockchain in 36 hours. Automated conversion via orchestration with minimised gas fees. A second consecutive hackathon win, delivered across two entirely different technology stacks.</p>
-          <div class="proj-tech"><span>Agoric</span><span>Cross-chain</span><span>Orchestration</span><span>Smart Contracts</span></div>
-        </div>
-        <div class="proj-side">
-          <div class="proj-badge">$350 Bounty</div>
-          <div class="proj-authors">36-hour build<br><strong>Agoric chain</strong></div>
         </div>
       </div>
 
@@ -1475,20 +602,20 @@ footer {
 <!-- EXPERIENCE -->
 <section id="experience" class="sec-pad" aria-labelledby="expHeading">
   <div class="container">
-    <div class="sec-tag">04 · Professional Experience</div>
+    <div class="sec-tag">04 &middot; Professional Experience</div>
     <h2 class="sec-head" id="expHeading">Where we have<br><em>worked.</em></h2>
     <div class="exp-companies">
 
       <div class="exp-co open reveal">
         <div class="exp-co-header" role="button" aria-expanded="true" tabindex="0">
-          <div class="exp-co-left"><div class="exp-co-name">Cisco Australia</div><div class="exp-co-sub">MEA &amp; KSA Region · Remote</div></div>
-          <div class="exp-co-right"><div class="exp-co-period">Sept 2025 – Present</div><div class="exp-toggle" aria-hidden="true">+</div></div>
+          <div class="exp-co-left"><div class="exp-co-name">Cisco Australia</div><div class="exp-co-sub">MEA - KSA Region &middot; Remote</div></div>
+          <div class="exp-co-right"><div class="exp-co-period">Sept 2025 &ndash; Present</div><div class="exp-toggle" aria-hidden="true">+</div></div>
         </div>
         <div class="exp-co-body">
           <div class="exp-member-rows">
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Abhijith Soman</div><div class="exp-member-role">Detection Engineer → Principal Security Architect (Offered)</div><div class="exp-member-period">September 2025 – Present · 8 months</div></div>
-              <div class="exp-points">Joined Cisco Australia as a Detection Engineer, embedded within the organisation's enterprise-scale Security Operations Centre covering the MEA &amp; KSA (Middle East, Africa &amp; Saudi Arabia) region. Responsible for authoring and maintaining high-fidelity detection rule pipelines, threat hunting playbooks, and cross-regional escalation frameworks across Cisco's global infrastructure.<br><br>Following eight months of demonstrated impact, Abhijith has been extended a formal offer for the position of <strong>Principal Security Architect at Cisco Australia</strong> — a strategic architecture role overseeing security design and operations across the MEA &amp; KSA region.</div>
+              <div><div class="exp-member-name">Abhijith Soman</div><div class="exp-member-role">Detection Engineer &rarr; Principal Security Architect (Offered)</div><div class="exp-member-period">September 2025 &ndash; Present &middot; 8 months</div></div>
+              <div class="exp-points">Joined Cisco Australia as a Detection Engineer, embedded within the organisation's enterprise-scale Security Operations Centre covering the MEA - KSA (Middle East, Africa &amp; Saudi Arabia) region. Responsible for authoring and maintaining high-fidelity detection rule pipelines, threat hunting playbooks, and cross-regional escalation frameworks across Cisco's global infrastructure.<br><br>Following eight months of demonstrated impact, Abhijith has been extended a formal offer for the position of <strong>Principal Security Architect at Cisco Australia</strong> &mdash; a strategic architecture role overseeing security design and operations across the MEA - KSA region.</div>
             </div>
           </div>
         </div>
@@ -1496,37 +623,33 @@ footer {
 
       <div class="exp-co open reveal">
         <div class="exp-co-header" role="button" aria-expanded="true" tabindex="0">
-          <div class="exp-co-left"><div class="exp-co-name">Gardiyan System Security Technologies</div><div class="exp-co-sub">Ankara, Türkiye · Remote</div></div>
-          <div class="exp-co-right"><div class="exp-co-period">Apr 2024 – Aug 2025</div><div class="exp-toggle" aria-hidden="true">+</div></div>
+          <div class="exp-co-left"><div class="exp-co-name">Gardiyan System Security Technologies</div><div class="exp-co-sub">Ankara, T&uuml;rkiye &middot; Remote</div></div>
+          <div class="exp-co-right"><div class="exp-co-period">Apr 2024 &ndash; Aug 2025</div><div class="exp-toggle" aria-hidden="true">+</div></div>
         </div>
         <div class="exp-co-body">
           <div class="exp-member-rows">
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Abhijith Soman</div><div class="exp-member-role">SOC Engineer → SOC Lead → Director of Security</div><div class="exp-member-period">April 2024 – August 2025 · 18 months</div></div>
-              <div class="exp-points"><strong style="color:var(--ink);">SOC Engineer</strong> (Apr–Oct 2024) — Security monitoring, alert triage, detection rule engineering, MITRE ATT&amp;CK-aligned coverage across client environments.<br><br><strong style="color:var(--ink);">SOC Lead</strong> (Oct 2024 – May 2025) — Led SOC analysts in triage operations, escalation workflows, detection tuning, and high-severity incident management.<br><br><strong style="color:var(--ink);">Director of Security</strong> (May–Aug 2025) — Oversaw the entire security operations function — detection strategy, policy enforcement, vendor governance, executive security reporting, and SOC maturity roadmap.</div>
+              <div><div class="exp-member-name">Abhijith Soman</div><div class="exp-member-role">SOC Engineer &rarr; SOC Lead &rarr; Director of Security</div><div class="exp-member-period">April 2024 &ndash; August 2025 &middot; 18 months</div></div>
+              <div class="exp-points"><strong style="color:var(--ink);">SOC Engineer</strong> (Apr&ndash;Oct 2024) &mdash; Security monitoring, alert triage, detection rule engineering, MITRE ATT&amp;CK-aligned coverage across client environments.<br><br><strong style="color:var(--ink);">SOC Lead</strong> (Oct 2024 &ndash; May 2025) &mdash; Led SOC analysts in triage operations, escalation workflows, detection tuning, and high-severity incident management.<br><br><strong style="color:var(--ink);">Director of Security</strong> (May&ndash;Aug 2025) &mdash; Oversaw the entire security operations function &mdash; detection strategy, policy enforcement, vendor governance, executive security reporting, and SOC maturity roadmap.</div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Naveen Kumar</div><div class="exp-member-role">SOC Level 1 Analyst Intern</div><div class="exp-member-period">April 2025 – December 2025</div></div>
+              <div><div class="exp-member-name">Naveen Kumar</div><div class="exp-member-role">SOC Level 1 Analyst Intern</div><div class="exp-member-period">April 2025 &ndash; December 2025</div></div>
               <div class="exp-points">Triaged 100+ weekly alerts across identity, endpoint, and network telemetry. Reduced MTTR by ~40% through Tines/Shuffle enrichment automation. Conducted MITRE ATT&amp;CK-aligned adversary simulations. Developed standardised playbooks for SOC response consistency.</div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Ojas Gaur</div><div class="exp-member-role">Security Engineer Intern</div><div class="exp-member-period">April 2025 – December 2025</div></div>
+              <div><div class="exp-member-name">Ojas Gaur</div><div class="exp-member-role">Security Engineer Intern</div><div class="exp-member-period">April 2025 &ndash; December 2025</div></div>
               <div class="exp-points">Alert triage, log analysis, and event correlation across Wazuh, ELK Stack, and Splunk. Created and tuned SIEM correlation rules mapped to MITRE ATT&amp;CK. Conducted threat hunting using Suricata, Zeek, Sigma, and YARA.</div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Sourabh Kumar</div><div class="exp-member-role">SOC Level 1 Analyst Intern</div><div class="exp-member-period">April 2025 – December 2025</div></div>
+              <div><div class="exp-member-name">Sourabh Kumar</div><div class="exp-member-role">SOC Level 1 Analyst Intern</div><div class="exp-member-period">April 2025 &ndash; December 2025</div></div>
               <div class="exp-points">Managed endpoint security across 300+ assets. Tracked 80+ vulnerability findings/month. Authored 18+ SIEM detection rules with 94%+ CIS Benchmark compliance. Uncovered 5 previously undetected persistence mechanisms during threat hunting exercises.</div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name yash-name">Yash Rathore</div><div class="exp-member-role">SOC Level 1 Analyst Intern</div><div class="exp-member-period">April 2025 – December 2025</div></div>
-              <div class="exp-points">Tuned 12+ Microsoft Sentinel detection rules. Developed 10+ SOC playbooks. Automated triage via Tines/Shuffle, saving ~10 hours of manual enrichment per week. Conducted adversary simulations (T1003, T1059, T1078, T1047).</div>
-            </div>
-            <div class="exp-member-row">
-              <div><div class="exp-member-name">Yashwardhan Singh</div><div class="exp-member-role">Cloud Security Intern</div><div class="exp-member-period">April 2025 – December 2025</div></div>
+              <div><div class="exp-member-name">Yashwardhan Singh</div><div class="exp-member-role">Cloud Security Intern</div><div class="exp-member-period">April 2025 &ndash; December 2025</div></div>
               <div class="exp-points">Cloud security monitoring and IAM reviews across AWS. Developed compliance dashboards aligned with ISO 27001 and NIST controls. Deployed cloud-based honeypots. Performed Active Directory hardening and GPO management.</div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Yogendra Jain</div><div class="exp-member-role">GRC &amp; Compliance Engineer Intern</div><div class="exp-member-period">April 2025 – December 2025</div></div>
+              <div><div class="exp-member-name">Yogendra Jain</div><div class="exp-member-role">GRC &amp; Compliance Engineer Intern</div><div class="exp-member-period">April 2025 &ndash; December 2025</div></div>
               <div class="exp-points">Monitored cloud security alerts and incident escalations. Supported IAM reviews and vulnerability assessments. Developed compliance dashboards aligned with ISO 27001 and NIST controls. Performed Active Directory hardening and privileged access security tasks.</div>
             </div>
           </div>
@@ -1535,34 +658,30 @@ footer {
 
       <div class="exp-co reveal">
         <div class="exp-co-header" role="button" aria-expanded="false" tabindex="0">
-          <div class="exp-co-left"><div class="exp-co-name">Quantix IT Ltd</div><div class="exp-co-sub">Coventry, England · Remote</div></div>
-          <div class="exp-co-right"><div class="exp-co-period">May 2023 – Mar 2025</div><div class="exp-toggle" aria-hidden="true">+</div></div>
+          <div class="exp-co-left"><div class="exp-co-name">Quantix IT Ltd</div><div class="exp-co-sub">Coventry, England &middot; Remote</div></div>
+          <div class="exp-co-right"><div class="exp-co-period">May 2023 &ndash; Mar 2025</div><div class="exp-toggle" aria-hidden="true">+</div></div>
         </div>
         <div class="exp-co-body">
           <div class="exp-member-rows">
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Naveen Kumar</div><div class="exp-member-role">SOC Analyst</div><div class="exp-member-period">Nov 2023 – Mar 2025</div></div>
-              <div class="exp-points">Investigated security incidents through alert triage, log analysis, and threat detection. Tuned SIEM rules and automated alert enrichment. Conducted MITRE ATT&amp;CK-aligned adversary simulations and maintained incident investigation playbooks. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: SOC Analyst Intern (May–Oct 2023).</em></div>
+              <div><div class="exp-member-name">Naveen Kumar</div><div class="exp-member-role">SOC Analyst</div><div class="exp-member-period">Nov 2023 &ndash; Mar 2025</div></div>
+              <div class="exp-points">Investigated security incidents through alert triage, log analysis, and threat detection. Tuned SIEM rules and automated alert enrichment. Conducted MITRE ATT&amp;CK-aligned adversary simulations and maintained incident investigation playbooks. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: SOC Analyst Intern (May&ndash;Oct 2023).</em></div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Ojas Gaur</div><div class="exp-member-role">Security Engineer</div><div class="exp-member-period">Nov 2023 – Mar 2025</div></div>
-              <div class="exp-points">Monitored and investigated security alerts across cloud and enterprise systems. Designed SIEM detection rules and performed threat hunting and log analysis across AWS and Azure. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Security Engineer Intern (May–Oct 2023).</em></div>
+              <div><div class="exp-member-name">Ojas Gaur</div><div class="exp-member-role">Security Engineer</div><div class="exp-member-period">Nov 2023 &ndash; Mar 2025</div></div>
+              <div class="exp-points">Monitored and investigated security alerts across cloud and enterprise systems. Designed SIEM detection rules and performed threat hunting and log analysis across AWS and Azure. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Security Engineer Intern (May&ndash;Oct 2023).</em></div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Sourabh Kumar</div><div class="exp-member-role">SOC Analyst Level 1</div><div class="exp-member-period">May 2023 – Mar 2025</div></div>
+              <div><div class="exp-member-name">Sourabh Kumar</div><div class="exp-member-role">SOC Analyst Level 1</div><div class="exp-member-period">May 2023 &ndash; Mar 2025</div></div>
               <div class="exp-points">Investigated security incidents, tuned SIEM rules, automated SOAR workflows, conducted MITRE ATT&amp;CK-aligned simulations, and managed honeypot environments.</div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name yash-name">Yash Rathore</div><div class="exp-member-role">Cloud Security Engineer</div><div class="exp-member-period">Nov 2023 – Mar 2025</div></div>
-              <div class="exp-points">Cloud threat monitoring across AWS and Azure. Administered IAM controls, executed cloud security assessments, implemented Trivy/Semgrep/Bandit in CI/CD workflows. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Junior Cloud Security Associate Intern (May–Oct 2023).</em></div>
+              <div><div class="exp-member-name">Yashwardhan Singh</div><div class="exp-member-role">Cloud Security Analyst</div><div class="exp-member-period">Nov 2023 &ndash; Mar 2025</div></div>
+              <div class="exp-points">Cloud security incident triage and IAM governance across AWS and Azure. Integrated Bandit, Trivy, and Semgrep into CI/CD pipelines. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Cloud Security Intern (May&ndash;Oct 2023).</em></div>
             </div>
             <div class="exp-member-row">
-              <div><div class="exp-member-name">Yashwardhan Singh</div><div class="exp-member-role">Cloud Security Analyst</div><div class="exp-member-period">Nov 2023 – Mar 2025</div></div>
-              <div class="exp-points">Cloud security incident triage and IAM governance across AWS and Azure. Integrated Bandit, Trivy, and Semgrep into CI/CD pipelines. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: Cloud Security Intern (May–Oct 2023).</em></div>
-            </div>
-            <div class="exp-member-row">
-              <div><div class="exp-member-name">Yogendra Jain</div><div class="exp-member-role">Cloud Security Analyst / GRC</div><div class="exp-member-period">Nov 2023 – Mar 2025</div></div>
-              <div class="exp-points">Governance and compliance reviews for cloud infrastructure. Managed control assessments, risk registers, and remediation tracking. Coordinated audit readiness activities across AWS and Azure. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: GRC &amp; Compliance Intern (May–Oct 2023).</em></div>
+              <div><div class="exp-member-name">Yogendra Jain</div><div class="exp-member-role">Cloud Security Analyst / GRC</div><div class="exp-member-period">Nov 2023 &ndash; Mar 2025</div></div>
+              <div class="exp-points">Governance and compliance reviews for cloud infrastructure. Managed control assessments, risk registers, and remediation tracking. Coordinated audit readiness activities across AWS and Azure. <em style="font-size:.88rem;color:var(--ink3);font-style:normal;">Previously: GRC &amp; Compliance Intern (May&ndash;Oct 2023).</em></div>
             </div>
           </div>
         </div>
@@ -1575,7 +694,7 @@ footer {
 <!-- SKILLS -->
 <section id="skills" class="sec-pad" aria-labelledby="skillsHeading">
   <div class="container">
-    <div class="sec-tag">05 · Technical Arsenal</div>
+    <div class="sec-tag">05 &middot; Technical Arsenal</div>
     <h2 class="sec-head" id="skillsHeading">The collective<br><em>skill set.</em></h2>
     <div class="skills-grid">
       <div class="skill-cat"><div class="skill-cat-name">SIEM &amp; Detection</div><div class="skill-cat-tags"><span class="skill-tag">Microsoft Sentinel</span><span class="skill-tag">Splunk</span><span class="skill-tag">ELK Stack</span><span class="skill-tag">Sumo Logic</span><span class="skill-tag">Wazuh</span><span class="skill-tag">QRadar</span><span class="skill-tag">KQL</span><span class="skill-tag">Sigma</span><span class="skill-tag">YARA</span><span class="skill-tag">Zeek</span></div></div>
@@ -1586,7 +705,7 @@ footer {
       <div class="skill-cat"><div class="skill-cat-name">DFIR &amp; EDR</div><div class="skill-cat-tags"><span class="skill-tag">Sysmon</span><span class="skill-tag">Velociraptor</span><span class="skill-tag">LimaCharlie</span><span class="skill-tag">Volatility3</span><span class="skill-tag">Autopsy</span><span class="skill-tag">CrowdStrike</span><span class="skill-tag">Defender XDR</span></div></div>
       <div class="skill-cat"><div class="skill-cat-name">Threat Intelligence</div><div class="skill-cat-tags"><span class="skill-tag">MISP</span><span class="skill-tag">OpenCTI</span><span class="skill-tag">AlienVault OTX</span><span class="skill-tag">MITRE ATT&amp;CK</span><span class="skill-tag">STIX/TAXII 2.1</span><span class="skill-tag">Diamond Model</span></div></div>
       <div class="skill-cat"><div class="skill-cat-name">GRC &amp; Compliance</div><div class="skill-cat-tags"><span class="skill-tag">ISO 27001</span><span class="skill-tag">NIST 800-53</span><span class="skill-tag">CIS Benchmarks</span><span class="skill-tag">GDPR</span><span class="skill-tag">PCI-DSS</span><span class="skill-tag">Risk Registers</span><span class="skill-tag">Audit Readiness</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-name">Scripting &amp; IaC</div><div class="skill-cat-tags"><span class="skill-tag">Python</span><span class="skill-tag">Bash</span><span class="skill-tag">PowerShell</span><span class="skill-tag">Terraform</span><span class="skill-tag">KQL</span><span class="skill-tag">Solidity</span><span class="skill-tag">Rust</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-name">Scripting &amp; IaC</div><div class="skill-cat-tags"><span class="skill-tag">Python</span><span class="skill-tag">Bash</span><span class="skill-tag">PowerShell</span><span class="skill-tag">Terraform</span><span class="skill-tag">KQL</span><span class="skill-tag">Rust</span></div></div>
       <div class="skill-cat"><div class="skill-cat-name">AI &amp; Analytics</div><div class="skill-cat-tags"><span class="skill-tag">Isolation Forest</span><span class="skill-tag">UEBA</span><span class="skill-tag">Anomaly Detection</span><span class="skill-tag">Streamlit</span><span class="skill-tag">Neo4j</span><span class="skill-tag">Kafka</span><span class="skill-tag">Behavioural Analytics</span></div></div>
     </div>
   </div>
@@ -1595,19 +714,15 @@ footer {
 <!-- CERTIFICATIONS -->
 <section id="certs" class="sec-pad" aria-labelledby="certsHeading">
   <div class="container">
-    <div class="sec-tag">06 · Certifications &amp; Recognition</div>
+    <div class="sec-tag">06 &middot; Certifications &amp; Recognition</div>
     <h2 class="sec-head" id="certsHeading">Credentials<br><em>&amp; Achievements</em></h2>
     <div class="cert-grid">
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">Cisco Networking Basics</div><div class="cert-holder">Ojas Gaur · Cisco</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">CompTIA CySA+ (In Progress)</div><div class="cert-holder">Ojas Gaur · Sourabh Kumar · Yogendra Jain</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><div class="cert-name">TryHackMe — Top 1% Global</div><div class="cert-holder yash-name-cert">Yash Rathore · May–June 2024</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div><div class="cert-name">Oracle Cloud Infrastructure Gen AI Professional</div><div class="cert-holder yash-name-cert">Yash Rathore · Oracle Certified</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><div class="cert-name">CyberOps Associate</div><div class="cert-holder yash-name-cert">Yash Rathore &amp; Yogendra Jain · Cisco</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><div class="cert-name">Shaastra Programming Contest — Finalist</div><div class="cert-holder yash-name-cert">Yash Rathore · IIT Madras · January 2025</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><div class="cert-name">Blockchain Hackathon Bounty Winner — $750 Total</div><div class="cert-holder yash-name-cert">Yash Rathore · Gurgaon + Bangalore 2024</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">Certified Ethical Hacker (CEH)</div><div class="cert-holder">Yashwardhan Singh · EC-Council · Oct 2024</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">Red Hat Certified System Administrator (RHCSA)</div><div class="cert-holder">Yashwardhan Singh · Red Hat · Feb 2025</div></div></div>
-      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">Cisco Cybersecurity Essentials</div><div class="cert-holder">Yogendra Jain · Cisco</div></div></div>
+      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">Cisco Networking Basics</div><div class="cert-holder">Ojas Gaur &middot; Cisco</div></div></div>
+      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">CompTIA CySA+ (In Progress)</div><div class="cert-holder">Ojas Gaur &middot; Sourabh Kumar &middot; Yogendra Jain</div></div></div>
+      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">Certified Ethical Hacker (CEH)</div><div class="cert-holder">Yashwardhan Singh &middot; EC-Council &middot; Oct 2024</div></div></div>
+      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">Red Hat Certified System Administrator (RHCSA)</div><div class="cert-holder">Yashwardhan Singh &middot; Red Hat &middot; Feb 2025</div></div></div>
+      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><div class="cert-name">CyberOps Associate</div><div class="cert-holder">Yogendra Jain &middot; Cisco</div></div></div>
+      <div class="cert-item reveal"><div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="cert-name">Cisco Cybersecurity Essentials</div><div class="cert-holder">Yogendra Jain &middot; Cisco</div></div></div>
     </div>
   </div>
 </section>
@@ -1618,22 +733,18 @@ footer {
     <div class="contact-inner reveal">
       <div>
         <h2 class="contact-left-head" id="contactHeading">Let's build<br><em>something real.</em></h2>
-        <p class="contact-left-body">Rusalka Cyber is a security engineering startup. We take on client projects, security engagements, and research collaborations — whether you need a detection engineering overhaul, a cloud security audit, a red team exercise, or a custom SIEM/SOAR build. We ship production-grade work.</p>
+        <p class="contact-left-body">Rusalka Cyber is a security engineering startup. We take on client projects, security engagements, and research collaborations &mdash; whether you need a detection engineering overhaul, a cloud security audit, a red team exercise, or a custom SIEM/SOAR build. We ship production-grade work.</p>
         <div class="contact-avail">
-          <div class="avail-top">
-            <div class="avail-dot" aria-hidden="true"></div>
-            <div class="avail-status">Rusalka Cyber · Open for Projects · 2026</div>
-          </div>
-          <p class="avail-body">We take on security engineering projects, adversarial simulations, cloud security engagements, GRC consultancy, and custom tooling — across Jaipur, India, and globally. If you have a security problem worth solving, we want to hear about it.</p>
+          <div class="avail-top"><div class="avail-dot" aria-hidden="true"></div><div class="avail-status">Rusalka Cyber &middot; Open for Projects &middot; 2026</div></div>
+          <p class="avail-body">We take on security engineering projects, adversarial simulations, cloud security engagements, GRC consultancy, and custom tooling &mdash; across Jaipur, India, and globally. If you have a security problem worth solving, we want to hear about it.</p>
         </div>
       </div>
       <div>
         <div style="font-family:var(--font-mono);font-size:.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal2);margin-bottom:1.1rem;">Contact the Team</div>
         <div class="contact-members">
-          <div class="cm-card"><div><div class="cm-name">Naveen Kumar</div><div class="cm-role">SOC Analyst · Detection Engineer</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/kumar--naveen" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/Naveenbana5250" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:Naveenbana5250@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
-          <div class="cm-card"><div><div class="cm-name">Ojas Gaur</div><div class="cm-role">Security Engineer · Detection Specialist</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/ojas-gaur-90a0b3230" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/ojas404" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:sharmaojas30@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
-          <div class="cm-card"><div><div class="cm-name">Sourabh Kumar</div><div class="cm-role">SOC Analyst · Security Architect</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/sourabh-kumar-73b549227/" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/sourabh1042022" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:sourabhkumar1043@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
-          <div class="cm-card"><div><div class="cm-name yash-name">Yash Rathore</div><div class="cm-role">Cloud Security Engineer</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/yash--rathore/" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/Yashraj-001" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:yashrajput7014@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
+          <div class="cm-card"><div><div class="cm-name">Naveen Kumar</div><div class="cm-role">SOC Analyst &middot; Detection Engineer</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/kumar--naveen" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/Naveenbana5250" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:Naveenbana5250@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
+          <div class="cm-card"><div><div class="cm-name">Ojas Gaur</div><div class="cm-role">Security Engineer &middot; Detection Specialist</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/ojas-gaur-90a0b3230" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/ojas404" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:sharmaojas30@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
+          <div class="cm-card"><div><div class="cm-name">Sourabh Kumar</div><div class="cm-role">SOC Analyst &middot; Security Architect</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/sourabh-kumar-73b549227/" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/sourabh1042022" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:sourabhkumar1043@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
           <div class="cm-card"><div><div class="cm-name">Yashwardhan Singh</div><div class="cm-role">Cloud Security Engineer</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/yashvardhan-singh-944308264" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/YashxProjects/" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:yashvardhans1224@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
           <div class="cm-card"><div><div class="cm-name">Yogendra Jain</div><div class="cm-role">GRC &amp; Compliance Engineer</div></div><div class="cm-links"><a href="https://www.linkedin.com/in/yogendrajain/" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LI</a><a href="https://github.com/yogendraj1608" target="_blank" rel="noopener noreferrer" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GH</a><a href="mailto:jainyogendra1685@gmail.com" class="cm-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div>
         </div>
@@ -1652,359 +763,142 @@ footer {
         <line x1="17" y1="24" x2="27" y2="28" stroke="rgba(46,196,189,0.6)" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </div>
-    © 2026 Rusalka Cyber · Jaipur, India
+    &copy; 2026 Rusalka Cyber &middot; Jaipur, India
   </div>
-  <div class="foot-r">Security Engineering &amp; Research · <a href="https://github.com/sourabh1042022" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+  <div class="foot-r">Security Engineering &amp; Research &middot; <a href="https://github.com/sourabh1042022" target="_blank" rel="noopener noreferrer">GitHub</a></div>
 </footer>
 
 <script>
 (function(){
   'use strict';
 
-  /* ── YASH EASTER EGG ── */
-  var russianName = 'Яш Ратхор';
-  var englishName = 'Yash Rathore';
-  document.querySelectorAll('.yash-name, .chip-name-yash').forEach(function(el){
-    if(Math.random() < 0.20){
-      var node = el.childNodes[0];
-      if(node && node.nodeType === 3){
-        node.textContent = russianName;
-      } else {
-        el.textContent = russianName;
-      }
-      el.title = englishName;
-      el.style.cursor = 'help';
-    }
-  });
-
-  /* ── PROGRESS BAR ── */
+  /* PROGRESS BAR */
   var prog = document.getElementById('prog');
   window.addEventListener('scroll', function(){
     var scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
     prog.style.width = (Math.min(scrolled, 1) * 100) + '%';
   }, {passive: true});
 
-  /* ── NAV SCROLL ── */
+  /* NAV SCROLL */
   var nav = document.getElementById('nav');
   window.addEventListener('scroll', function(){
     nav.classList.toggle('scrolled', window.scrollY > 50);
   }, {passive: true});
 
-  /* ── MOBILE NAV ── */
+  /* MOBILE NAV */
   var navHam = document.getElementById('navHam');
   var navMob = document.getElementById('navMob');
   var navMobClose = document.getElementById('navMobClose');
-  navHam.addEventListener('click', function(){
-    navMob.classList.add('open');
-    navHam.setAttribute('aria-expanded', 'true');
-    navMobClose.focus();
-  });
-  navMobClose.addEventListener('click', function(){
-    navMob.classList.remove('open');
-    navHam.setAttribute('aria-expanded', 'false');
-  });
-  document.querySelectorAll('.mob-link').forEach(function(a){
-    a.addEventListener('click', function(){
-      navMob.classList.remove('open');
-      navHam.setAttribute('aria-expanded', 'false');
-    });
-  });
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && navMob.classList.contains('open')){
-      navMob.classList.remove('open');
-      navHam.setAttribute('aria-expanded', 'false');
-      navHam.focus();
-    }
-  });
+  navHam.addEventListener('click', function(){ navMob.classList.add('open'); navHam.setAttribute('aria-expanded','true'); navMobClose.focus(); });
+  navMobClose.addEventListener('click', function(){ navMob.classList.remove('open'); navHam.setAttribute('aria-expanded','false'); });
+  document.querySelectorAll('.mob-link').forEach(function(a){ a.addEventListener('click', function(){ navMob.classList.remove('open'); navHam.setAttribute('aria-expanded','false'); }); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&navMob.classList.contains('open')){ navMob.classList.remove('open'); navHam.setAttribute('aria-expanded','false'); navHam.focus(); } });
 
-  /* ── INTERSECTION OBSERVER — reveal ── */
+  /* INTERSECTION OBSERVER */
   var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry, i){
-      if(entry.isIntersecting){
-        setTimeout(function(){ entry.target.classList.add('in'); }, i * 60);
-      }
-    });
-  }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal, .proj-card, .cert-item').forEach(function(el){
-    io.observe(el);
-  });
+    entries.forEach(function(entry, i){ if(entry.isIntersecting){ setTimeout(function(){ entry.target.classList.add('in'); }, i*60); } });
+  }, {threshold:0.06, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal, .proj-card, .cert-item').forEach(function(el){ io.observe(el); });
 
-  /* ── EXPERIENCE ACCORDION ── */
+  /* EXPERIENCE ACCORDION */
   document.querySelectorAll('.exp-co-header').forEach(function(header){
     header.addEventListener('click', function(){
       var co = this.closest('.exp-co');
       var expanded = co.classList.toggle('open');
       this.setAttribute('aria-expanded', expanded ? 'true' : 'false');
     });
-    header.addEventListener('keydown', function(e){
-      if(e.key === 'Enter' || e.key === ' '){
-        e.preventDefault();
-        this.click();
-      }
-    });
+    header.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); this.click(); } });
   });
 
-  /* ── MEMBER DETAIL PANELS ── */
+  /* MEMBER DATA - Yash Rathore removed */
   var memberData = [
     /* 0 — Abhijith Soman */
-    {
-      name: 'Abhijith Soman',
-      role: 'Detection Engineer · Principal Security Architect (Offered)',
-      about: 'Enterprise security leader with a career trajectory from SOC Engineer to Director of Security at Gardiyan, before joining Cisco Australia as a Detection Engineer covering the MEA & KSA (Middle East, Africa & Saudi Arabia) region. Following eight months of demonstrated impact, Abhijith has been extended a formal offer for the position of Principal Security Architect at Cisco Australia for the MEA & KSA region.',
-      location: 'MEA & KSA Region · Remote',
-      edu: 'Computer Science / Cybersecurity Background',
-      exp: [
-        { role: 'SOC Engineer → SOC Lead → Director of Security', org: 'Gardiyan System Security Technologies', period: 'April 2024 – August 2025 · 18 months', body: 'SOC Engineer (6 months): Security monitoring, alert triage, and detection rule engineering across endpoint, network, and identity telemetry.\n\nSOC Lead/Analyst (7 months): Led a team of SOC analysts, coordinated shift handovers, managed escalation workflows, and fine-tuned detection rules.\n\nDirector of Security (5 months): Oversaw the organisation\'s entire security operations function — detection strategy, policy enforcement, vendor governance, and executive security reporting.' },
-        { role: 'Detection Engineer → Principal Security Architect (Offered)', org: 'Cisco Australia', period: 'September 2025 – Present · 8 months', body: 'Joined as a Detection Engineer within Cisco Australia\'s enterprise-scale SOC covering the MEA & KSA (Middle East, Africa & Saudi Arabia) region. Architects and maintains enterprise-scale detection rule pipelines, threat hunting playbooks, and escalation frameworks.\n\nFollowing eight months of demonstrated impact, extended a formal offer for the position of Principal Security Architect at Cisco Australia — a strategic architecture role overseeing security design and operations across the MEA & KSA region.' }
-      ],
-      skills: ['Detection Engineering','SOC Leadership','Cisco SecureX','Cisco Stealthwatch','SIEM Engineering','Threat Hunting','MITRE ATT&CK','Incident Response','Playbook Development','Sigma','KQL','Enterprise Security Architecture','Security Strategy','MEA & KSA Operations'],
-      certs: ['Principal Security Architect – Cisco Australia (Offered · MEA & KSA Region)'],
-      links: []
-    },
+    { name:'Abhijith Soman', role:'Detection Engineer · Principal Security Architect (Offered)', about:'Enterprise security leader with a career trajectory from SOC Engineer to Director of Security at Gardiyan, before joining Cisco Australia as a Detection Engineer covering the MEA - KSA (Middle East, Africa & Saudi Arabia) region. Following eight months of demonstrated impact, Abhijith has been extended a formal offer for the position of Principal Security Architect at Cisco Australia for the MEA - KSA region.', location:'MEA - KSA region · Remote', edu:'Computer Science / Cybersecurity Background', exp:[{role:'SOC Engineer → SOC Lead → Director of Security',org:'Gardiyan System Security Technologies',period:'April 2024 – August 2025 · 18 months',body:'SOC Engineer (6 months): Security monitoring, alert triage, and detection rule engineering across endpoint, network, and identity telemetry.\n\nSOC Lead/Analyst (7 months): Led a team of SOC analysts, coordinated shift handovers, managed escalation workflows, and fine-tuned detection rules.\n\nDirector of Security (5 months): Oversaw the organisation\'s entire security operations function — detection strategy, policy enforcement, vendor governance, and executive security reporting.'},{role:'Detection Engineer → Principal Security Architect (Offered)',org:'Cisco Australia',period:'September 2025 – Present · 8 months',body:'Joined as a Detection Engineer within Cisco Australia\'s enterprise-scale SOC covering the MEA - KSA (Middle East, Africa & Saudi Arabia) region. Architects and maintains enterprise-scale detection rule pipelines, threat hunting playbooks, and escalation frameworks.\n\nFollowing eight months of demonstrated impact, extended a formal offer for the position of Principal Security Architect at Cisco Australia — a strategic architecture role overseeing security design and operations across the MEA - KSA region.'}], skills:['Detection Engineering','SOC Leadership','Cisco SecureX','Cisco Stealthwatch','SIEM Engineering','Threat Hunting','MITRE ATT&CK','Incident Response','Playbook Development','Sigma','KQL','Enterprise Security Architecture','Security Strategy','MEA - KSA Operations'], certs:['Principal Security Architect – Cisco Australia (Offered · MEA - KSA region)'], links:[] },
     /* 1 — Naveen Kumar */
-    {
-      name: 'Naveen Kumar',
-      role: 'SOC Analyst · Detection Engineer',
-      about: 'Security Operations and Detection Engineering professional with deep expertise in SIEM operations, UEBA-driven behavioural analytics, and SOAR automation. Proven ability to investigate complex security incidents, tune high-fidelity detections, and reduce alert fatigue. BTech in Cybersecurity, graduating 2026.',
-      location: 'Jaipur, India',
-      edu: 'BTech Cybersecurity · Graduating 2026',
-      exp: [
-        { role: 'SOC Analyst', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Investigated security incidents through alert triage, log analysis, and threat detection. Tuned SIEM rules, automated SOAR workflows, conducted MITRE ATT&CK-aligned adversary simulations. Previously: SOC Analyst Intern (May–Oct 2023).' },
-        { role: 'SOC Level 1 Analyst Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Triaged 100+ weekly alerts across identity, endpoint, and network telemetry. Reduced MTTR by ~40% through Tines/Shuffle enrichment automation. Developed standardised playbooks for SOC response consistency.' }
-      ],
-      skills: ['Splunk','Microsoft Sentinel','QRadar','ELK Stack','Wazuh','Sigma','YARA','Suricata','Zeek','Tines','Shuffle','TheHive','Cortex','MISP','OpenCTI','NIST','ISO 27001','Active Directory','Wireshark'],
-      certs: [],
-      links: [
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kumar--naveen', icon: 'li' },
-        { label: 'GitHub', url: 'https://github.com/Naveenbana5250', icon: 'gh' },
-        { label: 'Email', url: 'mailto:Naveenbana5250@gmail.com', icon: 'em' }
-      ]
-    },
+    { name:'Naveen Kumar', role:'SOC Analyst · Detection Engineer', about:'Security Operations and Detection Engineering professional with deep expertise in SIEM operations, UEBA-driven behavioural analytics, and SOAR automation. Proven ability to investigate complex security incidents, tune high-fidelity detections, and reduce alert fatigue. BTech in Cybersecurity, graduating 2026.', location:'Jaipur, India', edu:'BTech Cybersecurity · Graduating 2026', exp:[{role:'SOC Analyst',org:'Quantix IT Ltd',period:'Nov 2023 – Mar 2025',body:'Investigated security incidents through alert triage, log analysis, and threat detection. Tuned SIEM rules, automated SOAR workflows, conducted MITRE ATT&CK-aligned adversary simulations. Previously: SOC Analyst Intern (May–Oct 2023).'},{role:'SOC Level 1 Analyst Intern',org:'Gardiyan System Security Technologies',period:'Apr 2025 – Dec 2025',body:'Triaged 100+ weekly alerts across identity, endpoint, and network telemetry. Reduced MTTR by ~40% through Tines/Shuffle enrichment automation. Developed standardised playbooks for SOC response consistency.'}], skills:['Splunk','Microsoft Sentinel','QRadar','ELK Stack','Wazuh','Sigma','YARA','Suricata','Zeek','Tines','Shuffle','TheHive','Cortex','MISP','OpenCTI','NIST','ISO 27001','Active Directory','Wireshark'], certs:[], links:[{label:'LinkedIn',url:'https://www.linkedin.com/in/kumar--naveen',icon:'li'},{label:'GitHub',url:'https://github.com/Naveenbana5250',icon:'gh'},{label:'Email',url:'mailto:Naveenbana5250@gmail.com',icon:'em'}] },
     /* 2 — Ojas Gaur */
-    {
-      name: 'Ojas Gaur',
-      role: 'Security Engineer · Detection Specialist',
-      about: 'SIEM engineering and threat detection specialist with 2+ years of professional experience across cloud and enterprise environments. Expert in building and tuning high-fidelity SIEM correlation rules mapped to MITRE ATT&CK. Skilled threat hunter across Suricata, Zeek, Sigma, and YARA. BCA graduate, 2025.',
-      location: 'Bangalore, India',
-      edu: 'Bachelor of Computer Applications · Graduated 2025',
-      exp: [
-        { role: 'Security Engineer', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Monitored and investigated security alerts across cloud and enterprise systems. Designed and tuned SIEM detection rules. Performed threat hunting across AWS and Azure. Previously: Security Engineer Intern (May–Oct 2023).' },
-        { role: 'Security Engineer Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Alert triage, log analysis, and event correlation across Wazuh, ELK Stack, and Splunk. Created and tuned SIEM correlation rules mapped to MITRE ATT&CK. Threat hunting using Suricata, Zeek, Sigma, and YARA.' }
-      ],
-      skills: ['SIEM Engineering','Detection Engineering','Splunk','ELK Stack','Wazuh','Suricata','Zeek','Sigma','YARA','AWS Security','Azure Security','Python','Bash','PowerShell','MITRE ATT&CK','NIST CSF','ISO 27001','CIS Benchmarks'],
-      certs: ['Cisco Networking Basics','Cisco Cyber Threat Management','CompTIA CySA+ (In Progress)'],
-      links: [
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/ojas-gaur-90a0b3230', icon: 'li' },
-        { label: 'GitHub', url: 'https://github.com/ojas404', icon: 'gh' },
-        { label: 'Email', url: 'mailto:sharmaojas30@gmail.com', icon: 'em' }
-      ]
-    },
+    { name:'Ojas Gaur', role:'Security Engineer · Detection Specialist', about:'SIEM engineering and threat detection specialist with 2+ years of professional experience across cloud and enterprise environments. Expert in building and tuning high-fidelity SIEM correlation rules mapped to MITRE ATT&CK. Skilled threat hunter across Suricata, Zeek, Sigma, and YARA. BCA graduate, 2025.', location:'Bangalore, India', edu:'Bachelor of Computer Applications · Graduated 2025', exp:[{role:'Security Engineer',org:'Quantix IT Ltd',period:'Nov 2023 – Mar 2025',body:'Monitored and investigated security alerts across cloud and enterprise systems. Designed and tuned SIEM detection rules. Performed threat hunting across AWS and Azure. Previously: Security Engineer Intern (May–Oct 2023).'},{role:'Security Engineer Intern',org:'Gardiyan System Security Technologies',period:'Apr 2025 – Dec 2025',body:'Alert triage, log analysis, and event correlation across Wazuh, ELK Stack, and Splunk. Created and tuned SIEM correlation rules mapped to MITRE ATT&CK. Threat hunting using Suricata, Zeek, Sigma, and YARA.'}], skills:['SIEM Engineering','Detection Engineering','Splunk','ELK Stack','Wazuh','Suricata','Zeek','Sigma','YARA','AWS Security','Azure Security','Python','Bash','PowerShell','MITRE ATT&CK','NIST CSF','ISO 27001','CIS Benchmarks'], certs:['Cisco Networking Basics','Cisco Cyber Threat Management','CompTIA CySA+ (In Progress)'], links:[{label:'LinkedIn',url:'https://www.linkedin.com/in/ojas-gaur-90a0b3230',icon:'li'},{label:'GitHub',url:'https://github.com/ojas404',icon:'gh'},{label:'Email',url:'mailto:sharmaojas30@gmail.com',icon:'em'}] },
     /* 3 — Sourabh Kumar */
-    {
-      name: 'Sourabh Kumar',
-      role: 'SOC Analyst · Security Architect',
-      about: 'Security analyst and architect with SOC experience in endpoint security, vulnerability management, threat detection, and incident response. Lead architect of Project Chimera, Project Kronos, Project Leviathan, Project Citadel, and Project Horizon at Rusalka Cyber. Engineered an ML anomaly detection engine achieving 97.2% classification accuracy. BTech in Computer Science & Engineering, graduating 2026.',
-      location: 'Jaipur, India · Open to Relocation',
-      edu: 'BTech Computer Science & Engineering · Graduating 2026',
-      exp: [
-        { role: 'SOC Analyst Level 1', org: 'Quantix IT Ltd', period: 'May 2023 – Mar 2025', body: 'Alert triage, SIEM detection rule tuning, SOAR automation, MITRE ATT&CK-aligned simulations, and honeypot management.' },
-        { role: 'SOC Level 1 Analyst Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Managed endpoint coverage across 300+ assets. Authored 18+ SIEM rules with 94%+ CIS Benchmark compliance. Uncovered 5 previously undetected persistence mechanisms during threat hunting.' }
-      ],
-      skills: ['Splunk','Microsoft Sentinel','ELK Stack','Wazuh','CrowdStrike','Tenable','Qualys','MISP','OpenCTI','Tines','TheHive','Kubernetes','Cilium','Falco','Kafka','Neo4j','Terraform','Python','Bash','MITRE ATT&CK','NIST 800-53','ISO 27001'],
-      certs: ['CEH – EC-Council (Expected 2026)','CySA+ – CompTIA (Expected 2026)'],
-      links: [
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/sourabh-kumar-73b549227/', icon: 'li' },
-        { label: 'GitHub', url: 'https://github.com/sourabh1042022', icon: 'gh' },
-        { label: 'Medium', url: 'https://medium.com/@sourabhkumar1043', icon: 'md' },
-        { label: 'Email', url: 'mailto:sourabhkumar1043@gmail.com', icon: 'em' }
-      ]
-    },
-    /* 4 — Yash Rathore */
-    {
-      name: 'Yash Rathore',
-      nameRu: 'Яш Ратхор',
-      role: 'Cloud Security Engineer',
-      about: 'Cloud security professional with 15+ months of hands-on experience across AWS, Azure, and enterprise cloud environments. TryHackMe top 1% globally. Independently architected and delivered Project Horizon and Project Citadel at Rusalka Cyber. Blockchain hackathon bounty winner ($750). IIT Madras Shaastra finalist. BTech in Cybersecurity, graduated 2026.',
-      location: 'Jaipur, India · Open to Relocation',
-      edu: 'BTech Cybersecurity · Graduated 2026 · CGPA 7.31',
-      exp: [
-        { role: 'Cloud Security Engineer', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Cloud threat monitoring across AWS and Azure. Administered IAM controls, executed cloud security assessments, implemented Trivy, Semgrep, and Bandit in CI/CD workflows.' },
-        { role: 'SOC Level 1 Analyst Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Tuned 12+ Sentinel/SIEM detection rules. Developed 10+ SOC playbooks. Automated triage via Tines/Shuffle saving ~10 hours/week. Conducted adversary simulations (T1003, T1059, T1078, T1047).' }
-      ],
-      skills: ['AWS GuardDuty','AWS Security Hub','Azure Defender for Cloud','Azure Monitor','GCP IAM','CloudTrail','Terraform','CSPM','Cloud Custodian','Trivy','Semgrep','Bandit','Microsoft Sentinel','KQL','Tines','Shuffle','Wazuh','Keycloak','Pomerium','Falco','MITRE ATT&CK','Python','Bash','Solidity'],
-      certs: ['TryHackMe Top 1% Global','Oracle Cloud Infra Gen AI Professional','CyberOps Associate – Cisco','IIT Madras Shaastra Finalist','Blockchain Hackathon Bounty Winner ($750)'],
-      links: [
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/yash--rathore/', icon: 'li' },
-        { label: 'GitHub', url: 'https://github.com/Yashraj-001', icon: 'gh' },
-        { label: 'Email', url: 'mailto:yashrajput7014@gmail.com', icon: 'em' }
-      ]
-    },
-    /* 5 — Yashwardhan Singh */
-    {
-      name: 'Yashwardhan Singh',
-      role: 'Cloud Security Engineer',
-      about: 'Multi-cloud security specialist with proven expertise across AWS, Azure, and GCP. Certified Ethical Hacker (CEH) and Red Hat Certified System Administrator (RHCSA). Strong background in IAM governance, CSPM, vulnerability management, and CI/CD security integration. BTech in Cybersecurity, graduating 2026 with CGPA 7.8.',
-      location: 'Jaipur, India',
-      edu: 'BTech Cybersecurity · Graduating 2026 · CGPA 7.8',
-      exp: [
-        { role: 'Cloud Security Analyst', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Cloud security incident triage, IAM governance across AWS and Azure, CI/CD integration of Bandit/Trivy/Semgrep, honeypot management. Previously: Cloud Security Intern (May–Oct 2023).' },
-        { role: 'Cloud Security Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Cloud security monitoring, IAM reviews, compliance dashboards aligned with ISO 27001 and NIST, cloud-based honeypot deployment, Active Directory hardening.' }
-      ],
-      skills: ['AWS','AWS GuardDuty','Azure','Azure Defender','GCP','GCP IAM','IAM','CSPM','Terraform','Docker','Kubernetes','CI/CD Security','Bandit','Trivy','Semgrep','Splunk','Wazuh','ELK','Active Directory','OWASP','ISO 27001','NIST'],
-      certs: ['Certified Ethical Hacker (CEH) – EC-Council · Oct 2024','RHCSA – Red Hat · Feb 2025'],
-      links: [
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/yashvardhan-singh-944308264', icon: 'li' },
-        { label: 'GitHub', url: 'https://github.com/YashxProjects/', icon: 'gh' },
-        { label: 'Email', url: 'mailto:yashvardhans1224@gmail.com', icon: 'em' }
-      ]
-    },
-    /* 6 — Yogendra Jain */
-    {
-      name: 'Yogendra Jain',
-      role: 'GRC & Compliance Engineer',
-      about: 'Governance, Risk, and Compliance specialist with operational experience spanning cloud and on-premises environments. Skilled in risk assessments, compliance management, audit readiness, and policy enforcement across international organisations. BTech in Cybersecurity, graduating 2026.',
-      location: 'Jaipur, India',
-      edu: 'BTech Cybersecurity · Graduating 2026',
-      exp: [
-        { role: 'Cloud Security Analyst / GRC', org: 'Quantix IT Ltd', period: 'Nov 2023 – Mar 2025', body: 'Governance and compliance reviews for cloud infrastructure. Managed control assessments, risk registers, and remediation tracking. Audit readiness activities across AWS and Azure. Previously: GRC & Compliance Intern (May–Oct 2023).' },
-        { role: 'GRC & Compliance Engineer Intern', org: 'Gardiyan System Security Technologies', period: 'Apr 2025 – Dec 2025', body: 'Cloud security alerts monitoring, IAM reviews, compliance dashboards aligned with ISO 27001 and NIST, Active Directory hardening, privileged access security tasks.' }
-      ],
-      skills: ['GRC','Risk Assessments','Policy Management','Audit Support','Compliance Reporting','ISO 27001','NIST 800-53','CIS Benchmarks','GDPR','PCI-DSS','OWASP','AWS','Azure','GCP','IAM','CSPM','SIEM','Active Directory'],
-      certs: ['Cisco Cybersecurity Essentials','Cisco CyberOps Associate','CompTIA CySA+ (In Progress)'],
-      links: [
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/yogendrajain/', icon: 'li' },
-        { label: 'GitHub', url: 'https://github.com/yogendraj1608', icon: 'gh' },
-        { label: 'Medium', url: 'https://medium.com/@jainyogendra1685', icon: 'md' },
-        { label: 'Email', url: 'mailto:jainyogendra1685@gmail.com', icon: 'em' }
-      ]
-    }
+    { name:'Sourabh Kumar', role:'SOC Analyst · Security Architect', about:'Security analyst and architect with SOC experience in endpoint security, vulnerability management, threat detection, and incident response. Lead architect of Project Chimera, Project Kronos, Project Leviathan, Project Citadel, and Project Horizon at Rusalka Cyber. Engineered an ML anomaly detection engine achieving 97.2% classification accuracy. BTech in Computer Science & Engineering, graduating 2026.', location:'Jaipur, India · Open to Relocation', edu:'BTech Computer Science & Engineering · Graduating 2026', exp:[{role:'SOC Analyst Level 1',org:'Quantix IT Ltd',period:'May 2023 – Mar 2025',body:'Alert triage, SIEM detection rule tuning, SOAR automation, MITRE ATT&CK-aligned simulations, and honeypot management.'},{role:'SOC Level 1 Analyst Intern',org:'Gardiyan System Security Technologies',period:'Apr 2025 – Dec 2025',body:'Managed endpoint coverage across 300+ assets. Authored 18+ SIEM rules with 94%+ CIS Benchmark compliance. Uncovered 5 previously undetected persistence mechanisms during threat hunting.'}], skills:['Splunk','Microsoft Sentinel','ELK Stack','Wazuh','CrowdStrike','Tenable','Qualys','MISP','OpenCTI','Tines','TheHive','Kubernetes','Cilium','Falco','Kafka','Neo4j','Terraform','Python','Bash','MITRE ATT&CK','NIST 800-53','ISO 27001'], certs:['CEH – EC-Council (Expected 2026)','CySA+ – CompTIA (Expected 2026)'], links:[{label:'LinkedIn',url:'https://www.linkedin.com/in/sourabh-kumar-73b549227/',icon:'li'},{label:'GitHub',url:'https://github.com/sourabh1042022',icon:'gh'},{label:'Medium',url:'https://medium.com/@sourabhkumar1043',icon:'md'},{label:'Email',url:'mailto:sourabhkumar1043@gmail.com',icon:'em'}] },
+    /* 4 — Yashwardhan Singh (was index 5) */
+    { name:'Yashwardhan Singh', role:'Cloud Security Engineer', about:'Multi-cloud security specialist with proven expertise across AWS, Azure, and GCP. Certified Ethical Hacker (CEH) and Red Hat Certified System Administrator (RHCSA). Strong background in IAM governance, CSPM, vulnerability management, and CI/CD security integration. BTech in Cybersecurity, graduating 2026 with CGPA 7.8.', location:'Jaipur, India', edu:'BTech Cybersecurity · Graduating 2026 · CGPA 7.8', exp:[{role:'Cloud Security Analyst',org:'Quantix IT Ltd',period:'Nov 2023 – Mar 2025',body:'Cloud security incident triage, IAM governance across AWS and Azure, CI/CD integration of Bandit/Trivy/Semgrep, honeypot management. Previously: Cloud Security Intern (May–Oct 2023).'},{role:'Cloud Security Intern',org:'Gardiyan System Security Technologies',period:'Apr 2025 – Dec 2025',body:'Cloud security monitoring, IAM reviews, compliance dashboards aligned with ISO 27001 and NIST, cloud-based honeypot deployment, Active Directory hardening.'}], skills:['AWS','AWS GuardDuty','Azure','Azure Defender','GCP','GCP IAM','IAM','CSPM','Terraform','Docker','Kubernetes','CI/CD Security','Bandit','Trivy','Semgrep','Splunk','Wazuh','ELK','Active Directory','OWASP','ISO 27001','NIST'], certs:['Certified Ethical Hacker (CEH) – EC-Council · Oct 2024','RHCSA – Red Hat · Feb 2025'], links:[{label:'LinkedIn',url:'https://www.linkedin.com/in/yashvardhan-singh-944308264',icon:'li'},{label:'GitHub',url:'https://github.com/YashxProjects/',icon:'gh'},{label:'Email',url:'mailto:yashvardhans1224@gmail.com',icon:'em'}] },
+    /* 5 — Yogendra Jain (was index 6) */
+    { name:'Yogendra Jain', role:'GRC & Compliance Engineer', about:'Governance, Risk, and Compliance specialist with operational experience spanning cloud and on-premises environments. Skilled in risk assessments, compliance management, audit readiness, and policy enforcement across international organisations. BTech in Cybersecurity, graduating 2026.', location:'Jaipur, India', edu:'BTech Cybersecurity · Graduating 2026', exp:[{role:'Cloud Security Analyst / GRC',org:'Quantix IT Ltd',period:'Nov 2023 – Mar 2025',body:'Governance and compliance reviews for cloud infrastructure. Managed control assessments, risk registers, and remediation tracking. Audit readiness activities across AWS and Azure. Previously: GRC & Compliance Intern (May–Oct 2023).'},{role:'GRC & Compliance Engineer Intern',org:'Gardiyan System Security Technologies',period:'Apr 2025 – Dec 2025',body:'Cloud security alerts monitoring, IAM reviews, compliance dashboards aligned with ISO 27001 and NIST, Active Directory hardening, privileged access security tasks.'}], skills:['GRC','Risk Assessments','Policy Management','Audit Support','Compliance Reporting','ISO 27001','NIST 800-53','CIS Benchmarks','GDPR','PCI-DSS','OWASP','AWS','Azure','GCP','IAM','CSPM','SIEM','Active Directory'], certs:['Cisco Cybersecurity Essentials','Cisco CyberOps Associate','CompTIA CySA+ (In Progress)'], links:[{label:'LinkedIn',url:'https://www.linkedin.com/in/yogendrajain/',icon:'li'},{label:'GitHub',url:'https://github.com/yogendraj1608',icon:'gh'},{label:'Medium',url:'https://medium.com/@jainyogendra1685',icon:'md'},{label:'Email',url:'mailto:jainyogendra1685@gmail.com',icon:'em'}] }
   ];
 
   function iconSvg(type){
-    var attrs = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"';
-    var paths = {
-      li: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
-      gh: '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>',
-      md: '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
-      em: '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>'
-    };
-    return '<svg ' + attrs + '>' + (paths[type] || '') + '</svg>';
+    var attrs='viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"';
+    var paths={li:'<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',gh:'<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>',md:'<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',em:'<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>'};
+    return '<svg '+attrs+'>'+(paths[type]||'')+'</svg>';
   }
 
   function buildPanel(idx){
     var d = memberData[idx];
-    var displayName = d.name;
-    if(idx === 4 && d.nameRu && Math.random() < 0.20){ displayName = d.nameRu; }
-
     var expHtml = d.exp.map(function(e){
-      return '<div class="mdp-exp">'
-        + '<div class="mdp-exp-role">' + e.role + '</div>'
-        + '<div class="mdp-exp-org">' + e.org + '</div>'
-        + '<div class="mdp-exp-period">' + e.period + '</div>'
-        + '<div class="mdp-exp-body">' + e.body.replace(/\n\n/g, '<br><br>') + '</div>'
-        + '</div>';
+      return '<div class="mdp-exp"><div class="mdp-exp-role">'+e.role+'</div><div class="mdp-exp-org">'+e.org+'</div><div class="mdp-exp-period">'+e.period+'</div><div class="mdp-exp-body">'+e.body.replace(/\n\n/g,'<br><br>')+'</div></div>';
     }).join('');
-
-    var skillsHtml = d.skills.map(function(s){
-      return '<span class="mdp-skill">' + s + '</span>';
-    }).join('');
-
-    var certsHtml = d.certs.length
-      ? d.certs.map(function(c){
-          return '<span class="mdp-cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="11" height="11"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>' + c + '</span>';
-        }).join('')
-      : '<span style="font-family:var(--font-mono);font-size:.62rem;color:rgba(155,191,223,.38);">Certifications in progress</span>';
-
-    var linksHtml = d.links.length
-      ? d.links.map(function(l){
-          return '<a href="' + l.url + '" target="_blank" rel="noopener noreferrer" class="mdp-link">' + iconSvg(l.icon) + l.label + '</a>';
-        }).join('')
-      : '<span style="font-family:var(--font-mono);font-size:.62rem;color:rgba(155,191,223,.38);padding:.7rem 1.1rem;display:block;">Contact not available</span>';
-
+    var skillsHtml = d.skills.map(function(s){ return '<span class="mdp-skill">'+s+'</span>'; }).join('');
+    var certsHtml = d.certs.length ? d.certs.map(function(c){ return '<span class="mdp-cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="11" height="11"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'+c+'</span>'; }).join('') : '<span style="font-family:var(--font-mono);font-size:.62rem;color:rgba(155,191,223,.38);">Certifications in progress</span>';
+    var linksHtml = d.links.length ? d.links.map(function(l){ return '<a href="'+l.url+'" target="_blank" rel="noopener noreferrer" class="mdp-link">'+iconSvg(l.icon)+l.label+'</a>'; }).join('') : '<span style="font-family:var(--font-mono);font-size:.62rem;color:rgba(155,191,223,.38);padding:.7rem 1.1rem;display:block;">Contact not available</span>';
     var panel = document.createElement('div');
     panel.className = 'member-detail-panel open';
     panel.dataset.panelFor = String(idx);
-    panel.setAttribute('role', 'region');
-    panel.setAttribute('aria-label', d.name + ' profile');
-
-    panel.innerHTML =
-      '<button class="mdp-close" aria-label="Close ' + d.name + ' profile">✕ Close</button>'
-      + '<div class="mdp-grid">'
-        + '<div class="mdp-left">'
-          + '<div class="mdp-name">' + displayName + '</div>'
-          + '<div class="mdp-role">' + d.role + '</div>'
-          + '<p class="mdp-about">' + d.about + '</p>'
-          + '<div class="mdp-meta">'
-            + '<div class="mdp-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>' + d.location + '</div>'
-            + '<div class="mdp-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>' + d.edu + '</div>'
-          + '</div>'
-          + '<div class="mdp-links">' + linksHtml + '</div>'
-        + '</div>'
-        + '<div class="mdp-right">'
-          + '<div class="mdp-section-title">Professional Experience</div>'
-          + '<div class="mdp-exp-list">' + expHtml + '</div>'
-          + '<div class="mdp-section-title">Technical Skills</div>'
-          + '<div class="mdp-skills-grid">' + skillsHtml + '</div>'
-          + '<div class="mdp-section-title">Certifications &amp; Recognition</div>'
-          + '<div class="mdp-certs">' + certsHtml + '</div>'
-        + '</div>'
-      + '</div>';
-
+    panel.setAttribute('role','region');
+    panel.setAttribute('aria-label', d.name+' profile');
+    panel.innerHTML = '<button class="mdp-close" aria-label="Close '+d.name+' profile">&#x2715; Close</button>'
+      +'<div class="mdp-grid">'
+        +'<div class="mdp-left">'
+          +'<div class="mdp-name">'+d.name+'</div>'
+          +'<div class="mdp-role">'+d.role+'</div>'
+          +'<p class="mdp-about">'+d.about+'</p>'
+          +'<div class="mdp-meta">'
+            +'<div class="mdp-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>'+d.location+'</div>'
+            +'<div class="mdp-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>'+d.edu+'</div>'
+          +'</div>'
+          +'<div class="mdp-links">'+linksHtml+'</div>'
+        +'</div>'
+        +'<div class="mdp-right">'
+          +'<div class="mdp-section-title">Professional Experience</div>'
+          +'<div class="mdp-exp-list">'+expHtml+'</div>'
+          +'<div class="mdp-section-title">Technical Skills</div>'
+          +'<div class="mdp-skills-grid">'+skillsHtml+'</div>'
+          +'<div class="mdp-section-title">Certifications &amp; Recognition</div>'
+          +'<div class="mdp-certs">'+certsHtml+'</div>'
+        +'</div>'
+      +'</div>';
     return panel;
   }
 
   var openPanel = null;
   var panelsContainer = document.getElementById('memberPanels');
 
-  function closeCurrentPanel(){
-    if(openPanel){
-      openPanel.remove();
-      openPanel = null;
-    }
-  }
+  function closeCurrentPanel(){ if(openPanel){ openPanel.remove(); openPanel=null; } }
 
   function openMemberPanel(idx, triggerEl){
-    if(openPanel && parseInt(openPanel.dataset.panelFor, 10) === idx){
-      closeCurrentPanel();
-      return;
-    }
+    if(openPanel && parseInt(openPanel.dataset.panelFor,10)===idx){ closeCurrentPanel(); return; }
     closeCurrentPanel();
     var panel = buildPanel(idx);
     panelsContainer.appendChild(panel);
     openPanel = panel;
-    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
+    panel.scrollIntoView({behavior:'smooth',block:'nearest'});
     var closeBtn = panel.querySelector('.mdp-close');
-    closeBtn.addEventListener('click', function(){
-      closeCurrentPanel();
-      if(triggerEl){ triggerEl.focus(); }
-    });
+    closeBtn.addEventListener('click', function(){ closeCurrentPanel(); if(triggerEl){ triggerEl.focus(); } });
     closeBtn.focus();
   }
 
   document.querySelectorAll('.member-card').forEach(function(card){
-    card.addEventListener('click', function(){
-      openMemberPanel(parseInt(this.dataset.member, 10), this);
-    });
-    card.addEventListener('keydown', function(e){
-      if(e.key === 'Enter' || e.key === ' '){
-        e.preventDefault();
-        openMemberPanel(parseInt(this.dataset.member, 10), this);
-      }
-    });
+    card.addEventListener('click', function(){ openMemberPanel(parseInt(this.dataset.member,10), this); });
+    card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openMemberPanel(parseInt(this.dataset.member,10), this); } });
   });
 
-  /* ── HERO CHIPS — scroll + open panel ── */
+  /* HERO CHIPS */
   document.querySelectorAll('.hero-chip').forEach(function(chip){
     chip.addEventListener('click', function(e){
       e.preventDefault();
       var idx = parseInt(this.dataset.target, 10);
       var membersSection = document.getElementById('members');
-      if(membersSection){ membersSection.scrollIntoView({ behavior: 'smooth' }); }
-      setTimeout(function(){
-        var card = document.querySelector('[data-member="' + idx + '"]');
-        if(card){ card.click(); }
-      }, 700);
+      if(membersSection){ membersSection.scrollIntoView({behavior:'smooth'}); }
+      setTimeout(function(){ var card = document.querySelector('[data-member="'+idx+'"]'); if(card){ card.click(); } }, 700);
     });
   });
 
